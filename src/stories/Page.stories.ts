@@ -1,9 +1,9 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 
-import Button from './button.component';
-import Header from './header.component';
-import Page from './page.component';
+import Button from '../app/shared/button.component';
+import Header from '../app/shared/header.component';
+import Page from '../app/shared/page.component';
 
 import * as HeaderStories from './Header.stories';
 
