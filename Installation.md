@@ -1,5 +1,7 @@
 # Installation Guide
 
+*Not compatible with Angular 13.1.0 yet, use Angular 13.0.0*
+
 ## 1. Material 
 *install before tailwind*
 
@@ -27,12 +29,15 @@ Or, create your own!!!
 
 ## 2. Tailwind
 
+### Repo
+**https://github.com/ngneat/tailwind**
+
 ### Install
 
 Try the first set of commands. If there is an error, use the second set of commands.
-1. > https://github.com/ngneat/tailwind
 
-2. > npx ng add @ngneat/tailwind
+
+> npx ng add @ngneat/tailwind
 
 **OR**
 
