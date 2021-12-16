@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { User } from '../../stories/User';
+import { User } from './User';
 
 @Component({
   selector: 'storybook-page',
@@ -58,7 +58,7 @@ import { User } from '../../stories/User';
       </div>
     </section>
   </article>`,
-  styleUrls: ['./page.css'],
+  styleUrls: ['./page.component.scss'],
 })
 export default class PageComponent {
   @Input()
@@ -73,19 +73,3 @@ export default class PageComponent {
   @Output()
   onCreateAccount = new EventEmitter<Event>();
 }
-
-// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
-//   <article>
-//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />
-
-// );
-// Page.propTypes = {
-//   user: PropTypes.shape({}),
-//   onLogin: PropTypes.func.isRequired,
-//   onLogout: PropTypes.func.isRequired,
-//   onCreateAccount: PropTypes.func.isRequired,
-// };
-
-// Page.defaultProps = {
-//   user: null,
-// };

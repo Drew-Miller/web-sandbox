@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import Button from '../app/shared/button.component';
-import Header from '../app/shared/header.component';
+import Button from 'src/app/shared/button.component';
+import Header from 'src/app/shared/header.component';
 
 export default {
   title: 'Example/Header',
