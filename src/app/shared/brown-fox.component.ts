@@ -20,8 +20,7 @@ type FontFamily =
       }" 
     >{{text}}</p>
   </div>
-</div>`,
-  styleUrls: ['./brown-fox.component.scss']
+</div>`
 })
 export default class BrownFoxComponent {
   /**

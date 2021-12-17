@@ -69,11 +69,11 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"space-y-5\">\n    <div class=\"p-3 bg-white shadow rounded-lg\">\n        <h3 class=\"text-xs border-b\">font-sans</h3>\n        <p class=\"font-sans\">\n        The quick brown fox jumps over the lazy dog.\n        </p>\n    </div>\n    <div class=\"p-3 bg-white shadow rounded-lg\">\n        <h3 class=\"text-xs border-b\">font-serif</h3>\n        <p class=\"font-serif\">\n        The quick brown fox jumps over the lazy dog.\n        </p>\n    </div>\n    <div class=\"p-3 bg-white shadow rounded-lg\">\n        <h3 class=\"text-xs border-b\">font-mono</h3>\n        <p class=\"font-mono\">\n        The quick brown fox jumps over the lazy dog.\n        </p>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
+            "templateData": "<div class=\"space-y-4\">\n    <div class=\"w-96 bg-white shadow rounded\">w-96</div>\n    <div class=\"w-80 bg-white shadow rounded\">w-80</div>\n    <div class=\"w-72 bg-white shadow rounded\">w-72</div>\n    <div class=\"w-64 bg-white shadow rounded\">w-64</div>\n    <div class=\"w-60 bg-white shadow rounded\">w-60</div>\n    <div class=\"w-56 bg-white shadow rounded\">w-56</div>\n    <div class=\"w-52 bg-white shadow rounded\">w-52</div>\n    <div class=\"w-48 bg-white shadow rounded\">w-48</div>\n</div>\n\n<router-outlet></router-outlet>\n"
         },
         {
             "name": "BrownFoxComponent",
-            "id": "component-BrownFoxComponent-5cecff3d3fa530dcfaa9e4637ebcbe139c657c08bf6352c46043bfc44d2f52742298140ea009975626c76c7437a0ce63f71b637b1228f8b8e044699b74a22b2b",
+            "id": "component-BrownFoxComponent-728525c76c917b0e3f7949fbd69a247316c11973e43c2803959bf44afe29ec93a56725aa18690896c5e972733164668eafde43d1674aeaed5c5fe04329813ee0",
             "file": "src/app/shared/brown-fox.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -81,11 +81,9 @@
             "outputs": [],
             "providers": [],
             "selector": "brown-fox",
-            "styleUrls": [
-                "./brown-fox.component.scss"
-            ],
+            "styleUrls": [],
             "styles": [],
-            "template": "<div class=\"space-y-5\" >  <div class=\"p-3 bg-white shadow rounded-lg\">\n    <h3 class=\"text-xs leading-5 font-mono pb-2 border-b border-gray-100\">font-sans</h3>\n    <p class=\"mt-2 sm:mt-3 lg:mt-2 xl:mt-3 text-gray-700 text-sm leading-6 lg:leading-6\"\n      [class.font-sans]=\"isSans\"\n      [class.font-serif]=\"isSerif\"\n      [class.font-mono]=\"isMono\"\n      [class.sm:text-base]=\"!isMono\"\n      [class.sm:leading-6]=\"!isMono\"\n      [class.sm:leading-7]=\"isMono\"\n      [class.lg:text-sm]=\"!isMono\"\n      [class.xl:text-base]=\"!isMono\"\n      [class.xl:leading-6]=\"!isMono\"\n      [class.xl:leading-7]=\"isMono\"\n    >{{text}}</p>\n  </div>\n</div>",
+            "template": "<div class=\"space-y-5\" >  <div class=\"inline-block p-3 bg-white shadow rounded-lg\">\n    <h3 class=\"text-xs leading-5 font-mono pb-2 border-b border-gray-100\">font-sans</h3>\n    <p class=\"mt-2 sm:mt-3 lg:mt-2 xl:mt-3 text-gray-700 text-sm leading-6 lg:leading-6\"\n      [class.font-serif]=\"isSerif\"\n      [class.font-sans]=\"isSans\"\n      [class.font-mono]=\"isMono\"\n      [ngClass]=\"{\n        'sm:text-lg lg:text-sm xl:text-lg': !isMono,\n        'sm:leading-7 xl:leading-7': isMono\n      }\"\n    >{{text}}</p>\n  </div>\n</div>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -96,7 +94,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nWhat font family should the text be?\n",
                     "description": "<p>What font family should the text be?</p>\n",
-                    "line": 40,
+                    "line": 36,
                     "type": "FontFamily",
                     "decorators": []
                 },
@@ -107,7 +105,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nWhat text should the paragraph display?\n",
                     "description": "<p>What text should the paragraph display?</p>\n",
-                    "line": 34,
+                    "line": 30,
                     "type": "string",
                     "decorators": []
                 }
@@ -122,14 +120,9 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from \"@angular/core\"\n\ntype FontFamily =\n  | 'font-sans'\n  | 'font-serif'\n  | 'font-mono';\n\n@Component({\n  selector: 'brown-fox',\n  template: `<div class=\"space-y-5\" >\n  <div class=\"p-3 bg-white shadow rounded-lg\">\n    <h3 class=\"text-xs leading-5 font-mono pb-2 border-b border-gray-100\">font-sans</h3>\n    <p class=\"mt-2 sm:mt-3 lg:mt-2 xl:mt-3 text-gray-700 text-sm leading-6 lg:leading-6\"\n      [class.font-sans]=\"isSans\"\n      [class.font-serif]=\"isSerif\"\n      [class.font-mono]=\"isMono\"\n      [class.sm:text-base]=\"!isMono\"\n      [class.sm:leading-6]=\"!isMono\"\n      [class.sm:leading-7]=\"isMono\"\n      [class.lg:text-sm]=\"!isMono\"\n      [class.xl:text-base]=\"!isMono\"\n      [class.xl:leading-6]=\"!isMono\"\n      [class.xl:leading-7]=\"isMono\"     \n    >{{text}}</p>\n  </div>\n</div>`,\n  styleUrls: ['./brown-fox.component.scss']\n})\nexport default class BrownFoxComponent {\n  /**\n   * What text should the paragraph display?\n   */\n  @Input()\n  text = 'The quick brown fox jumps over the lazy dog.';\n  \n  /**\n   * What font family should the text be?\n   */\n  @Input()\n  fontFamily: FontFamily = 'font-sans';\n\n  get isSans() {\n    return this.fontFamily === 'font-sans';\n  }\n\n  get isSerif() {\n    return this.fontFamily === 'font-serif';\n  }\n\n  get isMono() {\n    return this.fontFamily === 'font-mono';\n  }\n}",
+            "sourceCode": "import { Component, Input } from \"@angular/core\"\n\ntype FontFamily =\n  | 'font-sans'\n  | 'font-serif'\n  | 'font-mono';\n\n@Component({\n  selector: 'brown-fox',\n  template: `<div class=\"space-y-5\" >\n  <div class=\"inline-block p-3 bg-white shadow rounded-lg\">\n    <h3 class=\"text-xs leading-5 font-mono pb-2 border-b border-gray-100\">font-sans</h3>\n    <p class=\"mt-2 sm:mt-3 lg:mt-2 xl:mt-3 text-gray-700 text-sm leading-6 lg:leading-6\"\n      [class.font-serif]=\"isSerif\"\n      [class.font-sans]=\"isSans\"\n      [class.font-mono]=\"isMono\"\n      [ngClass]=\"{\n        'sm:text-lg lg:text-sm xl:text-lg': !isMono,\n        'sm:leading-7 xl:leading-7': isMono\n      }\" \n    >{{text}}</p>\n  </div>\n</div>`\n})\nexport default class BrownFoxComponent {\n  /**\n   * What text should the paragraph display?\n   */\n  @Input()\n  text = 'The quick brown fox jumps over the lazy dog.';\n  \n  /**\n   * What font family should the text be?\n   */\n  @Input()\n  fontFamily: FontFamily = 'font-sans';\n\n  get isSans() {\n    return this.fontFamily === 'font-sans';\n  }\n\n  get isSerif() {\n    return this.fontFamily === 'font-serif';\n  }\n\n  get isMono() {\n    return this.fontFamily === 'font-mono';\n  }\n}",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "// Font Families\n.brown-fox--font-sans {\n\n}\n\n.brown-fox--font-serif {\n\n}\n\n.brown-fox--font-mono {\n\n}\n\n",
-                    "styleUrl": "./brown-fox.component.scss"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "accessors": {
                 "isSans": {
@@ -138,7 +131,7 @@
                         "name": "isSans",
                         "type": "",
                         "returnType": "",
-                        "line": 42
+                        "line": 38
                     }
                 },
                 "isSerif": {
@@ -147,7 +140,7 @@
                         "name": "isSerif",
                         "type": "",
                         "returnType": "",
-                        "line": 46
+                        "line": 42
                     }
                 },
                 "isMono": {
@@ -156,7 +149,7 @@
                         "name": "isMono",
                         "type": "",
                         "returnType": "",
-                        "line": 50
+                        "line": 46
                     }
                 }
             }
@@ -472,18 +465,59 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "WidthComponent",
+            "id": "component-WidthComponent-e95fefe8dc43f6b3b75f8f742299c67bec434e1b69f6339b221acbdebc34cb521e82857f1d50fe5c9c00844ba75c47eb40a9b9b560f28a4c3ab1f2ed8bbf388e",
+            "file": "src/app/shared/width.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "width",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"space-y-4\">  <div class=\"{{width}} bg-white shadow rounded\">\n    {{width}}\n  </div>\n</div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "width",
+                    "defaultValue": "'w-96'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 85,
+                    "type": "Widths",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { coerceNumberProperty } from '@angular/cdk/coercion';\nimport { Component, Input } from '@angular/core';\n\n// All available width classes\ntype Widths =\n  | 'w-0'\n  | 'w-px'\n  | 'w-0.5'\n  | 'w-1'\n  | 'w-1.5'\n  | 'w-2'\n  | 'w-2.5'\n  | 'w-3'\n  | 'w-3.5'\n  | 'w-4'\n  | 'w-5'\n  | 'w-6'\n  | 'w-7'\n  | 'w-8'\n  | 'w-9'\n  | 'w-10'\n  | 'w-11'\n  | 'w-12'\n  | 'w-14'\n  | 'w-16'\n  | 'w-18'\n  | 'w-20'\n  | 'w-24'\n  | 'w-28'\n  | 'w-32'\n  | 'w-36'\n  | 'w-40'\n  | 'w-44'\n  | 'w-48'\n  | 'w-52'\n  | 'w-56'\n  | 'w-60'\n  | 'w-64'\n  | 'w-72'\n  | 'w-80'\n  | 'w-96'\n  | 'w-auto'\n  | 'w-1/2'\n  | 'w-1/3'\n  | 'w-2/3'\n  | 'w-1/4'\n  | 'w-2/4'\n  | 'w-3/4'\n  | 'w-1/5'\n  | 'w-2/5'\n  | 'w-3/5'\n  | 'w-4/5'\n  | 'w-1/6'\n  | 'w-2/6'\n  | 'w-3/6'\n  | 'w-4/6'\n  | 'w-5/6'\n  | 'w-1/12'\n  | 'w-2/12'\n  | 'w-3/12'\n  | 'w-4/12'\n  | 'w-5/12'\n  | 'w-6/12'\n  | 'w-7/12'\n  | 'w-8/12'\n  | 'w-9/12'\n  | 'w-10/12'\n  | 'w-11/12'\n  | 'w-full'\n  | 'w-screen'\n  | 'w-min'\n  | 'w-max'\n  | 'w-fit';\n  \n@Component({\n  selector: 'width',\n  template: `<div class=\"space-y-4\">\n  <div class=\"{{width}} bg-white shadow rounded\">\n    {{width}}\n  </div>\n</div>`\n})\nexport default class WidthComponent {\n  @Input()\n  width: Widths = 'w-96';\n}\n\nfunction clamp(v: number, min = 0, max = 100) {\n  return Math.max(min, Math.min(max, v));\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-3a8a556831842beb207088c8d014d536ad9ed79a799dfe49dd53eac5970a36f4f10bdf836da42a7d9d90508bff9f4a9bcd902ade6bbd8a4714c5e90517a3ecaa",
+            "id": "module-AppModule-918b5998025a67be7f519429a9c3efe64dab2c12def88c4f65c268de615a7376be6be0005480e1fddd1030894861d39db3f83eef71c66be3e22661d4754f1db2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -506,6 +540,9 @@
                         },
                         {
                             "name": "Page"
+                        },
+                        {
+                            "name": "Width"
                         }
                     ]
                 },
@@ -762,9 +799,92 @@
                 "deprecationMessage": "",
                 "type": "Story<Page>",
                 "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Width.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Width>",
+                "defaultValue": "(args: Width) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "w96",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Width.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             }
         ],
-        "functions": [],
+        "functions": [
+            {
+                "name": "clamp",
+                "file": "src/app/shared/width.component.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "v",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "min",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    },
+                    {
+                        "name": "max",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "100"
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "v",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "min",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "max",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "100",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
         "typealiases": [
             {
                 "name": "ButtonSize",
@@ -783,6 +903,17 @@
                 "subtype": "typealias",
                 "rawtype": "\"font-sans\" | \"font-serif\" | \"font-mono\"",
                 "file": "src/app/shared/brown-fox.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
+                "name": "Widths",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"w-0\" | \"w-px\" | \"w-0.5\" | \"w-1\" | \"w-1.5\" | \"w-2\" | \"w-2.5\" | \"w-3\" | \"w-3.5\" | \"w-4\" | \"w-5\" | \"w-6\" | \"w-7\" | \"w-8\" | \"w-9\" | \"w-10\" | \"w-11\" | \"w-12\" | \"w-14\" | \"w-16\" | \"w-18\" | \"w-20\" | \"w-24\" | \"w-28\" | \"w-32\" | \"w-36\" | \"w-40\" | \"w-44\" | \"w-48\" | \"w-52\" | \"w-56\" | \"w-60\" | \"w-64\" | \"w-72\" | \"w-80\" | \"w-96\" | \"w-auto\" | \"w-1/2\" | \"w-1/3\" | \"w-2/3\" | \"w-1/4\" | \"w-2/4\" | \"w-3/4\" | \"w-1/5\" | \"w-2/5\" | \"w-3/5\" | \"w-4/5\" | \"w-1/6\" | \"w-2/6\" | \"w-3/6\" | \"w-4/6\" | \"w-5/6\" | \"w-1/12\" | \"w-2/12\" | \"w-3/12\" | \"w-4/12\" | \"w-5/12\" | \"w-6/12\" | \"w-7/12\" | \"w-8/12\" | \"w-9/12\" | \"w-10/12\" | \"w-11/12\" | \"w-full\" | \"w-screen\" | \"w-min\" | \"w-max\" | \"w-fit\"",
+                "file": "src/app/shared/width.component.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -993,9 +1124,96 @@
                     "type": "Story<BrownFox>",
                     "defaultValue": "(args: BrownFox) => ({\n  props: args,\n})"
                 }
+            ],
+            "src/stories/Width.stories.ts": [
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Width.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Width>",
+                    "defaultValue": "(args: Width) => ({\n  props: args,\n})"
+                },
+                {
+                    "name": "w96",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Width.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                }
             ]
         },
-        "groupedFunctions": {},
+        "groupedFunctions": {
+            "src/app/shared/width.component.ts": [
+                {
+                    "name": "clamp",
+                    "file": "src/app/shared/width.component.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "v",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "min",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        },
+                        {
+                            "name": "max",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "100"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "v",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "min",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "max",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "100",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
         "groupedEnumerations": {},
         "groupedTypeAliases": {
             "src/app/shared/button.component.ts": [
@@ -1023,6 +1241,19 @@
                     "description": "",
                     "kind": 186
                 }
+            ],
+            "src/app/shared/width.component.ts": [
+                {
+                    "name": "Widths",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"w-0\" | \"w-px\" | \"w-0.5\" | \"w-1\" | \"w-1.5\" | \"w-2\" | \"w-2.5\" | \"w-3\" | \"w-3.5\" | \"w-4\" | \"w-5\" | \"w-6\" | \"w-7\" | \"w-8\" | \"w-9\" | \"w-10\" | \"w-11\" | \"w-12\" | \"w-14\" | \"w-16\" | \"w-18\" | \"w-20\" | \"w-24\" | \"w-28\" | \"w-32\" | \"w-36\" | \"w-40\" | \"w-44\" | \"w-48\" | \"w-52\" | \"w-56\" | \"w-60\" | \"w-64\" | \"w-72\" | \"w-80\" | \"w-96\" | \"w-auto\" | \"w-1/2\" | \"w-1/3\" | \"w-2/3\" | \"w-1/4\" | \"w-2/4\" | \"w-3/4\" | \"w-1/5\" | \"w-2/5\" | \"w-3/5\" | \"w-4/5\" | \"w-1/6\" | \"w-2/6\" | \"w-3/6\" | \"w-4/6\" | \"w-5/6\" | \"w-1/12\" | \"w-2/12\" | \"w-3/12\" | \"w-4/12\" | \"w-5/12\" | \"w-6/12\" | \"w-7/12\" | \"w-8/12\" | \"w-9/12\" | \"w-10/12\" | \"w-11/12\" | \"w-full\" | \"w-screen\" | \"w-min\" | \"w-max\" | \"w-fit\"",
+                    "file": "src/app/shared/width.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                }
             ]
         }
     },
@@ -1041,7 +1272,7 @@
         ]
     },
     "coverage": {
-        "count": 5,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -1096,6 +1327,25 @@
                 "name": "PageComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/width.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "WidthComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/width.component.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "clamp",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -1264,6 +1514,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Width.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Width.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "w96",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

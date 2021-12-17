@@ -9,6 +9,7 @@ import BrownFox from './shared/brown-fox.component';
 import Button from './shared/button.component';
 import Header from './shared/header.component';
 import Page from './shared/page.component';
+import Width from './shared/width.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import Page from './shared/page.component';
     BrownFox,
     Button,
     Header,
-    Page
+    Page,
+    Width
   ],
   imports: [
     BrowserModule,
