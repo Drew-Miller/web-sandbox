@@ -69,7 +69,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"space-y-4\">\n    <div class=\"w-96 bg-white shadow rounded\">w-96</div>\n    <div class=\"w-80 bg-white shadow rounded\">w-80</div>\n    <div class=\"w-72 bg-white shadow rounded\">w-72</div>\n    <div class=\"w-64 bg-white shadow rounded\">w-64</div>\n    <div class=\"w-60 bg-white shadow rounded\">w-60</div>\n    <div class=\"w-56 bg-white shadow rounded\">w-56</div>\n    <div class=\"w-52 bg-white shadow rounded\">w-52</div>\n    <div class=\"w-48 bg-white shadow rounded\">w-48</div>\n</div>\n\n<router-outlet></router-outlet>\n"
+            "templateData": "\n<router-outlet></router-outlet>\n"
         },
         {
             "name": "BrownFoxComponent",
@@ -394,6 +394,167 @@
             "stylesData": ""
         },
         {
+            "name": "NameComponent",
+            "id": "component-NameComponent-4149202e6e6fd2afcc6a2624866adbf64e8d96f989c2fcbdc09a8d063c1042e39496a2d9798e7386648eb5ba1fe76c2915526f1ca5f72b700c57a928164757fe",
+            "file": "src/app/shopping/simple.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "simple",
+            "styleUrls": [
+                "./simple.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./simple.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "img",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "inStock",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "'Classic Utillity Jacket'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "price",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "number | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "selectedSize",
+                    "defaultValue": "'XS'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "Size",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "addToBag",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 45,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "buyNow",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 42,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "favorite",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 39,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "_img",
+                    "defaultValue": "'/assets/simple-jacket.jpg'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 27,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\ntype Size =\n  | 'XS'\n  | 'S'\n  | 'M'\n  | 'L'\n  | 'XL';\n\n@Component({\n  selector: 'simple',\n  templateUrl: './simple.component.html',\n  styleUrls: ['./simple.component.scss']\n})\nexport default class NameComponent {\n  @Input()\n  name: string = 'Classic Utillity Jacket';\n\n  // TODO validate image path\n  @Input()\n  get img() {\n    return this._img;\n  }\n  set img(value: string) {\n    this._img = value;\n  }\n  private _img: string = '/assets/simple-jacket.jpg';\n\n  @Input()\n  price: number | undefined;\n\n  @Input()\n  inStock: boolean = true;\n\n  @Input()\n  selectedSize: Size = 'XS';\n\n  @Output()\n  favorite = new EventEmitter<Event>();\n  \n  @Output()\n  buyNow = new EventEmitter<Event>();\n\n  @Output()\n  addToBag = new EventEmitter<Event>();\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./simple.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "img": {
+                    "name": "img",
+                    "setSignature": {
+                        "name": "img",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 24,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "img",
+                        "type": "",
+                        "returnType": "",
+                        "line": 21
+                    }
+                }
+            },
+            "templateData": "<div\n  class=\"bg-white flex w-full\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 1.92308% / 3.93443%\"\n>\n  <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n    <div\n      class=\"relative z-20 overflow-hidden flex-none\"\n      style=\"width: 192px; height: 305px; border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%; transform-origin: 50% 50% 0px;\"\n    >\n      <img\n        src=\"{{ img }}\"\n        alt=\"\"\n        class=\"absolute max-w-none\"\n        style=\"width: 229px; height: 305px; left: -18px; top: 0px; opacity: 1; z-index: 2; transform-origin: 50% 50% 0px;\"\n      />\n    </div>\n    <div\n      class=\"absolute z-10 bg-teal-400 inset-px\"\n      style=\"border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%; transform-origin: 50% 50% 0px;\"\n    ></div>\n  </div>\n  <div class=\"self-start flex-auto flex flex-wrap items-baseline p-6\">\n    <div class=\"w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6\">\n        <div\n            class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n        ></div>\n        <div class=\"relative flex-auto\">\n            <h2\n                class=\"inline-flex text-gray-900 text-lg font-semibold\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >\n                <span class=\"hidden sm:inline whitespace-pre\">{{ name }}</span>\n            </h2>\n        </div>\n        <div class=\"relative\">\n            <div\n                class=\"inline-flex text-lg font-semibold\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >{{ price | currency }}</div>\n        </div>\n        <div class=\"relative whitespace-nowrap flex-none w-full mt-2\">\n            <div *ngIf=\"inStock\"\n                class=\"inline-flex text-sm font-medium text-gray-700\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >In stock</div>\n        </div>\n    </div>\n    <div class=\"w-full flex-none flex items-center\">\n      <ul class=\"flex text-sm space-x-3\">\n        <li\n            class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n            style=\"width: 38px; height: 38px; color: rgb(255, 255, 255); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute bg-teal-400 inset-px\"\n                style=\"transform-origin: 50% 50% 0px; border-radius: 22.2222%\"\n            ></div>\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(17, 24, 39); background-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center font-semibold\"\n                style=\"opacity: 1\"\n            >XS</span>\n        </li>\n        <li\n          class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n          style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center undefined\"\n                style=\"opacity: 1\"\n            >S</span>\n        </li>\n        <li\n          class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n          style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center undefined\"\n                style=\"opacity: 1\"\n            >M</span>\n        </li>\n        <li\n          class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n          style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center undefined\"\n                style=\"opacity: 1\"\n            >L</span>\n        </li>\n        <li\n          class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n          style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center undefined\"\n                style=\"opacity: 1\"\n            >XL</span>\n        </li>\n      </ul>\n    </div>\n    <div\n      class=\"w-full h-px bg-gray-200 my-6\"\n      style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n    ></div>\n    <div\n      class=\"flex-none w-full grid gap-4 text-center\"\n      style=\"grid-template-columns: auto auto 1fr\"\n    >\n      <div class=\"relative\">\n        <div\n          class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n          style=\"height: 42px; background-color: rgb(17, 24, 39); border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 7.55943% / 19.0476%;\"\n        >\n            <span\n                class=\"flex items-center justify-center text-white font-semibold\"\n                style=\"opacity: 1\"\n            >\n                <span style=\"transform-origin: 50% 50% 0px\">Buy now</span>\n            </span>\n        </div>\n      </div>\n      <div class=\"relative\">\n        <div\n          class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n          style=\"height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 6.52229% / 19.0476%;\"\n        >\n            <span\n                class=\"w-full flex-none flex items-center justify-center text-gray-900 font-semibold\"\n                style=\"opacity: 1\"\n            >\n                <span style=\"transform-origin: 50% 50% 0px\">Add to bag</span>\n            </span>\n        </div>\n      </div>\n      <div class=\"flex justify-end\">\n        <button mat-icon-button\n          class=\"flex items-center border cursor-pointer justify-center\"\n          style=\"width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;\"\n        >\n          <mat-icon>heart</mat-icon>\n        </button>\n        <div\n          class=\"flex items-center border cursor-pointer justify-center\"\n          style=\"width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;\"\n        >\n          <img src=\"/assets/heart.svg\" />\n        </div>\n      </div>\n    </div>\n    <div class=\"relative w-full mt-6 mb-1\">      \n      <p\n        class=\"inline-flex align-top text-xs leading-6 absolute bottom-0 left-0\"\n        style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n      >\n        <span>Free shipping on all<span class=\"hidden sm:inline\"> continental US</span> orders.</span>\n      </p>\n    </div>\n  </div>\n</div>\n"
+        },
+        {
             "name": "PageComponent",
             "id": "component-PageComponent-01d36143b5b8d570de9e74ba1ed402756ecd8a9fb646a739b6c16bc867b7585163ab67afd07fe85187a053c087f65a1691af6e61435f5751c4db3a07fce7775b",
             "file": "src/app/shared/page.component.ts",
@@ -468,7 +629,7 @@
         },
         {
             "name": "WidthComponent",
-            "id": "component-WidthComponent-e95fefe8dc43f6b3b75f8f742299c67bec434e1b69f6339b221acbdebc34cb521e82857f1d50fe5c9c00844ba75c47eb40a9b9b560f28a4c3ab1f2ed8bbf388e",
+            "id": "component-WidthComponent-49d2fe82356607dd3f61ba9b8ae4dbd4deffc44e7d41cab4a889a3ea5e40a412cb6de31e18786c34befab65cb8ede3579f0eb5bd7f05cbcd3307b5a10e102094",
             "file": "src/app/shared/width.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -478,7 +639,7 @@
             "selector": "width",
             "styleUrls": [],
             "styles": [],
-            "template": "<div class=\"space-y-4\">  <div class=\"{{width}} bg-white shadow rounded\">\n    {{width}}\n  </div>\n</div>",
+            "template": "<div class=\"space-y-4\">  <div class=\"{{width}} h-6 origin-left bg-white border-gray-500 ring-1 ring-gray-700/5 px-1 flex items-center shadow-xl\" style=\"border-radius: 4px; transform: none;\">\n    <span class=\"flex-auto text-center text-gray-500 text-xs\">{{width}}</span>\n  </div>\n</div>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -502,7 +663,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { coerceNumberProperty } from '@angular/cdk/coercion';\nimport { Component, Input } from '@angular/core';\n\n// All available width classes\ntype Widths =\n  | 'w-0'\n  | 'w-px'\n  | 'w-0.5'\n  | 'w-1'\n  | 'w-1.5'\n  | 'w-2'\n  | 'w-2.5'\n  | 'w-3'\n  | 'w-3.5'\n  | 'w-4'\n  | 'w-5'\n  | 'w-6'\n  | 'w-7'\n  | 'w-8'\n  | 'w-9'\n  | 'w-10'\n  | 'w-11'\n  | 'w-12'\n  | 'w-14'\n  | 'w-16'\n  | 'w-18'\n  | 'w-20'\n  | 'w-24'\n  | 'w-28'\n  | 'w-32'\n  | 'w-36'\n  | 'w-40'\n  | 'w-44'\n  | 'w-48'\n  | 'w-52'\n  | 'w-56'\n  | 'w-60'\n  | 'w-64'\n  | 'w-72'\n  | 'w-80'\n  | 'w-96'\n  | 'w-auto'\n  | 'w-1/2'\n  | 'w-1/3'\n  | 'w-2/3'\n  | 'w-1/4'\n  | 'w-2/4'\n  | 'w-3/4'\n  | 'w-1/5'\n  | 'w-2/5'\n  | 'w-3/5'\n  | 'w-4/5'\n  | 'w-1/6'\n  | 'w-2/6'\n  | 'w-3/6'\n  | 'w-4/6'\n  | 'w-5/6'\n  | 'w-1/12'\n  | 'w-2/12'\n  | 'w-3/12'\n  | 'w-4/12'\n  | 'w-5/12'\n  | 'w-6/12'\n  | 'w-7/12'\n  | 'w-8/12'\n  | 'w-9/12'\n  | 'w-10/12'\n  | 'w-11/12'\n  | 'w-full'\n  | 'w-screen'\n  | 'w-min'\n  | 'w-max'\n  | 'w-fit';\n  \n@Component({\n  selector: 'width',\n  template: `<div class=\"space-y-4\">\n  <div class=\"{{width}} bg-white shadow rounded\">\n    {{width}}\n  </div>\n</div>`\n})\nexport default class WidthComponent {\n  @Input()\n  width: Widths = 'w-96';\n}\n\nfunction clamp(v: number, min = 0, max = 100) {\n  return Math.max(min, Math.min(max, v));\n}",
+            "sourceCode": "import { coerceNumberProperty } from '@angular/cdk/coercion';\nimport { Component, Input } from '@angular/core';\n\n// All available width classes\ntype Widths =\n  | 'w-0'\n  | 'w-px'\n  | 'w-0.5'\n  | 'w-1'\n  | 'w-1.5'\n  | 'w-2'\n  | 'w-2.5'\n  | 'w-3'\n  | 'w-3.5'\n  | 'w-4'\n  | 'w-5'\n  | 'w-6'\n  | 'w-7'\n  | 'w-8'\n  | 'w-9'\n  | 'w-10'\n  | 'w-11'\n  | 'w-12'\n  | 'w-14'\n  | 'w-16'\n  | 'w-18'\n  | 'w-20'\n  | 'w-24'\n  | 'w-28'\n  | 'w-32'\n  | 'w-36'\n  | 'w-40'\n  | 'w-44'\n  | 'w-48'\n  | 'w-52'\n  | 'w-56'\n  | 'w-60'\n  | 'w-64'\n  | 'w-72'\n  | 'w-80'\n  | 'w-96'\n  | 'w-auto'\n  | 'w-1/2'\n  | 'w-1/3'\n  | 'w-2/3'\n  | 'w-1/4'\n  | 'w-2/4'\n  | 'w-3/4'\n  | 'w-1/5'\n  | 'w-2/5'\n  | 'w-3/5'\n  | 'w-4/5'\n  | 'w-1/6'\n  | 'w-2/6'\n  | 'w-3/6'\n  | 'w-4/6'\n  | 'w-5/6'\n  | 'w-1/12'\n  | 'w-2/12'\n  | 'w-3/12'\n  | 'w-4/12'\n  | 'w-5/12'\n  | 'w-6/12'\n  | 'w-7/12'\n  | 'w-8/12'\n  | 'w-9/12'\n  | 'w-10/12'\n  | 'w-11/12'\n  | 'w-full'\n  | 'w-screen'\n  | 'w-min'\n  | 'w-max'\n  | 'w-fit';\n  \n@Component({\n  selector: 'width',\n  template: `<div class=\"space-y-4\">\n  <div class=\"{{width}} h-6 origin-left bg-white border-gray-500 ring-1 ring-gray-700/5 px-1 flex items-center shadow-xl\" style=\"border-radius: 4px; transform: none;\">\n    <span class=\"flex-auto text-center text-gray-500 text-xs\">{{width}}</span>\n  </div>\n</div>`\n})\nexport default class WidthComponent {\n  @Input()\n  width: Widths = 'w-96';\n}\n\nfunction clamp(v: number, min = 0, max = 100) {\n  return Math.max(min, Math.min(max, v));\n}",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -511,13 +672,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-918b5998025a67be7f519429a9c3efe64dab2c12def88c4f65c268de615a7376be6be0005480e1fddd1030894861d39db3f83eef71c66be3e22661d4754f1db2",
+            "id": "module-AppModule-dcf4ad68894850fc375e42601b2ccac551f1b4987e53e2cd890fc0dc9b2fdeec0341c4187c683e96fd98aa893690b0b72eaca0ddb9f65ce003e420ace5007169",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule,\n    MatButtonModule,\n    MatIconModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -712,6 +873,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Simple.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -799,6 +970,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Page>",
                 "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Simple.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Simple>",
+                "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -903,6 +1084,17 @@
                 "subtype": "typealias",
                 "rawtype": "\"font-sans\" | \"font-serif\" | \"font-mono\"",
                 "file": "src/app/shared/brown-fox.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
+                "name": "Size",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"XS\" | \"S\" | \"M\" | \"L\" | \"XL\"",
+                "file": "src/app/shopping/simple.component.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1125,6 +1317,28 @@
                     "defaultValue": "(args: BrownFox) => ({\n  props: args,\n})"
                 }
             ],
+            "src/stories/Simple.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Simple.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Simple.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Simple>",
+                    "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/Width.stories.ts": [
                 {
                     "name": "Template",
@@ -1242,6 +1456,19 @@
                     "kind": 186
                 }
             ],
+            "src/app/shopping/simple.component.ts": [
+                {
+                    "name": "Size",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"XS\" | \"S\" | \"M\" | \"L\" | \"XL\"",
+                    "file": "src/app/shopping/simple.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                }
+            ],
             "src/app/shared/width.component.ts": [
                 {
                     "name": "Widths",
@@ -1346,6 +1573,15 @@
                 "name": "clamp",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/simple.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NameComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
                 "status": "low"
             },
             {
@@ -1510,6 +1746,26 @@
             },
             {
                 "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Simple.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Simple.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
