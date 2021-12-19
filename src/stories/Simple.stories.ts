@@ -4,8 +4,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import Simple from 'src/app/shopping/simple.component';
-import SizeSelector from 'src/app/shopping/size-selector/size-selector.component';
+
+import Simple from 'src/app/simple/simple.component';
+import SizeSelector from 'src/app/simple/size-selector/size-selector.component';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {

@@ -1,0 +1,27 @@
+<ul class="flex text-sm space-x-3">
+    <li *ngFor="let size of sizes"
+        class="relative flex-none flex items-center justify-center cursor-pointer"
+        style="width: 38px; height: 38px; transform-origin: 50% 50% 0px;"
+        [ngStyle]="{
+            'color': size === selectedSize ? 'rgb(255, 255, 255)' :  'color: rgb(255, 255, 255)'
+        }"
+    >
+        <div
+            class="absolute inset-0 border-2"
+            style="border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 21.0526%;"
+            [ngStyle]="{
+                'background-color': size === selectedSize ? 'rgb(17, 24, 39)' : 'inherit',
+                'border-color': size === selectedSize ? 'border-color: rgb(17, 24, 39)' : 'rgb(255, 255, 255)'
+            }"
+        ></div>
+        <button
+            mat-icon-button
+            (click)="selectedSize = size"
+        >
+            <span
+                class="absolute inset-0 flex items-center justify-center font-semibold"
+                style="opacity: 1"
+            >{{size}}</span>
+        </button>
+    </li>
+</ul>

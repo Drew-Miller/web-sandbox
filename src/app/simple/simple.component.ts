@@ -1,11 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-type Size =
-  | 'XS'
-  | 'S'
-  | 'M'
-  | 'L'
-  | 'XL';
+export const sizes = ['XS', 'S', 'M', 'L', 'XL'];
+export type Size = typeof sizes[number];
 
 @Component({
   selector: 'simple',
@@ -13,6 +9,8 @@ type Size =
   styleUrls: ['./simple.component.scss']
 })
 export default class NameComponent {
+  sizes = sizes;
+  
   @Input()
   name: string = 'Classic Utillity Jacket';
 

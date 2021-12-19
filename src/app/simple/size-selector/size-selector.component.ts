@@ -1,12 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'size-selector',
-  templateUrl: 'size-selector.component.html',
-  styles: [],
-  host: {
-    class: 'flex text-sm space-x-3'
-  }
+  templateUrl: 'size-selector.component.html'
 })
 export default class SizeSelectorComponent {
   @Input()
@@ -19,9 +15,14 @@ export default class SizeSelectorComponent {
     } else {
       this._selectedSize = this.sizes[0];
     }
+
+    this.selectedSizeChange.emit(this._selectedSize);
   }
   get selectedSize() {
     return this._selectedSize;
   }
   private _selectedSize: string = '';
+
+  @Output()
+  selectedSizeChange = new EventEmitter<string>();
 }
