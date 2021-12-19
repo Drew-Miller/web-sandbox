@@ -5,8 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import Simple from 'src/app/simple/simple.component';
-import SizeSelector from 'src/app/simple/size-selector/size-selector.component';
+import Simple from 'src/app/shopping/simple/simple.component';
+import SizeSelector from 'src/app/shopping/simple/size-selector/size-selector.component';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -26,8 +26,3 @@ const Template: Story<Simple> = (args: Simple) => ({
 });
 
 export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/angular/writing-stories/args
-// Primary.args = {
-//   primary: true,
-//   label: 'Button',
-// };
