@@ -395,7 +395,7 @@
         },
         {
             "name": "NameComponent",
-            "id": "component-NameComponent-4149202e6e6fd2afcc6a2624866adbf64e8d96f989c2fcbdc09a8d063c1042e39496a2d9798e7386648eb5ba1fe76c2915526f1ca5f72b700c57a928164757fe",
+            "id": "component-NameComponent-2ba0dccb57cf93d9ebac2bf1f742c12557f6ea9406bd8383436115fe6ddc5f152cccf5bd77868bb8bab7775de87b6481a04425521790e89a463c07d47a76b6b6",
             "file": "src/app/shopping/simple.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -413,7 +413,8 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "img",
+                    "name": "image",
+                    "defaultValue": "'/assets/simple-jacket.jpg'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 21,
@@ -425,7 +426,7 @@
                     "defaultValue": "true",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 33,
+                    "line": 27,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -440,9 +441,10 @@
                 },
                 {
                     "name": "price",
+                    "defaultValue": "110",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 30,
+                    "line": 24,
                     "type": "number | undefined",
                     "decorators": []
                 },
@@ -451,7 +453,7 @@
                     "defaultValue": "'XS'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 36,
+                    "line": 30,
                     "type": "Size",
                     "decorators": []
                 }
@@ -462,7 +464,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 45,
+                    "line": 39,
                     "type": "EventEmitter"
                 },
                 {
@@ -470,7 +472,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 42,
+                    "line": 36,
                     "type": "EventEmitter"
                 },
                 {
@@ -478,25 +480,11 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 39,
+                    "line": 33,
                     "type": "EventEmitter"
                 }
             ],
-            "propertiesClass": [
-                {
-                    "name": "_img",
-                    "defaultValue": "'/assets/simple-jacket.jpg'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 27,
-                    "modifierKind": [
-                        121
-                    ]
-                }
-            ],
+            "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -505,7 +493,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\ntype Size =\n  | 'XS'\n  | 'S'\n  | 'M'\n  | 'L'\n  | 'XL';\n\n@Component({\n  selector: 'simple',\n  templateUrl: './simple.component.html',\n  styleUrls: ['./simple.component.scss']\n})\nexport default class NameComponent {\n  @Input()\n  name: string = 'Classic Utillity Jacket';\n\n  // TODO validate image path\n  @Input()\n  get img() {\n    return this._img;\n  }\n  set img(value: string) {\n    this._img = value;\n  }\n  private _img: string = '/assets/simple-jacket.jpg';\n\n  @Input()\n  price: number | undefined;\n\n  @Input()\n  inStock: boolean = true;\n\n  @Input()\n  selectedSize: Size = 'XS';\n\n  @Output()\n  favorite = new EventEmitter<Event>();\n  \n  @Output()\n  buyNow = new EventEmitter<Event>();\n\n  @Output()\n  addToBag = new EventEmitter<Event>();\n}",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\ntype Size =\n  | 'XS'\n  | 'S'\n  | 'M'\n  | 'L'\n  | 'XL';\n\n@Component({\n  selector: 'simple',\n  templateUrl: './simple.component.html',\n  styleUrls: ['./simple.component.scss']\n})\nexport default class NameComponent {\n  @Input()\n  name: string = 'Classic Utillity Jacket';\n\n  // TODO validate image path\n  @Input()\n  image: string = '/assets/simple-jacket.jpg';\n\n  @Input()\n  price: number | undefined = 110;\n\n  @Input()\n  inStock: boolean = true;\n\n  @Input()\n  selectedSize: Size = 'XS';\n\n  @Output()\n  favorite = new EventEmitter<Event>();\n  \n  @Output()\n  buyNow = new EventEmitter<Event>();\n\n  @Output()\n  addToBag = new EventEmitter<Event>();\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -514,45 +502,7 @@
                 }
             ],
             "stylesData": "",
-            "accessors": {
-                "img": {
-                    "name": "img",
-                    "setSignature": {
-                        "name": "img",
-                        "type": "void",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "args": [
-                            {
-                                "name": "value",
-                                "type": "string",
-                                "deprecated": false,
-                                "deprecationMessage": ""
-                            }
-                        ],
-                        "returnType": "void",
-                        "line": 24,
-                        "jsdoctags": [
-                            {
-                                "name": "value",
-                                "type": "string",
-                                "deprecated": false,
-                                "deprecationMessage": "",
-                                "tagName": {
-                                    "text": "param"
-                                }
-                            }
-                        ]
-                    },
-                    "getSignature": {
-                        "name": "img",
-                        "type": "",
-                        "returnType": "",
-                        "line": 21
-                    }
-                }
-            },
-            "templateData": "<div\n  class=\"bg-white flex w-full\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 1.92308% / 3.93443%\"\n>\n  <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n    <div\n      class=\"relative z-20 overflow-hidden flex-none\"\n      style=\"width: 192px; height: 305px; border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%; transform-origin: 50% 50% 0px;\"\n    >\n      <img\n        src=\"{{ img }}\"\n        alt=\"\"\n        class=\"absolute max-w-none\"\n        style=\"width: 229px; height: 305px; left: -18px; top: 0px; opacity: 1; z-index: 2; transform-origin: 50% 50% 0px;\"\n      />\n    </div>\n    <div\n      class=\"absolute z-10 bg-teal-400 inset-px\"\n      style=\"border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%; transform-origin: 50% 50% 0px;\"\n    ></div>\n  </div>\n  <div class=\"self-start flex-auto flex flex-wrap items-baseline p-6\">\n    <div class=\"w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6\">\n        <div\n            class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n        ></div>\n        <div class=\"relative flex-auto\">\n            <h2\n                class=\"inline-flex text-gray-900 text-lg font-semibold\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >\n                <span class=\"hidden sm:inline whitespace-pre\">{{ name }}</span>\n            </h2>\n        </div>\n        <div class=\"relative\">\n            <div\n                class=\"inline-flex text-lg font-semibold\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >{{ price | currency }}</div>\n        </div>\n        <div class=\"relative whitespace-nowrap flex-none w-full mt-2\">\n            <div *ngIf=\"inStock\"\n                class=\"inline-flex text-sm font-medium text-gray-700\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >In stock</div>\n        </div>\n    </div>\n    <div class=\"w-full flex-none flex items-center\">\n      <ul class=\"flex text-sm space-x-3\">\n        <li\n            class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n            style=\"width: 38px; height: 38px; color: rgb(255, 255, 255); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute bg-teal-400 inset-px\"\n                style=\"transform-origin: 50% 50% 0px; border-radius: 22.2222%\"\n            ></div>\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(17, 24, 39); background-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center font-semibold\"\n                style=\"opacity: 1\"\n            >XS</span>\n        </li>\n        <li\n          class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n          style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center undefined\"\n                style=\"opacity: 1\"\n            >S</span>\n        </li>\n        <li\n          class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n          style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center undefined\"\n                style=\"opacity: 1\"\n            >M</span>\n        </li>\n        <li\n          class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n          style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center undefined\"\n                style=\"opacity: 1\"\n            >L</span>\n        </li>\n        <li\n          class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n          style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n        >\n            <div\n                class=\"absolute inset-0 border-2\"\n                style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            ></div>\n            <span\n                class=\"absolute inset-0 flex items-center justify-center undefined\"\n                style=\"opacity: 1\"\n            >XL</span>\n        </li>\n      </ul>\n    </div>\n    <div\n      class=\"w-full h-px bg-gray-200 my-6\"\n      style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n    ></div>\n    <div\n      class=\"flex-none w-full grid gap-4 text-center\"\n      style=\"grid-template-columns: auto auto 1fr\"\n    >\n      <div class=\"relative\">\n        <div\n          class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n          style=\"height: 42px; background-color: rgb(17, 24, 39); border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 7.55943% / 19.0476%;\"\n        >\n            <span\n                class=\"flex items-center justify-center text-white font-semibold\"\n                style=\"opacity: 1\"\n            >\n                <span style=\"transform-origin: 50% 50% 0px\">Buy now</span>\n            </span>\n        </div>\n      </div>\n      <div class=\"relative\">\n        <div\n          class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n          style=\"height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 6.52229% / 19.0476%;\"\n        >\n            <span\n                class=\"w-full flex-none flex items-center justify-center text-gray-900 font-semibold\"\n                style=\"opacity: 1\"\n            >\n                <span style=\"transform-origin: 50% 50% 0px\">Add to bag</span>\n            </span>\n        </div>\n      </div>\n      <div class=\"flex justify-end\">\n        <button mat-icon-button\n          class=\"flex items-center border cursor-pointer justify-center\"\n          style=\"width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;\"\n        >\n          <mat-icon>heart</mat-icon>\n        </button>\n        <div\n          class=\"flex items-center border cursor-pointer justify-center\"\n          style=\"width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;\"\n        >\n          <img src=\"/assets/heart.svg\" />\n        </div>\n      </div>\n    </div>\n    <div class=\"relative w-full mt-6 mb-1\">      \n      <p\n        class=\"inline-flex align-top text-xs leading-6 absolute bottom-0 left-0\"\n        style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n      >\n        <span>Free shipping on all<span class=\"hidden sm:inline\"> continental US</span> orders.</span>\n      </p>\n    </div>\n  </div>\n</div>\n"
+            "templateData": "<div\n  class=\"bg-white flex w-full\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 1.92308% / 3.93443%\"\n>\n  <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n    <div\n      class=\"relative z-20 overflow-hidden flex-none\"\n      style=\"width: 192px; height: 305px; border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%; transform-origin: 50% 50% 0px;\"\n    >\n      <img\n        src=\"{{ image }}\"\n        alt=\"product image\"\n        class=\"absolute max-w-none\"\n        style=\"width: 229px; height: 305px; left: -18px; top: 0px; opacity: 1; z-index: 2; transform-origin: 50% 50% 0px;\"\n      />\n    </div>\n    <div\n      class=\"absolute z-10 bg-teal-400 inset-px\"\n      style=\"border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%; transform-origin: 50% 50% 0px;\"\n    ></div>\n  </div>\n  <div class=\"self-start flex-auto flex flex-wrap items-baseline p-6\">\n    <div class=\"w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6\">\n        <div\n            class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n        ></div>\n        <div class=\"relative flex-auto\">\n            <h2\n                class=\"inline-flex text-gray-900 text-lg font-semibold\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >\n                <span class=\"hidden sm:inline whitespace-pre\">{{ name }}</span>\n            </h2>\n        </div>\n        <div class=\"relative\">\n            <div\n                class=\"inline-flex text-lg font-semibold\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >{{ price | currency }}</div>\n        </div>\n        <div class=\"relative whitespace-nowrap flex-none w-full mt-2\">\n            <div *ngIf=\"inStock\"\n                class=\"inline-flex text-sm font-medium text-gray-700\"\n                style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n            >In stock</div>\n        </div>\n    </div>\n    <div class=\"w-full flex-none flex items-center\">\n      <size-selector></size-selector>\n    </div>\n    <div\n      class=\"w-full h-px bg-gray-200 my-6\"\n      style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n    ></div>\n    <div\n      class=\"flex-none w-full grid gap-4 text-center\"\n      style=\"grid-template-columns: auto auto 1fr\"\n    >\n      <div class=\"relative\">\n        <button\n          mat-flat-button\n          matRipple\n          class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n          style=\"height: 42px; background-color: rgb(17, 24, 39); border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 7.55943% / 19.0476%;\"\n        >\n            <span\n                class=\"flex items-center justify-center text-white font-semibold\"\n                style=\"opacity: 1\"\n            >\n                <span style=\"transform-origin: 50% 50% 0px; width: 80px;\">Buy now</span>\n            </span>\n        </button>\n      </div>\n\n      <div class=\"relative\">\n        <button\n          mat-stroked-button\n          class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n          style=\"height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 6.52229% / 19.0476%;\"\n        >\n            <span\n                class=\"w-full flex-none flex items-center justify-center text-gray-900 font-semibold\"\n                style=\"opacity: 1\"\n            >\n                <span style=\"transform-origin: 50% 50% 0px; width: 80px;\">Add to bag</span>\n            </span>\n        </button>\n      </div>\n      <div class=\"flex justify-end\">\n        <button\n          mat-icon-button\n          mat-stroked-button\n          class=\"flex items-center border cursor-pointer justify-center\"\n          style=\"width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;\"\n        >\n          <img class=\"m-auto\" src=\"/assets/heart.svg\" />\n        </button>\n      </div>\n    </div>\n    <div class=\"relative w-full mt-6 mb-1\">      \n      <p\n        class=\"inline-flex align-top text-xs leading-6 absolute bottom-0 left-0\"\n        style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n      >\n        <span>Free shipping on all<span class=\"hidden sm:inline\"> continental US</span> orders.</span>\n      </p>\n    </div>\n  </div>\n</div>\n"
         },
         {
             "name": "PageComponent",
@@ -628,6 +578,110 @@
             "stylesData": ""
         },
         {
+            "name": "SizeSelectorComponent",
+            "id": "component-SizeSelectorComponent-26d8e3c1a873f590fd0832423422a30ddf79397628d082914ecef343afc52e015222d9d669682f46b3dffa06687588068c2a0be2ae7f7c4c1ab66e256ff9b7b6",
+            "file": "src/app/shopping/size-selector/size-selector.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "size-selector",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "size-selector.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "selectedSize",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "sizes",
+                    "defaultValue": "['N/A']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "_selectedSize",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 26,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'size-selector',\n  templateUrl: 'size-selector.component.html',\n  styles: [],\n  host: {\n    class: 'flex text-sm space-x-3'\n  }\n})\nexport default class SizeSelectorComponent {\n  @Input()\n  sizes: string[] = ['N/A'];\n\n  @Input()\n  set selectedSize(value: string) {\n    if (this.sizes.indexOf(value) > -1) {\n      this._selectedSize = value;\n    } else {\n      this._selectedSize = this.sizes[0];\n    }\n  }\n  get selectedSize() {\n    return this._selectedSize;\n  }\n  private _selectedSize: string = '';\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "accessors": {
+                "selectedSize": {
+                    "name": "selectedSize",
+                    "setSignature": {
+                        "name": "selectedSize",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 16,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "selectedSize",
+                        "type": "",
+                        "returnType": "",
+                        "line": 23
+                    }
+                }
+            },
+            "templateData": "<li\n    class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n    style=\"width: 38px; height: 38px; color: rgb(255, 255, 255); transform-origin: 50% 50% 0px;\"\n>\n    <div\n        class=\"absolute bg-teal-400 inset-px\"\n        style=\"transform-origin: 50% 50% 0px; border-radius: 22.2222%\"\n    ></div>\n    <div\n        class=\"absolute inset-0 border-2\"\n        style=\"border-color: rgb(17, 24, 39); background-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n    ></div>\n    <button mat-icon-button>\n        <span\n        class=\"absolute inset-0 flex items-center justify-center font-semibold\"\n        style=\"opacity: 1\"\n        >XS</span>\n    </button>\n</li>\n<li\n    class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n    style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n>\n    <div\n        class=\"absolute inset-0 border-2\"\n        style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n    ></div>\n    <button mat-icon-button>\n        <span\n        class=\"absolute inset-0 flex items-center justify-center undefined\"\n        style=\"opacity: 1\"\n        >S</span>\n    </button>\n</li>\n<li\n    class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n    style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n>\n    <div\n        class=\"absolute inset-0 border-2\"\n        style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n    ></div>\n    <button mat-icon-button>\n        <span\n        class=\"absolute inset-0 flex items-center justify-center undefined\"\n        style=\"opacity: 1\"\n        >M</span>\n    </button>\n</li>\n<li\n    class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n    style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n>\n    <div\n        class=\"absolute inset-0 border-2\"\n        style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n    ></div>\n    <button mat-icon-button>\n        <span\n        class=\"absolute inset-0 flex items-center justify-center undefined\"\n        style=\"opacity: 1\"\n        >L</span>\n    </button>\n</li>\n<li\n    class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n    style=\"width: 38px; height: 38px; color: rgb(55, 65, 81); transform-origin: 50% 50% 0px;\"\n>\n    <div\n        class=\"absolute inset-0 border-2\"\n        style=\"border-color: rgb(255, 255, 255); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n    ></div>\n    <button mat-icon-button>\n        <span\n        class=\"absolute inset-0 flex items-center justify-center undefined\"\n        style=\"opacity: 1\"\n        >XL</span>\n    </button>\n</li>\n"
+        },
+        {
             "name": "WidthComponent",
             "id": "component-WidthComponent-49d2fe82356607dd3f61ba9b8ae4dbd4deffc44e7d41cab4a889a3ea5e40a412cb6de31e18786c34befab65cb8ede3579f0eb5bd7f05cbcd3307b5a10e102094",
             "file": "src/app/shared/width.component.ts",
@@ -672,13 +726,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-dcf4ad68894850fc375e42601b2ccac551f1b4987e53e2cd890fc0dc9b2fdeec0341c4187c683e96fd98aa893690b0b72eaca0ddb9f65ce003e420ace5007169",
+            "id": "module-AppModule-918b5998025a67be7f519429a9c3efe64dab2c12def88c4f65c268de615a7376be6be0005480e1fddd1030894861d39db3f83eef71c66be3e22661d4754f1db2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule,\n    MatButtonModule,\n    MatIconModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -750,6 +804,49 @@
                 {
                     "type": "declarations",
                     "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SimpleModule",
+            "id": "module-SimpleModule-b59b4b81dc2f9b2e0e57eb707f1ece01cee7bcab684b1330bd22d0ccca18998819b46dd75a0280999e8dc60152b7822af99f27a721433c0a19099e1c33a5bcd5",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/shopping/shopping.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport Simple from './simple.component';\nimport SizeSelector from './size-selector/size-selector.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    MatButtonModule,\n    MatIconModule\n  ],\n  exports: [],\n  declarations: [Simple, SizeSelector],\n  providers: [],\n})\nexport class SimpleModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "Simple"
+                        },
+                        {
+                            "name": "SizeSelector"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
@@ -1581,7 +1678,16 @@
                 "linktype": "component",
                 "name": "NameComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/10",
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/size-selector/size-selector.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SizeSelectorComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
