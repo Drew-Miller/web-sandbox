@@ -1,6 +1,6 @@
 <div
   class="relative shadow-xl flex leading-none"
-  style="transform-origin: 50% 50% 0px; border-radius: 2.02703% / 3.93443%;"
+  style="transform-origin: 50% 50% 0px; border-radius: 2.02703% / 3.93443%"
 >
   <div
     class="bg-white flex w-full"
@@ -9,53 +9,82 @@
     <div class="relative flex-none sm:self-start lg:self-auto xl:self-start">
       <div
         class="relative z-20 overflow-hidden flex-none"
-        style="width: 192px; height: 305px; border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%; transform-origin: 50% 50% 0px;"
+        style="
+          width: 192px;
+          height: 305px;
+          border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%;
+          transform-origin: 50% 50% 0px;
+        "
       >
         <img
           src="{{ product.image }}"
           alt="product image"
           class="absolute max-w-none"
-          style="width: 229px; height: 305px; left: -18px; top: 0px; opacity: 1; z-index: 2; transform-origin: 50% 50% 0px;"
+          style="
+            width: 229px;
+            height: 305px;
+            left: -18px;
+            top: 0px;
+            opacity: 1;
+            z-index: 2;
+            transform-origin: 50% 50% 0px;
+          "
         />
       </div>
       <div
         class="absolute z-10 bg-teal-400 inset-px"
-        style="border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%; transform-origin: 50% 50% 0px;"
+        style="
+          border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%;
+          transform-origin: 50% 50% 0px;
+        "
       ></div>
     </div>
     <div class="self-start flex-auto flex flex-wrap items-baseline p-6">
-      <div class="w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6">
+      <div
+        class="w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6"
+      >
+        <div
+          class="absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black"
+          style="opacity: 0; transform-origin: 50% 50% 0px"
+        ></div>
+        <div class="relative flex-auto">
+          <h2
+            class="inline-flex text-gray-900 text-lg font-semibold"
+            style="opacity: 1; transform-origin: 50% 50% 0px"
+          >
+            <span class="hidden sm:inline whitespace-pre">{{ product.name }}</span>
+          </h2>
+        </div>
+        <div class="relative">
           <div
-              class="absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black"
-              style="opacity: 0; transform-origin: 50% 50% 0px"
-          ></div>
-          <div class="relative flex-auto">
-              <h2
-                  class="inline-flex text-gray-900 text-lg font-semibold"
-                  style="opacity: 1; transform-origin: 50% 50% 0px"
-              >
-                  <span class="hidden sm:inline whitespace-pre">{{ product.name }}</span>
-              </h2>
+            class="inline-flex text-lg font-semibold"
+            style="opacity: 1; transform-origin: 50% 50% 0px"
+          >
+            {{ product.price | currency }}
           </div>
-          <div class="relative">
-              <div
-                  class="inline-flex text-lg font-semibold"
-                  style="opacity: 1; transform-origin: 50% 50% 0px"
-              >{{ product.price | currency }}</div>
+        </div>
+        <div class="relative whitespace-nowrap flex-none w-full mt-2">
+          <div
+            *ngIf="product.inStock"
+            class="inline-flex text-sm font-medium text-gray-700"
+            style="opacity: 1; transform-origin: 50% 50% 0px"
+          >
+            In stock
           </div>
-          <div class="relative whitespace-nowrap flex-none w-full mt-2">
-              <div *ngIf="inStock"
-                  class="inline-flex text-sm font-medium text-gray-700"
-                  style="opacity: 1; transform-origin: 50% 50% 0px"
-              >In stock</div>
-              <div *ngIf="!inStock"
-                  class="inline-flex text-sm font-medium text-gray-700"
-                  style="opacity: 1; transform-origin: 50% 50% 0px"
-              >Out of stock</div>
+          <div
+            *ngIf="!product.inStock"
+            class="inline-flex text-sm font-medium text-gray-700"
+            style="opacity: 1; transform-origin: 50% 50% 0px"
+          >
+            Out of stock
           </div>
+        </div>
       </div>
       <div class="w-full flex-none flex items-center">
-        <size-selector [sizes]="product.sizes" [(selectedSize)]="selectedSize"></size-selector>
+        <size-selector
+          [sizes]="product.sizes"
+          [(selectedSize)]="selectedSize"
+        ></size-selector>
       </div>
       <div
         class="w-full h-px bg-gray-200 my-6"
@@ -68,54 +97,88 @@
         <div class="relative">
           <button
             mat-flat-button
-            matRipple
-            class="relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6"
-            style="height: 42px; background-color: rgb(17, 24, 39); border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 7.55943% / 19.0476%;"
             (click)="buyNow.emit($event)"
+            class="relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6"
+            style="
+              height: 42px;
+              background-color: rgb(17, 24, 39);
+              border-color: rgb(17, 24, 39);
+              transform-origin: 50% 50% 0px;
+              border-radius: 7.55943% / 19.0476%;
+            "
           >
-              <span
-                  class="flex items-center justify-center text-white font-semibold"
-                  style="opacity: 1"
-              >
-                  <span style="transform-origin: 50% 50% 0px; width: 80px;">Buy now</span>
-              </span>
+            <span
+              class="flex items-center justify-center text-white font-semibold"
+              style="opacity: 1"
+            >
+              <span style="transform-origin: 50% 50% 0px; width: 80px">Buy now</span>
+            </span>
           </button>
         </div>
 
         <div class="relative">
           <button
             mat-stroked-button
-            class="relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6"
-            style="height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 6.52229% / 19.0476%;"
             (click)="addToBag.emit($event)"
+            class="relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6"
+            style="
+              height: 42px;
+              background-color: rgb(255, 255, 255);
+              border-color: rgb(229, 231, 235);
+              transform-origin: 50% 50% 0px;
+              border-radius: 6.52229% / 19.0476%;
+            "
           >
-              <span
-                  class="w-full flex-none flex items-center justify-center text-gray-900 font-semibold"
-                  style="opacity: 1"
-              >
-                  <span style="transform-origin: 50% 50% 0px; width: 80px;">Add to bag</span>
-              </span>
+            <span
+              class="w-full flex-none flex items-center justify-center text-gray-900 font-semibold"
+              style="opacity: 1"
+            >
+              <span style="transform-origin: 50% 50% 0px; width: 80px">Add to bag</span>
+            </span>
           </button>
         </div>
         <div class="flex justify-end">
           <button
             mat-icon-button
             mat-stroked-button
+            (click)="
+              addToFavorites.emit($event);
+              product.isFavorite = !product.isFavorite
+            "
             class="flex items-center border cursor-pointer justify-center"
-            style="width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;"
-            (click)="addToFavorites.emit($event); product.isFavorite = !product.isFavorite;"
+            style="
+              width: 42px;
+              height: 42px;
+              background-color: rgb(255, 255, 255);
+              border-color: rgb(229, 231, 235);
+              transform-origin: 50% 50% 0px;
+              border-radius: 19.0476%;
+            "
+
           >
-            <img *ngIf="!product.isFavorite" class="m-auto" src="/assets/heart-gray.svg" />
-            <img *ngIf="product.isFavorite" class="m-auto" src="/assets/heart-black.svg" />
+            <img
+              *ngIf="!product.isFavorite"
+              class="m-auto"
+              src="/assets/heart-gray.svg"
+            />
+            <img
+              *ngIf="product.isFavorite"
+              class="m-auto"
+              src="/assets/heart-black.svg"
+            />
           </button>
         </div>
       </div>
-      <div class="relative w-full mt-6 mb-1">      
+      <div class="relative w-full mt-6 mb-1">
         <p
-          class="inline-flex align-top text-sm text-gray-700 "
+          class="inline-flex align-top text-sm text-gray-700"
           style="opacity: 1; transform-origin: 50% 50% 0px"
         >
-          <span>Free shipping on all<span class="hidden sm:inline"> continental US</span> orders.</span>
+          <span
+            >Free shipping on all<span class="hidden sm:inline"
+              >continental US</span
+            >orders.</span
+          >
         </p>
       </div>
     </div>

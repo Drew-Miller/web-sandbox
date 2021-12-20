@@ -30,7 +30,7 @@ export const kidsJumper: Product = {
   name: 'Kids Jumper',
   image: '/assets/kids-jumper.jpg',
   price: 39,
-  inStock: true,
+  inStock: false,
   isFavorite: true,
   sizes: clothingSizes
 };
@@ -40,7 +40,7 @@ export const fancySuitJacket: Product = {
   name: 'Dogtooth Style Jacket',
   image: '/assets/fancy-suit-jacket.jpg',
   price: 350,
-  inStock: true,
+  inStock: false,
   isFavorite: false,
   sizes: clothingSizes
 };

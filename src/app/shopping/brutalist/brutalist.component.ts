@@ -4,10 +4,10 @@ import * as Shopping from '../shopping';
 
 @Component({
   selector: 'simple',
-  templateUrl: './simple.component.html',
-  styleUrls: ['./simple.component.scss']
+  templateUrl: './brutalist.component.html',
+  styleUrls: ['./brutalist.component.scss']
 })
-export default class SimpleComponent {
+export default class BrutalistComponent {
   @Input()
   product!: Shopping.Product;
 
