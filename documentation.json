@@ -395,8 +395,8 @@
         },
         {
             "name": "NameComponent",
-            "id": "component-NameComponent-688fa1d681f62976a8407a36a49734ec42f2905de12346320751360bb645b37bf18d84777634a8219aa51924171d31d90a1f814da8cc50631a94ca2c8ac6fbd0",
-            "file": "src/app/simple/simple.component.ts",
+            "id": "component-NameComponent-f8db0c222e1fe0532cfd66c0425f02c675b8dae5e542e079706ba2eeec48c818d9dbf9eb757c66d28d194a4c8e28ab85151865c69f9ab887e4d16e445efa9170",
+            "file": "src/app/shopping/simple/simple.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -413,57 +413,19 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "image",
-                    "defaultValue": "'/assets/simple-jacket.jpg'",
+                    "name": "product",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 28,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "inStock",
-                    "defaultValue": "true",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 34,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "isFavorite",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 37,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "name",
-                    "defaultValue": "'Classic Utillity Jacket'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 25,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "price",
-                    "defaultValue": "110",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 31,
-                    "type": "number | undefined",
+                    "line": 12,
+                    "type": "Shopping.Product",
                     "decorators": []
                 },
                 {
                     "name": "selectedSize",
-                    "defaultValue": "'XS'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
-                    "type": "Size",
+                    "line": 15,
+                    "type": "Shopping.Size",
                     "decorators": []
                 }
             ],
@@ -473,7 +435,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 46,
+                    "line": 24,
                     "type": "EventEmitter"
                 },
                 {
@@ -481,7 +443,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 40,
+                    "line": 18,
                     "type": "EventEmitter"
                 },
                 {
@@ -489,22 +451,11 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 43,
+                    "line": 21,
                     "type": "EventEmitter"
                 }
             ],
-            "propertiesClass": [
-                {
-                    "name": "sizes",
-                    "defaultValue": "sizes",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 19
-                }
-            ],
+            "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -513,7 +464,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\nexport const sizes = ['XS', 'S', 'M', 'L', 'XL'];\n// export type Size = typeof sizes[number]; \n\nexport type Size =\n  | 'XS'\n  | 'S'\n  | 'M'\n  | 'L'\n  | 'XL';\n\n@Component({\n  selector: 'simple',\n  templateUrl: './simple.component.html',\n  styleUrls: ['./simple.component.scss']\n})\nexport default class NameComponent {\n  sizes = sizes;\n  \n  @Input()\n  selectedSize: Size = 'XS';\n  \n  @Input()\n  name: string = 'Classic Utillity Jacket';\n\n  @Input()\n  image: string = '/assets/simple-jacket.jpg';\n\n  @Input()\n  price: number | undefined = 110;\n\n  @Input()\n  inStock: boolean = true;\n\n  @Input()\n  isFavorite: boolean = false;\n\n  @Output()\n  addToFavorites = new EventEmitter<Event>();\n  \n  @Output()\n  buyNow = new EventEmitter<Event>();\n\n  @Output()\n  addToBag = new EventEmitter<Event>();\n}",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport * as Shopping from '../shopping';\n\n\n@Component({\n  selector: 'simple',\n  templateUrl: './simple.component.html',\n  styleUrls: ['./simple.component.scss']\n})\nexport default class NameComponent {\n  @Input()\n  product?: Shopping.Product;\n\n  @Input()\n  selectedSize!: Shopping.Size;\n\n  @Output()\n  addToFavorites = new EventEmitter<Event>();\n\n  @Output()\n  buyNow = new EventEmitter<Event>();\n\n  @Output()\n  addToBag = new EventEmitter<Event>();\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -522,7 +473,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div\n  class=\"relative shadow-xl flex leading-none\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 2.02703% / 3.93443%;\"\n>\n  <div\n    class=\"bg-white flex w-full\"\n    style=\"transform-origin: 50% 50% 0px; border-radius: 1.92308% / 3.93443%\"\n  >\n    <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n      <div\n        class=\"relative z-20 overflow-hidden flex-none\"\n        style=\"width: 192px; height: 305px; border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%; transform-origin: 50% 50% 0px;\"\n      >\n        <img\n          src=\"{{ image }}\"\n          alt=\"product image\"\n          class=\"absolute max-w-none\"\n          style=\"width: 229px; height: 305px; left: -18px; top: 0px; opacity: 1; z-index: 2; transform-origin: 50% 50% 0px;\"\n        />\n      </div>\n      <div\n        class=\"absolute z-10 bg-teal-400 inset-px\"\n        style=\"border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%; transform-origin: 50% 50% 0px;\"\n      ></div>\n    </div>\n    <div class=\"self-start flex-auto flex flex-wrap items-baseline p-6\">\n      <div class=\"w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6\">\n          <div\n              class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n              style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          ></div>\n          <div class=\"relative flex-auto\">\n              <h2\n                  class=\"inline-flex text-gray-900 text-lg font-semibold\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >\n                  <span class=\"hidden sm:inline whitespace-pre\">{{ name }}</span>\n              </h2>\n          </div>\n          <div class=\"relative\">\n              <div\n                  class=\"inline-flex text-lg font-semibold\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >{{ price | currency }}</div>\n          </div>\n          <div class=\"relative whitespace-nowrap flex-none w-full mt-2\">\n              <div *ngIf=\"inStock\"\n                  class=\"inline-flex text-sm font-medium text-gray-700\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >In stock</div>\n              <div *ngIf=\"!inStock\"\n                  class=\"inline-flex text-sm font-medium text-gray-700\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >Out of stock</div>\n          </div>\n      </div>\n      <div class=\"w-full flex-none flex items-center\">\n        <size-selector [sizes]=\"sizes\" [(selectedSize)]=\"selectedSize\"></size-selector>\n      </div>\n      <div\n        class=\"w-full h-px bg-gray-200 my-6\"\n        style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n      ></div>\n      <div\n        class=\"flex-none w-full grid gap-4 text-center\"\n        style=\"grid-template-columns: auto auto 1fr\"\n      >\n        <div class=\"relative\">\n          <button\n            mat-flat-button\n            matRipple\n            class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"height: 42px; background-color: rgb(17, 24, 39); border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 7.55943% / 19.0476%;\"\n            (click)=\"buyNow.emit($event)\"\n          >\n              <span\n                  class=\"flex items-center justify-center text-white font-semibold\"\n                  style=\"opacity: 1\"\n              >\n                  <span style=\"transform-origin: 50% 50% 0px; width: 80px;\">Buy now</span>\n              </span>\n          </button>\n        </div>\n\n        <div class=\"relative\">\n          <button\n            mat-stroked-button\n            class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 6.52229% / 19.0476%;\"\n            (click)=\"addToBag.emit($event)\"\n          >\n              <span\n                  class=\"w-full flex-none flex items-center justify-center text-gray-900 font-semibold\"\n                  style=\"opacity: 1\"\n              >\n                  <span style=\"transform-origin: 50% 50% 0px; width: 80px;\">Add to bag</span>\n              </span>\n          </button>\n        </div>\n        <div class=\"flex justify-end\">\n          <button\n            mat-icon-button\n            mat-stroked-button\n            class=\"flex items-center border cursor-pointer justify-center\"\n            style=\"width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;\"\n            (click)=\"addToFavorites.emit($event); isFavorite = !isFavorite;\"\n          >\n            <img *ngIf=\"!isFavorite\" class=\"m-auto\" src=\"/assets/heart-gray.svg\" />\n            <img *ngIf=\"isFavorite\" class=\"m-auto\" src=\"/assets/heart-black.svg\" />\n          </button>\n        </div>\n      </div>\n      <div class=\"relative w-full mt-6 mb-1\">      \n        <p\n          class=\"inline-flex align-top text-sm text-gray-700 \"\n          style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n        >\n          <span>Free shipping on all<span class=\"hidden sm:inline\"> continental US</span> orders.</span>\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
+            "templateData": "<div\n  class=\"relative shadow-xl flex leading-none\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 2.02703% / 3.93443%;\"\n>\n  <div\n    class=\"bg-white flex w-full\"\n    style=\"transform-origin: 50% 50% 0px; border-radius: 1.92308% / 3.93443%\"\n  >\n    <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n      <div\n        class=\"relative z-20 overflow-hidden flex-none\"\n        style=\"width: 192px; height: 305px; border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%; transform-origin: 50% 50% 0px;\"\n      >\n        <img\n          src=\"{{ product.image }}\"\n          alt=\"product image\"\n          class=\"absolute max-w-none\"\n          style=\"width: 229px; height: 305px; left: -18px; top: 0px; opacity: 1; z-index: 2; transform-origin: 50% 50% 0px;\"\n        />\n      </div>\n      <div\n        class=\"absolute z-10 bg-teal-400 inset-px\"\n        style=\"border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%; transform-origin: 50% 50% 0px;\"\n      ></div>\n    </div>\n    <div class=\"self-start flex-auto flex flex-wrap items-baseline p-6\">\n      <div class=\"w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6\">\n          <div\n              class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n              style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          ></div>\n          <div class=\"relative flex-auto\">\n              <h2\n                  class=\"inline-flex text-gray-900 text-lg font-semibold\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >\n                  <span class=\"hidden sm:inline whitespace-pre\">{{ product.name }}</span>\n              </h2>\n          </div>\n          <div class=\"relative\">\n              <div\n                  class=\"inline-flex text-lg font-semibold\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >{{ product.price | currency }}</div>\n          </div>\n          <div class=\"relative whitespace-nowrap flex-none w-full mt-2\">\n              <div *ngIf=\"inStock\"\n                  class=\"inline-flex text-sm font-medium text-gray-700\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >In stock</div>\n              <div *ngIf=\"!inStock\"\n                  class=\"inline-flex text-sm font-medium text-gray-700\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >Out of stock</div>\n          </div>\n      </div>\n      <div class=\"w-full flex-none flex items-center\">\n        <size-selector [sizes]=\"product.sizes\" [(selectedSize)]=\"selectedSize\"></size-selector>\n      </div>\n      <div\n        class=\"w-full h-px bg-gray-200 my-6\"\n        style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n      ></div>\n      <div\n        class=\"flex-none w-full grid gap-4 text-center\"\n        style=\"grid-template-columns: auto auto 1fr\"\n      >\n        <div class=\"relative\">\n          <button\n            mat-flat-button\n            matRipple\n            class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"height: 42px; background-color: rgb(17, 24, 39); border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 7.55943% / 19.0476%;\"\n            (click)=\"buyNow.emit($event)\"\n          >\n              <span\n                  class=\"flex items-center justify-center text-white font-semibold\"\n                  style=\"opacity: 1\"\n              >\n                  <span style=\"transform-origin: 50% 50% 0px; width: 80px;\">Buy now</span>\n              </span>\n          </button>\n        </div>\n\n        <div class=\"relative\">\n          <button\n            mat-stroked-button\n            class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 6.52229% / 19.0476%;\"\n            (click)=\"addToBag.emit($event)\"\n          >\n              <span\n                  class=\"w-full flex-none flex items-center justify-center text-gray-900 font-semibold\"\n                  style=\"opacity: 1\"\n              >\n                  <span style=\"transform-origin: 50% 50% 0px; width: 80px;\">Add to bag</span>\n              </span>\n          </button>\n        </div>\n        <div class=\"flex justify-end\">\n          <button\n            mat-icon-button\n            mat-stroked-button\n            class=\"flex items-center border cursor-pointer justify-center\"\n            style=\"width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;\"\n            (click)=\"addToFavorites.emit($event); product.isFavorite = !product.isFavorite;\"\n          >\n            <img *ngIf=\"!product.isFavorite\" class=\"m-auto\" src=\"/assets/heart-gray.svg\" />\n            <img *ngIf=\"product.isFavorite\" class=\"m-auto\" src=\"/assets/heart-black.svg\" />\n          </button>\n        </div>\n      </div>\n      <div class=\"relative w-full mt-6 mb-1\">      \n        <p\n          class=\"inline-flex align-top text-sm text-gray-700 \"\n          style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n        >\n          <span>Free shipping on all<span class=\"hidden sm:inline\"> continental US</span> orders.</span>\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
         },
         {
             "name": "PageComponent",
@@ -600,7 +551,7 @@
         {
             "name": "SizeSelectorComponent",
             "id": "component-SizeSelectorComponent-a8d29ce1b80fbd274dbcfff9250479a22bff414df91e7297254eff2889706f41e1bf22a75989731366177c1800bdc9cc47e7b2340dcb6b743a8999562cb78711",
-            "file": "src/app/simple/size-selector/size-selector.component.ts",
+            "file": "src/app/shopping/simple/size-selector/size-selector.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -857,7 +808,7 @@
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "src/app/simple/simple.module.ts",
+            "file": "src/app/shopping/simple/simple.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport Simple from './simple.component';\nimport SizeSelector from './size-selector/size-selector.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    MatButtonModule,\n    MatIconModule\n  ],\n  exports: [],\n  declarations: [Simple, SizeSelector],\n  providers: [],\n})\nexport class SimpleModule { }\n",
             "children": [
@@ -898,6 +849,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "clothingSizes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shopping/shopping.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "['XS', 'S', 'M', 'L', 'XL']"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -926,6 +887,56 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "fancyJacket",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shopping/shopping.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Product",
+                "defaultValue": "{\n  id: 3,\n  name: 'Dogtooth Style Jacket',\n  image: '/assets/fancy-jacket.jpg',\n  price: 350,\n  inStock: true,\n  isFavorite: false,\n  sizes: clothingSizes\n}"
+            },
+            {
+                "name": "FancyJacket",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Simple.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Jacket",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Simple.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "kidsJumper",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shopping/shopping.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Product",
+                "defaultValue": "{\n  id: 2,\n  name: 'Kids Jumper',\n  image: '/assets/kids-jumper.jpg',\n  price: 39,\n  inStock: true,\n  isFavorite: true,\n  sizes: clothingSizes\n}"
+            },
+            {
+                "name": "KidsJumper",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Simple.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Large",
@@ -998,16 +1009,6 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Simple.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1015,6 +1016,16 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
+            },
+            {
+                "name": "retroShoe",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shopping/shopping.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Product",
+                "defaultValue": "{\n  id: 4,\n  name: 'Retro Shoe',\n  image: '/assets/retro-shoe.jpg',\n  price: 89,\n  inStock: true,\n  isFavorite: true,\n  sizes: shoeSizes\n}"
             },
             {
                 "name": "Sans",
@@ -1047,14 +1058,34 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "sizes",
+                "name": "Shoe",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/simple/simple.component.ts",
+                "file": "src/stories/Simple.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "shoeSizes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shopping/shopping.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "['XS', 'S', 'M', 'L', 'XL']"
+                "defaultValue": "['9', '9.5', '10', '10.5', '11', '11.5', '12']"
+            },
+            {
+                "name": "simpleJacket",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shopping/shopping.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Product",
+                "defaultValue": "{\n  id: 1,\n  name: 'Classic Utillity Jacket',\n  image: '/assets/simple-jacket.jpg',\n  price: 110,\n  inStock: true,\n  isFavorite: false,\n  sizes: clothingSizes\n}"
             },
             {
                 "name": "Small",
@@ -1225,11 +1256,22 @@
                 "kind": 186
             },
             {
+                "name": "Product",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/shopping/shopping.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 181
+            },
+            {
                 "name": "Size",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "\"XS\" | \"S\" | \"M\" | \"L\" | \"XL\"",
-                "file": "src/app/simple/simple.component.ts",
+                "rawtype": " | ",
+                "file": "src/app/shopping/shopping.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1249,6 +1291,68 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "src/app/shopping/shopping.ts": [
+                {
+                    "name": "clothingSizes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shopping/shopping.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "['XS', 'S', 'M', 'L', 'XL']"
+                },
+                {
+                    "name": "fancyJacket",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shopping/shopping.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Product",
+                    "defaultValue": "{\n  id: 3,\n  name: 'Dogtooth Style Jacket',\n  image: '/assets/fancy-jacket.jpg',\n  price: 350,\n  inStock: true,\n  isFavorite: false,\n  sizes: clothingSizes\n}"
+                },
+                {
+                    "name": "kidsJumper",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shopping/shopping.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Product",
+                    "defaultValue": "{\n  id: 2,\n  name: 'Kids Jumper',\n  image: '/assets/kids-jumper.jpg',\n  price: 39,\n  inStock: true,\n  isFavorite: true,\n  sizes: clothingSizes\n}"
+                },
+                {
+                    "name": "retroShoe",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shopping/shopping.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Product",
+                    "defaultValue": "{\n  id: 4,\n  name: 'Retro Shoe',\n  image: '/assets/retro-shoe.jpg',\n  price: 89,\n  inStock: true,\n  isFavorite: true,\n  sizes: shoeSizes\n}"
+                },
+                {
+                    "name": "shoeSizes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shopping/shopping.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "['9', '9.5', '10', '10.5', '11', '11.5', '12']"
+                },
+                {
+                    "name": "simpleJacket",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shopping/shopping.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Product",
+                    "defaultValue": "{\n  id: 1,\n  name: 'Classic Utillity Jacket',\n  image: '/assets/simple-jacket.jpg',\n  price: 110,\n  inStock: true,\n  isFavorite: false,\n  sizes: clothingSizes\n}"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -1292,6 +1396,58 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/stories/Simple.stories.ts": [
+                {
+                    "name": "FancyJacket",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Simple.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Jacket",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Simple.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "KidsJumper",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Simple.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Shoe",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Simple.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Simple.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Simple>",
+                    "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -1452,40 +1608,6 @@
                     "defaultValue": "(args: BrownFox) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/Simple.stories.ts": [
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Simple.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Simple.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Simple>",
-                    "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/app/simple/simple.component.ts": [
-                {
-                    "name": "sizes",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/simple/simple.component.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "[]",
-                    "defaultValue": "['XS', 'S', 'M', 'L', 'XL']"
-                }
-            ],
             "src/stories/Width.stories.ts": [
                 {
                     "name": "Template",
@@ -1603,13 +1725,24 @@
                     "kind": 186
                 }
             ],
-            "src/app/simple/simple.component.ts": [
+            "src/app/shopping/shopping.ts": [
+                {
+                    "name": "Product",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/shopping/shopping.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 181
+                },
                 {
                     "name": "Size",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "\"XS\" | \"S\" | \"M\" | \"L\" | \"XL\"",
-                    "file": "src/app/simple/simple.component.ts",
+                    "rawtype": " | ",
+                    "file": "src/app/shopping/shopping.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1646,7 +1779,7 @@
         ]
     },
     "coverage": {
-        "count": 4,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -1723,26 +1856,76 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/simple/simple.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "NameComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/11",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/simple/simple.component.ts",
+                "filePath": "src/app/shopping/shopping.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "sizes",
+                "name": "clothingSizes",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/app/simple/size-selector/size-selector.component.ts",
+                "filePath": "src/app/shopping/shopping.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "fancyJacket",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/shopping.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "kidsJumper",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/shopping.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "retroShoe",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/shopping.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "shoeSizes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/shopping.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "simpleJacket",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/simple/simple.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NameComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/simple/size-selector/size-selector.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "SizeSelectorComponent",
@@ -1925,7 +2108,37 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
+                "name": "FancyJacket",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Simple.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Jacket",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Simple.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "KidsJumper",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Simple.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Shoe",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

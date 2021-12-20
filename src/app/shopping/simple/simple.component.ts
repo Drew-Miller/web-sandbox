@@ -1,12 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import * as Shopping from '../shopping';
 
-export const sizes = ['XS', 'S', 'M', 'L', 'XL'];
-export type Size =
-  | 'XS'
-  | 'S'
-  | 'M'
-  | 'L'
-  | 'XL';
 
 @Component({
   selector: 'simple',
@@ -14,29 +8,15 @@ export type Size =
   styleUrls: ['./simple.component.scss']
 })
 export default class NameComponent {
-  sizes = sizes;
-  
   @Input()
-  selectedSize: Size = 'XS';
-  
-  @Input()
-  name: string = 'Classic Utillity Jacket';
+  product?: Shopping.Product;
 
   @Input()
-  image: string = '/assets/simple-jacket.jpg';
-
-  @Input()
-  price: number = 110;
-
-  @Input()
-  inStock: boolean = true;
-
-  @Input()
-  isFavorite: boolean = false;
+  selectedSize!: Shopping.Size;
 
   @Output()
   addToFavorites = new EventEmitter<Event>();
-  
+
   @Output()
   buyNow = new EventEmitter<Event>();
 

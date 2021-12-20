@@ -6,6 +6,7 @@ import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 
 import Simple from 'src/app/shopping/simple/simple.component';
+import * as Shopping from 'src/app/shopping/shopping';
 import SizeSelector from 'src/app/shopping/simple/size-selector/size-selector.component';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
@@ -25,4 +26,26 @@ const Template: Story<Simple> = (args: Simple) => ({
   props: args,
 });
 
-export const Primary = Template.bind({});
+export const SimpleJacket = Template.bind({});
+SimpleJacket.args = {
+  product: Shopping.simpleJacket,
+  selectedSize: 'XS'
+};
+
+export const KidsJumper = Template.bind({});
+KidsJumper.args = {
+  product: Shopping.kidsJumper,
+  selectedSize: 'XS'
+};
+
+export const FancySuitJacket = Template.bind({});
+FancySuitJacket.args = {
+  product: Shopping.fancySuitJacket,
+  selectedSize: 'L'
+};
+
+export const Shoe = Template.bind({});
+Shoe.args = {
+  product: Shopping.retroShoe,
+  selectedSize: '10.5'
+};

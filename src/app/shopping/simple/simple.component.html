@@ -12,7 +12,7 @@
         style="width: 192px; height: 305px; border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%; transform-origin: 50% 50% 0px;"
       >
         <img
-          src="{{ image }}"
+          src="{{ product.image }}"
           alt="product image"
           class="absolute max-w-none"
           style="width: 229px; height: 305px; left: -18px; top: 0px; opacity: 1; z-index: 2; transform-origin: 50% 50% 0px;"
@@ -34,14 +34,14 @@
                   class="inline-flex text-gray-900 text-lg font-semibold"
                   style="opacity: 1; transform-origin: 50% 50% 0px"
               >
-                  <span class="hidden sm:inline whitespace-pre">{{ name }}</span>
+                  <span class="hidden sm:inline whitespace-pre">{{ product.name }}</span>
               </h2>
           </div>
           <div class="relative">
               <div
                   class="inline-flex text-lg font-semibold"
                   style="opacity: 1; transform-origin: 50% 50% 0px"
-              >{{ price | currency }}</div>
+              >{{ product.price | currency }}</div>
           </div>
           <div class="relative whitespace-nowrap flex-none w-full mt-2">
               <div *ngIf="inStock"
@@ -55,7 +55,7 @@
           </div>
       </div>
       <div class="w-full flex-none flex items-center">
-        <size-selector [sizes]="sizes" [(selectedSize)]="selectedSize"></size-selector>
+        <size-selector [sizes]="product.sizes" [(selectedSize)]="selectedSize"></size-selector>
       </div>
       <div
         class="w-full h-px bg-gray-200 my-6"
@@ -103,10 +103,10 @@
             mat-stroked-button
             class="flex items-center border cursor-pointer justify-center"
             style="width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;"
-            (click)="addToFavorites.emit($event); isFavorite = !isFavorite;"
+            (click)="addToFavorites.emit($event); product.isFavorite = !product.isFavorite;"
           >
-            <img *ngIf="!isFavorite" class="m-auto" src="/assets/heart-gray.svg" />
-            <img *ngIf="isFavorite" class="m-auto" src="/assets/heart-black.svg" />
+            <img *ngIf="!product.isFavorite" class="m-auto" src="/assets/heart-gray.svg" />
+            <img *ngIf="product.isFavorite" class="m-auto" src="/assets/heart-black.svg" />
           </button>
         </div>
       </div>
