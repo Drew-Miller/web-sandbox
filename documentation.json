@@ -156,14 +156,14 @@
         },
         {
             "name": "BrutalistComponent",
-            "id": "component-BrutalistComponent-dc0dc401d6365248bb844e1dae28eab96c9a7d3c3f1c07f1e0a5756549d9c300fd0b904645c218c1ee809aaff5fd92f4a070919cce2251a7088d73b14b96f0c2",
+            "id": "component-BrutalistComponent-1a7d773f0aa1091f71e9d8d698f2536541157b4208716cf635acbf5adf27a73ff8b868bd5521e56dff295d84d339acc9ce078034a215f2756ac90a6d05f83967",
             "file": "src/app/shopping/brutalist/brutalist.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "simple",
+            "selector": "brutalist",
             "styleUrls": [
                 "./brutalist.component.scss"
             ],
@@ -225,7 +225,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport * as Shopping from '../shopping';\n\n\n@Component({\n  selector: 'simple',\n  templateUrl: './brutalist.component.html',\n  styleUrls: ['./brutalist.component.scss']\n})\nexport default class BrutalistComponent {\n  @Input()\n  product!: Shopping.Product;\n\n  @Input()\n  selectedSize!: Shopping.Size;\n\n  @Output()\n  addToFavorites = new EventEmitter<Event>();\n\n  @Output()\n  buyNow = new EventEmitter<Event>();\n\n  @Output()\n  addToBag = new EventEmitter<Event>();\n}",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport * as Shopping from '../shopping';\n\n\n@Component({\n  selector: 'brutalist',\n  templateUrl: './brutalist.component.html',\n  styleUrls: ['./brutalist.component.scss']\n})\nexport default class BrutalistComponent {\n  @Input()\n  product!: Shopping.Product;\n\n  @Input()\n  selectedSize!: Shopping.Size;\n\n  @Output()\n  addToFavorites = new EventEmitter<Event>();\n\n  @Output()\n  buyNow = new EventEmitter<Event>();\n\n  @Output()\n  addToBag = new EventEmitter<Event>();\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -234,7 +234,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div\n  class=\"relative shadow-xl flex leading-none\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 0%\"\n>\n  <div\n    class=\"bg-white flex w-full p-6 pb-[1.0625rem]\"\n    style=\"transform-origin: 50% 50% 0px; border-radius: 0%\"\n  >\n    <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n      <div\n        class=\"relative z-20 overflow-hidden flex-none\"\n        style=\"\n          width: 184px;\n          height: 224px;\n          border-radius: 0%;\n          transform-origin: 50% 50% 0px;\n        \"\n      >\n        <img\n          src=\"/_next/static/media/classic-utility-jacket.0f108046e151c8576017eaf383406fe6.jpg\"\n          alt=\"\"\n          class=\"absolute max-w-none\"\n          style=\"\n            width: 184px;\n            height: 245px;\n            left: 0px;\n            top: -11px;\n            opacity: 1;\n            z-index: 0;\n            transform-origin: 70.1754% 27.6316% 0px;\n          \"\n        /><img\n          src=\"/_next/static/media/kids-jumper.47a06f045002a3e6ba595351a36a46eb.jpg\"\n          alt=\"\"\n          class=\"absolute max-w-none\"\n          style=\"\n            width: 184px;\n            height: 261px;\n            left: 0px;\n            top: -18px;\n            z-index: 1;\n            transform-origin: 76.7442% 23.3333% 0px;\n            opacity: 1;\n          \"\n        /><img\n          src=\"/_next/static/media/fancy-suit-jacket.380b02296e758f6a462590ecfb936789.jpg\"\n          alt=\"\"\n          class=\"absolute max-w-none\"\n          style=\"\n            width: 184px;\n            height: 326px;\n            left: 0px;\n            top: -51px;\n            z-index: 0;\n            transform-origin: 80% 26.7606% 0px;\n            opacity: 1;\n          \"\n        /><img\n          src=\"/_next/static/media/retro-shoe.ee965cd22237d00d4225236bbaf5edc1.jpg\"\n          alt=\"\"\n          class=\"absolute max-w-none\"\n          style=\"\n            width: 184px;\n            height: 272px;\n            left: 0px;\n            top: -24px;\n            z-index: 2;\n            transform-origin: 50% 50% 0px;\n            opacity: 1;\n          \"\n        />\n      </div>\n      <div\n        class=\"absolute z-10 bg-teal-400 top-1 left-1 -right-1 -bottom-1\"\n        style=\"border-radius: 0%; transform-origin: 50% 50% 0px\"\n      ></div>\n    </div>\n    <div class=\"self-start flex-auto flex flex-wrap items-baseline pl-8\">\n      <div class=\"w-full relative flex flex-wrap items-baseline -mt-6 py-6\">\n        <div\n          class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n          style=\"opacity: 1; transform-origin: 50% 0% 0px\"\n        ></div>\n        <div class=\"relative w-full flex-none mb-2\">\n          <h2\n            class=\"inline-flex text-gray-900 text-lg font-semibold absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          >\n            <span class=\"hidden sm:inline whitespace-pre\">Classic </span>Utility\n            Jacket\n          </h2>\n          <h2\n            class=\"inline-flex text-gray-900 text-base font-medium Pally-Variable_font__37Wax absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          >\n            Kids Jumpsuit\n          </h2>\n          <h2\n            class=\"inline-flex text-gray-900 text-2xl leading-none SourceSerifPro-Regular_font__1qDkM absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          >\n            Dogtooth Style Jacket\n          </h2>\n          <h2\n            class=\"inline-flex text-white text-2xl IBMPlexMono-SemiBold_font__3yATK\"\n            style=\"opacity: 1; transform-origin: 50% 0% 0px\"\n          >\n            Retro Shoe\n          </h2>\n        </div>\n        <div class=\"relative\">\n          <div\n            class=\"inline-flex text-lg font-semibold absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          >\n            $110.00\n          </div>\n          <div\n            class=\"inline-flex text-3xl font-bold text-violet-600 Pally-Variable_font__37Wax absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 0% 0px\"\n          >\n            $39.00\n          </div>\n          <div\n            class=\"inline-flex text-lg text-gray-500 font-medium Synonym-Variable_font__2Movv absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          >\n            $350.00\n          </div>\n          <div\n            class=\"inline-flex text-white text-base IBMPlexMono-SemiBold_font__3yATK\"\n            style=\"opacity: 1; transform-origin: 50% 0% 0px\"\n          >\n            $89.00\n          </div>\n        </div>\n        <div class=\"relative whitespace-nowrap flex-auto ml-3\">\n          <div\n            class=\"inline-flex text-sm font-medium text-gray-700 absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          >\n            In stock\n          </div>\n          <div\n            class=\"inline-flex text-base font-medium text-gray-400 Pally-Variable_font__37Wax absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          >\n            In stock\n          </div>\n          <div\n            class=\"inline-flex text-xs leading-6 text-gray-500 font-medium uppercase Synonym-Variable_font__2Movv absolute bottom-0 left-0\"\n            style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          >\n            In stock\n          </div>\n          <div\n            class=\"inline-flex text-teal-400 text-base uppercase IBMPlexMono-Regular_font__VNQU5\"\n            style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n          >\n            In stock\n          </div>\n        </div>\n      </div>\n      <div class=\"w-full flex-none flex items-center my-6\">\n        <ul class=\"flex text-sm space-x-3\">\n          <li\n            class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n            style=\"\n              width: 42px;\n              height: 42px;\n              color: rgb(255, 255, 255);\n              transform-origin: 0% 0% 0px;\n            \"\n          >\n            <div\n              class=\"absolute bg-teal-400 top-0.5 left-0.5 -right-0.5 -bottom-0.5\"\n              style=\"transform-origin: 50% 50% 0px; border-radius: 0%\"\n            ></div>\n            <div\n              class=\"absolute inset-0 border-2\"\n              style=\"\n                border-color: rgb(0, 0, 0);\n                background-color: rgb(0, 0, 0);\n                transform-origin: 50% 50% 0px;\n                border-radius: 0%;\n              \"\n            ></div>\n            <span\n              class=\"absolute inset-0 flex items-center justify-center font-semibold pointer-events-none\"\n              style=\"opacity: 0\"\n              >XS</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-bold Pally-Variable_font__37Wax pointer-events-none\"\n              style=\"opacity: 0\"\n              >XS</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-medium Synonym-Variable_font__2Movv pointer-events-none\"\n              style=\"opacity: 0\"\n              >XS</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center IBMPlexMono-Regular_font__VNQU5\"\n              style=\"opacity: 1\"\n              >XS</span\n            >\n          </li>\n          <li\n            class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n            style=\"\n              width: 42px;\n              height: 42px;\n              color: rgb(0, 0, 0);\n              transform-origin: 0% 0% 0px;\n            \"\n          >\n            <div\n              class=\"absolute inset-0 border-2\"\n              style=\"\n                border-color: rgb(255, 255, 255);\n                transform-origin: 50% 50% 0px;\n                border-radius: 0%;\n              \"\n            ></div>\n            <span\n              class=\"absolute inset-0 flex items-center justify-center undefined pointer-events-none\"\n              style=\"opacity: 0\"\n              >S</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-bold Pally-Variable_font__37Wax pointer-events-none\"\n              style=\"opacity: 0\"\n              >S</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-medium Synonym-Variable_font__2Movv pointer-events-none\"\n              style=\"opacity: 0\"\n              >S</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center IBMPlexMono-Regular_font__VNQU5\"\n              style=\"opacity: 1\"\n              >S</span\n            >\n          </li>\n          <li\n            class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n            style=\"\n              width: 42px;\n              height: 42px;\n              color: rgb(0, 0, 0);\n              transform-origin: 0% 0% 0px;\n            \"\n          >\n            <div\n              class=\"absolute inset-0 border-2\"\n              style=\"\n                border-color: rgb(255, 255, 255);\n                transform-origin: 50% 50% 0px;\n                border-radius: 0%;\n              \"\n            ></div>\n            <span\n              class=\"absolute inset-0 flex items-center justify-center undefined pointer-events-none\"\n              style=\"opacity: 0\"\n              >M</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-bold Pally-Variable_font__37Wax pointer-events-none\"\n              style=\"opacity: 0\"\n              >M</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-medium Synonym-Variable_font__2Movv pointer-events-none\"\n              style=\"opacity: 0\"\n              >M</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center IBMPlexMono-Regular_font__VNQU5\"\n              style=\"opacity: 1\"\n              >M</span\n            >\n          </li>\n          <li\n            class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n            style=\"\n              width: 42px;\n              height: 42px;\n              color: rgb(0, 0, 0);\n              transform-origin: 0% 0% 0px;\n            \"\n          >\n            <div\n              class=\"absolute inset-0 border-2\"\n              style=\"\n                border-color: rgb(255, 255, 255);\n                transform-origin: 50% 50% 0px;\n                border-radius: 0%;\n              \"\n            ></div>\n            <span\n              class=\"absolute inset-0 flex items-center justify-center undefined pointer-events-none\"\n              style=\"opacity: 0\"\n              >L</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-bold Pally-Variable_font__37Wax pointer-events-none\"\n              style=\"opacity: 0\"\n              >L</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-medium Synonym-Variable_font__2Movv pointer-events-none\"\n              style=\"opacity: 0\"\n              >L</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center IBMPlexMono-Regular_font__VNQU5\"\n              style=\"opacity: 1\"\n              >L</span\n            >\n          </li>\n          <li\n            class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n            style=\"\n              width: 42px;\n              height: 42px;\n              color: rgb(0, 0, 0);\n              transform-origin: 0% 0% 0px;\n            \"\n          >\n            <div\n              class=\"absolute inset-0 border-2\"\n              style=\"\n                border-color: rgb(255, 255, 255);\n                transform-origin: 50% 50% 0px;\n                border-radius: 0%;\n              \"\n            ></div>\n            <span\n              class=\"absolute inset-0 flex items-center justify-center undefined pointer-events-none\"\n              style=\"opacity: 0\"\n              >XL</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-bold Pally-Variable_font__37Wax pointer-events-none\"\n              style=\"opacity: 0\"\n              >XL</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center font-medium Synonym-Variable_font__2Movv pointer-events-none\"\n              style=\"opacity: 0\"\n              >XL</span\n            ><span\n              class=\"absolute inset-0 flex items-center justify-center IBMPlexMono-Regular_font__VNQU5\"\n              style=\"opacity: 1\"\n              >XL</span\n            >\n          </li>\n        </ul>\n      </div>\n      <div\n        class=\"w-full h-px bg-gray-200 -mt-px\"\n        style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n      ></div>\n      <div\n        class=\"flex-none w-full grid gap-4 text-center\"\n        style=\"grid-template-columns: auto auto 1fr\"\n      >\n        <div class=\"relative\">\n          <div\n            class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"\n              height: 46px;\n              background-color: rgb(45, 212, 191);\n              border-color: rgb(0, 0, 0);\n              transform-origin: 50% 50% 0px;\n              border-radius: 0%;\n            \"\n          >\n            <span\n              class=\"flex items-center justify-center text-white font-semibold absolute\"\n              style=\"opacity: 0\"\n              ><span style=\"transform-origin: 50% 50% 0px\">Buy now</span></span\n            ><span\n              class=\"flex items-center justify-center text-base text-white font-medium Pally-Variable_font__37Wax absolute\"\n              style=\"opacity: 0\"\n              ><span style=\"transform-origin: 50% 50% 0px\">Buy now</span></span\n            ><span\n              class=\"flex items-center justify-center text-white font-medium tracking-wide uppercase Synonym-Variable_font__2Movv absolute\"\n              style=\"opacity: 0\"\n              ><span style=\"transform-origin: 50% 50% 0px\">Buy now</span></span\n            ><span\n              class=\"flex items-center justify-center text-base text-black uppercase IBMPlexMono-SemiBold_font__3yATK\"\n              style=\"opacity: 1\"\n              ><span style=\"transform-origin: 50% 50% 0px\">Buy now</span></span\n            >\n          </div>\n        </div>\n        <div class=\"relative\">\n          <div\n            class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"\n              height: 46px;\n              background-color: rgb(255, 255, 255);\n              border-color: rgb(229, 231, 235);\n              transform-origin: 50% 50% 0px;\n              border-radius: 0%;\n            \"\n          >\n            <span\n              class=\"w-full flex-none flex items-center justify-center text-gray-900 font-semibold absolute\"\n              style=\"opacity: 0\"\n              ><span style=\"transform-origin: 50% 50% 0px\"\n                >Add to bag</span\n              ></span\n            ><span\n              class=\"w-full flex-none flex items-center justify-center text-base text-gray-900 font-medium Pally-Variable_font__37Wax absolute\"\n              style=\"opacity: 0\"\n              ><span style=\"transform-origin: 50% 50% 0px\"\n                >Add to bag</span\n              ></span\n            ><span\n              class=\"w-full flex-none flex items-center justify-center text-gray-900 font-medium tracking-wide uppercase Synonym-Variable_font__2Movv absolute\"\n              style=\"opacity: 0\"\n              ><span style=\"transform-origin: 50% 50% 0px\"\n                >Add to bag</span\n              ></span\n            ><span\n              class=\"w-full flex-none flex items-center justify-center text-base text-black uppercase IBMPlexMono-SemiBold_font__3yATK\"\n              style=\"opacity: 1\"\n              ><span style=\"transform-origin: 100% 50% 0px\"\n                >Add to bag</span\n              ></span\n            >\n          </div>\n        </div>\n        <div class=\"flex\">\n          <div\n            class=\"flex items-center border cursor-pointer justify-center\"\n            style=\"\n              width: 30px;\n              height: 46px;\n              background-color: rgb(255, 255, 255);\n              border-color: rgb(255, 255, 255);\n              transform-origin: 50% 50% 0px;\n              border-radius: 0%;\n            \"\n          >\n            <svg\n              width=\"20\"\n              height=\"20\"\n              color=\"rgba(0, 0, 0, 1)\"\n              style=\"\n                transform: translate3d(0px, 0px, 0px) scale(0.99989, 1);\n                transform-origin: 10.025px 10.8039px;\n              \"\n              transform=\"\"\n              transform-origin=\"50% 50% 0\"\n              transformOrigin=\"50% 50% 0\"\n            >\n              <path\n                fill-rule=\"evenodd\"\n                clip-rule=\"evenodd\"\n                d=\"M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z\"\n                fill=\"currentColor\"\n              ></path>\n            </svg>\n          </div>\n        </div>\n      </div>\n      <div class=\"relative w-full mt-4\">\n        <p\n          class=\"inline-flex align-top IBMPlexMono-Regular_font__VNQU5 text-xs leading-6\"\n          style=\"opacity: 1; transform-origin: 50% 100% 0px\"\n        >\n          <span>Free shipping on all<span class=\"hidden sm:inline\">continental US</span>orders.</span>\n        </p>\n      </div>\n    </div>\n  </div>\n</div>\n"
+            "templateData": "<div\n  class=\"relative shadow-xl flex leading-none font-mono\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 0%\"\n>\n  <div\n    class=\"bg-white flex w-full p-6 pb-[1.0625rem]\"\n    style=\"transform-origin: 50% 50% 0px; border-radius: 0%\"\n  >\n    <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n      <div\n        class=\"relative z-20 overflow-hidden flex-none\"\n        style=\"\n          width: 184px;\n          height: 224px;\n          border-radius: 0%;\n          transform-origin: 50% 50% 0px;\n        \"\n      >\n        <img\n          src=\"{{ product.image }}\"\n          alt=\"\"\n          class=\"absolute max-w-none\"\n          style=\"\n            width: 184px;\n            height: 272px;\n            left: 0px;\n            top: -24px;\n            z-index: 2;\n            transform-origin: 50% 50% 0px;\n            opacity: 1;\n          \"\n        />\n      </div>\n\t\t\t<div \n\t\t\t\tclass=\"\n\t\t\t\t\tabsolute\n\t\t\t\t\tz-10\n\t\t\t\t\tbg-teal-400\n\t\t\t\t\ttop-1\n\t\t\t\t\tleft-1\n\t\t\t\t\t-right-1\n\t\t\t\t\t-bottom-1\n\t\t\t\t\"\n\t\t\t\tstyle=\"\n\t\t\t\t\tbackground-color: rgb(45, 212, 191);\n\t\t\t\t\tborder-radius: 0%;\n\t\t\t\t\ttransform-origin: 50% 50% 0px;\n\t\t\t\t\"\n\t\t\t>\n\t\t\t</div>\n    </div>\n    <div class=\"self-start flex-auto flex flex-wrap items-baseline pl-8\">\n      <div class=\"w-full relative flex flex-wrap items-baseline -mt-6 py-6\">\n        <div\n          class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n          style=\"opacity: 1; transform-origin: 50% 0% 0px\"\n        ></div>\n        <div class=\"relative w-full flex-none mb-2\">\n          <h2\n            class=\"inline-flex text-white text-2xl\"\n            style=\"opacity: 1; transform-origin: 50% 0% 0px\"\n          >\n            Retro Shoe\n          </h2>\n        </div>\n        <div class=\"relative\">\n          <div\n            class=\"inline-flex text-white text-base\"\n            style=\"opacity: 1; transform-origin: 50% 0% 0px\"\n          >{{ product.price | currency }}</div>\n        </div>\n        <div class=\"relative whitespace-nowrap flex-auto ml-3\">\n          <div\n\t\t\t\t\t\t*ngIf=\"product.inStock\"\n            class=\"inline-flex text-teal-400 text-base uppercase\"\n            style=\"opacity: 1; transform-origin: 50% 50% 0px; color: rgb(45, 212, 191)\"\n          >\n            In stock\n          </div>\n\t\t\t\t\t<div\n\t\t\t\t\t\t*ngIf=\"!product.inStock\"\n\t\t\t\t\t\tclass=\"inline-flex text-teal-400 text-base uppercase\"\n\t\t\t\t\t\tstyle=\"opacity: 1; transform-origin: 50% 50% 0px; color: rgb(45, 212, 191)\"\n\t\t\t\t\t>\n\t\t\t\t\t\tOut of stock\n\t\t\t\t\t</div>\n        </div>\n      </div>\n      <div class=\"w-full flex-none flex items-center my-6\">\n\t\t\t\t<size-selector\n\t\t\t\t\t[sizes]=\"product.sizes\"\n\t\t\t\t\t[(selectedSize)]=\"selectedSize\"\n\t\t\t\t></size-selector>\n      </div>\n      <div\n        class=\"w-full h-px bg-gray-200 -mt-px\"\n        style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n      ></div>\n      <div\n        class=\"flex-none w-full grid gap-4 text-center\"\n        style=\"grid-template-columns: auto auto 1fr\"\n      >\n        <div class=\"relative\">\n          <button\n\t\t\t\t\t\tmat-stroked-button\n\t\t\t\t\t\t(click)=\"buyNow.emit($event)\"\n            class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"\n              height: 46px;\n              background-color: rgb(45, 212, 191);\n              border-color: rgb(0, 0, 0);\n\t\t\t\t\t\t\tborder-width: 2px;\n              transform-origin: 50% 50% 0px;\n              border-radius: 0%;\n            \"\n          >\n            <span\n              class=\"flex items-center justify-center text-base text-black uppercase\"\n              style=\"opacity: 1\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<span style=\"transform-origin: 50% 50% 0px; width: 98px;\">Buy now</span>\n\t\t\t\t\t\t</span>\n          </button>\n        </div>\n        <div class=\"relative\">\n          <button\n\t\t\t\t\t\tmat-stroked-button\n\t\t\t\t\t\t(click)=\"addToBag.emit($event)\"\n            class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"\n              height: 46px;\n              background-color: rgb(255, 255, 255);\n              border-color: rgb(229, 231, 235);\n              transform-origin: 50% 50% 0px;\n              border-radius: 0%;\n            \"\n          >\n            <span\n              class=\"w-full flex-none flex items-center justify-center text-base text-black uppercase\"\n              style=\"opacity: 1\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<span style=\"transform-origin: 100% 50% 0px; width: 98px;\">Add to bag</span>\n\t\t\t\t\t\t</span>\n          </button>\n        </div>\n        <div class=\"flex\">\n          <button\n\t\t\t\t\t\tmat-icon-button\n\t\t\t\t\t\t(click)=\"\n\t\t\t\t\t\t\taddToFavorites.emit($event);\n\t\t\t\t\t\t\tproduct.isFavorite = !product.isFavorite\n\t\t\t\t\t\t\"\n            class=\"flex items-center border cursor-pointer justify-center\"\n            style=\"\n              width: 30px;\n              height: 46px;\n              background-color: rgb(255, 255, 255);\n              border-color: rgb(255, 255, 255);\n              transform-origin: 50% 50% 0px;\n              border-radius: 0%;\n            \"\n          >\n\t\t\t\t\t\t<img\n\t\t\t\t\t\t\t*ngIf=\"!product.isFavorite\"\n\t\t\t\t\t\t\tclass=\"m-auto\"\n\t\t\t\t\t\t\tsrc=\"/assets/heart-gray.svg\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<img\n\t\t\t\t\t\t\t*ngIf=\"product.isFavorite\"\n\t\t\t\t\t\t\tclass=\"m-auto\"\n\t\t\t\t\t\t\tsrc=\"/assets/heart-black.svg\"\n\t\t\t\t\t\t/>\n\t\t\t\t</button>\n        </div>\n      </div>\n      <div class=\"relative w-full mt-4\">\n        <p\n          class=\"inline-flex align-top IBMPlexMono-Regular_font__VNQU5 text-gray-500 text-xs leading-6\"\n          style=\"opacity: 1; transform-origin: 50% 100% 0px\"\n        >\n          <span>Free shipping on all <span class=\"hidden sm:inline\">continental US</span> orders.</span>\n        </p>\n      </div>\n    </div>\n  </div>\n</div>\n"
         },
         {
             "name": "ButtonComponent",
@@ -403,6 +403,69 @@
             }
         },
         {
+            "name": "GridComponent",
+            "id": "component-GridComponent-816fd2bd4dce779d616d90034647ef7b08bfafff2c91519c0579eb7929465b791934f19c08ae29b79f7c260a0b409874f1f1dc6c71c36ebeef91e064628297d5",
+            "file": "src/app/grid/grid.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-grid",
+            "styleUrls": [
+                "./grid.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./grid.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';\n\n@Component({\n  selector: 'app-grid',\n  templateUrl: './grid.component.html',\n  styleUrls: ['./grid.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class GridComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./grid.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 9
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>grid works!</p>\n"
+        },
+        {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-6095ca04a0dc8221d530ae2d7648e1b84c0e59ef2d669aa7dcaa73fd921ec77962abda30e08f2fa5fd9c9e7ebc9fd4de9387d9129895cfd067fe79e491d8ad0b",
             "file": "src/app/shared/header.component.ts",
@@ -549,6 +612,97 @@
             "stylesData": ""
         },
         {
+            "name": "RentalComponent",
+            "id": "component-RentalComponent-ac9e2246e341321203dd4cc6e57e57f1b5406f386523ed90e043392ff7607dc84d6221af453abd1013b81d11d1f92e5254c71c3e966abac665f90b235a21dfec",
+            "file": "src/app/rental/rental.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-rental",
+            "styleUrls": [
+                "./rental.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./rental.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, ChangeDetectionStrategy } from '@angular/core';\n\n@Component({\n  selector: 'app-rental',\n  templateUrl: './rental.component.html',\n  styleUrls: ['./rental.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class RentalComponent { }\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./rental.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<body class=\"antialiased text-gray-500 dark:text-gray-400\">\n  <div id=\"__next\" data-reactroot=\"\">\n    <div>\n      <main class=\"py-6 px-4 sm:p-6 md:py-10 md:px-8\">\n        <div\n          class=\"max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2\"\n        >\n          <div\n            class=\"relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1\"\n          >\n            <h1\n              class=\"mt-1 text-lg font-semibold text-white sm:text-gray-900 md:text-2xl dark:sm:text-white\"\n            >\n              Beach House in Collingwood\n            </h1>\n            <p\n              class=\"text-sm leading-4 font-medium text-white sm:text-gray-500 dark:sm:text-gray-400\"\n            >\n              Entire house\n            </p>\n          </div>\n          <div\n            class=\"grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0\"\n          >\n            <img\n              src=\"/assets/beach-house.jpg\"\n              alt=\"\"\n              class=\"w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full\"\n              loading=\"lazy\"\n            />\n            <img\n              src=\"/assets/beach-house-interior-1.jpg\"\n              alt=\"\"\n              class=\"hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32\"\n              loading=\"lazy\"\n            />\n            <img\n              src=\"/assets/beach-house-interior-2.jpg\"\n              alt=\"\"\n              class=\"hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32\"\n              loading=\"lazy\"\n            />\n          </div>\n          <dl\n            class=\"mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2\"\n          >\n            <dt class=\"sr-only\">Reviews</dt>\n            <dd class=\"text-indigo-600 flex items-center dark:text-indigo-400\">\n              <svg\n                width=\"24\"\n                height=\"24\"\n                fill=\"none\"\n                aria-hidden=\"true\"\n                class=\"mr-1 stroke-current dark:stroke-indigo-500\"\n              >\n                <path\n                  d=\"m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z\"\n                  stroke-width=\"2\"\n                  stroke-linecap=\"round\"\n                  stroke-linejoin=\"round\"\n                ></path>\n              </svg>\n              <span\n                >4.89 <span class=\"text-gray-400 font-normal\">(128)</span></span\n              >\n            </dd>\n            <dt class=\"sr-only\">Location</dt>\n            <dd class=\"flex items-center\">\n              <svg\n                width=\"2\"\n                height=\"2\"\n                aria-hidden=\"true\"\n                fill=\"currentColor\"\n                class=\"mx-3 text-gray-300\"\n              >\n                <circle cx=\"1\" cy=\"1\" r=\"1\"></circle>\n              </svg>\n              <svg\n                width=\"24\"\n                height=\"24\"\n                fill=\"none\"\n                stroke=\"currentColor\"\n                stroke-width=\"2\"\n                stroke-linecap=\"round\"\n                stroke-linejoin=\"round\"\n                class=\"mr-1 text-gray-400 dark:text-gray-500\"\n                aria-hidden=\"true\"\n              >\n                <path\n                  d=\"M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z\"\n                ></path>\n                <path d=\"M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z\"></path>\n              </svg>\n              Collingwood, Ontario\n            </dd>\n          </dl>\n          <div\n            class=\"mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4\"\n          >\n            <button\n              type=\"button\"\n              class=\"bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg\"\n            >\n              Check availability\n            </button>\n          </div>\n          <p\n            class=\"mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-gray-400\"\n          >\n            This sunny and spacious room is for those traveling light and\n            looking for a comfy and cosy place to lay their head for a night or\n            two. This beach house sits in a vibrant neighborhood littered with\n            cafes, pubs, restaurants and supermarkets and is close to all the\n            major attractions such as Edinburgh Castle and Arthur's Seat.\n          </p>\n        </div>\n      </main>\n    </div>\n  </div>\n  <script id=\"__NEXT_DATA__\" type=\"application/json\">\n    {\n      \"props\": { \"pageProps\": {} },\n      \"page\": \"/examples/mobile-first-demo\",\n      \"query\": {},\n      \"buildId\": \"u6_z16uThS3p_oGCHakW8\",\n      \"nextExport\": true,\n      \"autoExport\": true,\n      \"isFallback\": false,\n      \"scriptLoader\": []\n    }\n  </script>\n  <script></script>\n  <div\n    class=\"bar-of-progress finished\"\n    style=\"\n      position: fixed;\n      top: 0px;\n      left: 0px;\n      margin: 0px;\n      padding: 0px;\n      border: none;\n      border-radius: 0px;\n      background-color: currentcolor;\n      z-index: 10000;\n      height: 2px;\n      color: rgb(56, 189, 248);\n      opacity: 0;\n      width: 100%;\n      transition: width 0.1s ease-out 0s, opacity 0.5s ease 0.2s;\n    \"\n  >\n    <div\n      class=\"glow\"\n      style=\"opacity: 0.4; box-shadow: 3px 0px 8px; height: 100%\"\n    ></div>\n  </div>\n  <!-- <next-route-announcer>\n    <p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\"\n      style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\">\n    </p>\n  </next-route-announcer> -->\n</body>\n"
+        },
+        {
+            "name": "ShoppingComponent",
+            "id": "component-ShoppingComponent-b00542c7e4339de6b504c12a89ac92d3ba1e3207f8e8d67576c260c320ef2e2035aeb1f82b400688d66abaa6e2a44011d54069daec83e8488f733e816528052b",
+            "file": "src/app/shopping/shopping.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "shopping",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "shopping.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "products",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "Shopping.Product[]",
+                    "decorators": []
+                },
+                {
+                    "name": "style",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "Style.Style",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport * as Shopping from './shopping';\nimport * as Style from './style';\n\n@Component({\n  selector: 'shopping',\n  templateUrl: 'shopping.component.html'\n})\nexport default class ShoppingComponent {\n  @Input()\n  products!: Shopping.Product[];\n\n  @Input()\n  style!: Style.Style;\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "templateData": "<div *ngIf=\"Style === 'brutalist\">\n  <brutalist \n    *ngFor=\"let product of products\"\n    [product]=\"product\"\n    [selectedSize]=\"product.sizes[0]\"\n  ></brutalist>\n</div>\n\n<div *ngIf=\"Style === 'simple>\n  <simple \n    *ngFor=\"let product of products\"\n    [product]=\"product\"\n    [selectedSize]=\"product.sizes[0]\"\n  ></simple>\n</div>"
+        },
+        {
             "name": "SimpleComponent",
             "id": "component-SimpleComponent-6a84affd22ad05b336c82fc3da6b44206e10c5d627aae4bd717d8e177023f2a822f6cb5d0af22b33cd474e9266d0e4abf08bb35a624b270ca26dc01c4ff85cbb",
             "file": "src/app/shopping/simple/simple.component.ts",
@@ -628,11 +782,123 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div\n  class=\"relative shadow-xl flex leading-none\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 2.02703% / 3.93443%;\"\n>\n  <div\n    class=\"bg-white flex w-full\"\n    style=\"transform-origin: 50% 50% 0px; border-radius: 1.92308% / 3.93443%\"\n  >\n    <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n      <div\n        class=\"relative z-20 overflow-hidden flex-none\"\n        style=\"width: 192px; height: 305px; border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%; transform-origin: 50% 50% 0px;\"\n      >\n        <img\n          src=\"{{ product.image }}\"\n          alt=\"product image\"\n          class=\"absolute max-w-none\"\n          style=\"width: 229px; height: 305px; left: -18px; top: 0px; opacity: 1; z-index: 2; transform-origin: 50% 50% 0px;\"\n        />\n      </div>\n      <div\n        class=\"absolute z-10 bg-teal-400 inset-px\"\n        style=\"border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%; transform-origin: 50% 50% 0px;\"\n      ></div>\n    </div>\n    <div class=\"self-start flex-auto flex flex-wrap items-baseline p-6\">\n      <div class=\"w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6\">\n          <div\n              class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n              style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n          ></div>\n          <div class=\"relative flex-auto\">\n              <h2\n                  class=\"inline-flex text-gray-900 text-lg font-semibold\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >\n                  <span class=\"hidden sm:inline whitespace-pre\">{{ product.name }}</span>\n              </h2>\n          </div>\n          <div class=\"relative\">\n              <div\n                  class=\"inline-flex text-lg font-semibold\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >{{ product.price | currency }}</div>\n          </div>\n          <div class=\"relative whitespace-nowrap flex-none w-full mt-2\">\n              <div *ngIf=\"inStock\"\n                  class=\"inline-flex text-sm font-medium text-gray-700\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >In stock</div>\n              <div *ngIf=\"!inStock\"\n                  class=\"inline-flex text-sm font-medium text-gray-700\"\n                  style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n              >Out of stock</div>\n          </div>\n      </div>\n      <div class=\"w-full flex-none flex items-center\">\n        <size-selector [sizes]=\"product.sizes\" [(selectedSize)]=\"selectedSize\"></size-selector>\n      </div>\n      <div\n        class=\"w-full h-px bg-gray-200 my-6\"\n        style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n      ></div>\n      <div\n        class=\"flex-none w-full grid gap-4 text-center\"\n        style=\"grid-template-columns: auto auto 1fr\"\n      >\n        <div class=\"relative\">\n          <button\n            mat-flat-button\n            matRipple\n            class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"height: 42px; background-color: rgb(17, 24, 39); border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 7.55943% / 19.0476%;\"\n            (click)=\"buyNow.emit($event)\"\n          >\n              <span\n                  class=\"flex items-center justify-center text-white font-semibold\"\n                  style=\"opacity: 1\"\n              >\n                  <span style=\"transform-origin: 50% 50% 0px; width: 80px;\">Buy now</span>\n              </span>\n          </button>\n        </div>\n\n        <div class=\"relative\">\n          <button\n            mat-stroked-button\n            class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 6.52229% / 19.0476%;\"\n            (click)=\"addToBag.emit($event)\"\n          >\n              <span\n                  class=\"w-full flex-none flex items-center justify-center text-gray-900 font-semibold\"\n                  style=\"opacity: 1\"\n              >\n                  <span style=\"transform-origin: 50% 50% 0px; width: 80px;\">Add to bag</span>\n              </span>\n          </button>\n        </div>\n        <div class=\"flex justify-end\">\n          <button\n            mat-icon-button\n            mat-stroked-button\n            class=\"flex items-center border cursor-pointer justify-center\"\n            style=\"width: 42px; height: 42px; background-color: rgb(255, 255, 255); border-color: rgb(229, 231, 235); transform-origin: 50% 50% 0px; border-radius: 19.0476%;\"\n            (click)=\"addToFavorites.emit($event); product.isFavorite = !product.isFavorite;\"\n          >\n            <img *ngIf=\"!product.isFavorite\" class=\"m-auto\" src=\"/assets/heart-gray.svg\" />\n            <img *ngIf=\"product.isFavorite\" class=\"m-auto\" src=\"/assets/heart-black.svg\" />\n          </button>\n        </div>\n      </div>\n      <div class=\"relative w-full mt-6 mb-1\">      \n        <p\n          class=\"inline-flex align-top text-sm text-gray-700 \"\n          style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n        >\n          <span>Free shipping on all<span class=\"hidden sm:inline\"> continental US</span> orders.</span>\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
+            "templateData": "<div\n  class=\"relative shadow-xl flex leading-none\"\n  style=\"transform-origin: 50% 50% 0px; border-radius: 2.02703% / 3.93443%\"\n>\n  <div\n    class=\"bg-white flex w-full\"\n    style=\"transform-origin: 50% 50% 0px; border-radius: 1.92308% / 3.93443%\"\n  >\n    <div class=\"relative flex-none sm:self-start lg:self-auto xl:self-start\">\n      <div\n        class=\"relative z-20 overflow-hidden flex-none\"\n        style=\"\n          width: 192px;\n          height: 305px;\n          border-radius: 4.16667% 0% 0% 4.16667% / 2.62295% 0% 0% 2.62295%;\n          transform-origin: 50% 50% 0px;\n        \"\n      >\n        <img\n          src=\"{{ product.image }}\"\n          alt=\"product image\"\n          class=\"absolute max-w-none\"\n          style=\"\n            width: 229px;\n            height: 305px;\n            left: -18px;\n            top: 0px;\n            opacity: 1;\n            z-index: 2;\n            transform-origin: 50% 50% 0px;\n          \"\n        />\n      </div>\n      <div\n        class=\"absolute z-10 bg-teal-400 inset-px\"\n        style=\"\n          border-radius: 4.21053% 0% 0% 4.21053% / 2.64026% 0% 0% 2.64026%;\n          transform-origin: 50% 50% 0px;\n        \"\n      ></div>\n    </div>\n    <div class=\"self-start flex-auto flex flex-wrap items-baseline p-6\">\n      <div\n        class=\"w-full relative flex flex-wrap items-baseline -mt-6 pt-6 pb-6\"\n      >\n        <div\n          class=\"absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black\"\n          style=\"opacity: 0; transform-origin: 50% 50% 0px\"\n        ></div>\n        <div class=\"relative flex-auto\">\n          <h2\n            class=\"inline-flex text-gray-900 text-lg font-semibold\"\n            style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n          >\n            <span class=\"hidden sm:inline whitespace-pre\">{{ product.name }}</span>\n          </h2>\n        </div>\n        <div class=\"relative\">\n          <div\n            class=\"inline-flex text-lg font-semibold\"\n            style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n          >\n            {{ product.price | currency }}\n          </div>\n        </div>\n        <div class=\"relative whitespace-nowrap flex-none w-full mt-2\">\n          <div\n            *ngIf=\"product.inStock\"\n            class=\"inline-flex text-sm font-medium text-gray-700\"\n            style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n          >\n            In stock\n          </div>\n          <div\n            *ngIf=\"!product.inStock\"\n            class=\"inline-flex text-sm font-medium text-gray-700\"\n            style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n          >\n            Out of stock\n          </div>\n        </div>\n      </div>\n      <div class=\"w-full flex-none flex items-center\">\n        <size-selector\n          [sizes]=\"product.sizes\"\n          [(selectedSize)]=\"selectedSize\"\n        ></size-selector>\n      </div>\n      <div\n        class=\"w-full h-px bg-gray-200 my-6\"\n        style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n      ></div>\n      <div\n        class=\"flex-none w-full grid gap-4 text-center\"\n        style=\"grid-template-columns: auto auto 1fr\"\n      >\n        <div class=\"relative\">\n          <button\n            mat-flat-button\n            (click)=\"buyNow.emit($event)\"\n            class=\"relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"\n              height: 42px;\n              background-color: rgb(17, 24, 39);\n              border-color: rgb(17, 24, 39);\n              transform-origin: 50% 50% 0px;\n              border-radius: 7.55943% / 19.0476%;\n            \"\n          >\n            <span\n              class=\"flex items-center justify-center text-white font-semibold\"\n              style=\"opacity: 1\"\n            >\n              <span style=\"transform-origin: 50% 50% 0px; width: 80px\">Buy now</span>\n            </span>\n          </button>\n        </div>\n\n        <div class=\"relative\">\n          <button\n            mat-stroked-button\n            (click)=\"addToBag.emit($event)\"\n            class=\"relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap px-6\"\n            style=\"\n              height: 42px;\n              background-color: rgb(255, 255, 255);\n              border-color: rgb(229, 231, 235);\n              transform-origin: 50% 50% 0px;\n              border-radius: 6.52229% / 19.0476%;\n            \"\n          >\n            <span\n              class=\"w-full flex-none flex items-center justify-center text-gray-900 font-semibold\"\n              style=\"opacity: 1\"\n            >\n              <span style=\"transform-origin: 50% 50% 0px; width: 80px\">Add to bag</span>\n            </span>\n          </button>\n        </div>\n        <div class=\"flex justify-end\">\n          <button\n            mat-icon-button\n            mat-stroked-button\n            (click)=\"\n              addToFavorites.emit($event);\n              product.isFavorite = !product.isFavorite\n            \"\n            class=\"flex items-center border cursor-pointer justify-center\"\n            style=\"\n              width: 42px;\n              height: 42px;\n              background-color: rgb(255, 255, 255);\n              border-color: rgb(229, 231, 235);\n              transform-origin: 50% 50% 0px;\n              border-radius: 19.0476%;\n            \"\n\n          >\n            <img\n              *ngIf=\"!product.isFavorite\"\n              class=\"m-auto\"\n              src=\"/assets/heart-gray.svg\"\n            />\n            <img\n              *ngIf=\"product.isFavorite\"\n              class=\"m-auto\"\n              src=\"/assets/heart-black.svg\"\n            />\n          </button>\n        </div>\n      </div>\n      <div class=\"relative w-full mt-6 mb-1\">\n        <p\n          class=\"inline-flex align-top text-sm text-gray-700\"\n          style=\"opacity: 1; transform-origin: 50% 50% 0px\"\n        >\n          <span\n            >Free shipping on all<span class=\"hidden sm:inline\"\n              >continental US</span\n            >orders.</span\n          >\n        </p>\n      </div>\n    </div>\n  </div>\n</div>\n"
         },
         {
             "name": "SizeSelectorComponent",
             "id": "component-SizeSelectorComponent-a8d29ce1b80fbd274dbcfff9250479a22bff414df91e7297254eff2889706f41e1bf22a75989731366177c1800bdc9cc47e7b2340dcb6b743a8999562cb78711",
+            "file": "src/app/shopping/brutalist/size-selector/size-selector.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "size-selector",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "size-selector.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "selectedSize",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "sizes",
+                    "defaultValue": "['N/A']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "selectedSizeChange",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "_selectedSize",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 24,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'size-selector',\n  templateUrl: 'size-selector.component.html'\n})\nexport default class SizeSelectorComponent {\n  @Input()\n  sizes: string[] = ['N/A'];\n\n  @Input()\n  set selectedSize(value: string) {\n    if (this.sizes.indexOf(value) > -1) {\n      this._selectedSize = value;\n    } else {\n      this._selectedSize = this.sizes[0];\n    }\n\n    this.selectedSizeChange.emit(this._selectedSize);\n  }\n  get selectedSize() {\n    return this._selectedSize;\n  }\n  private _selectedSize: string = '';\n\n  @Output()\n  selectedSizeChange = new EventEmitter<string>();\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "accessors": {
+                "selectedSize": {
+                    "name": "selectedSize",
+                    "setSignature": {
+                        "name": "selectedSize",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 12,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "selectedSize",
+                        "type": "",
+                        "returnType": "",
+                        "line": 21
+                    }
+                }
+            },
+            "templateData": "<ul class=\"flex text-sm space-x-3\">\n  <li\n\t\t*ngFor=\"let size of sizes\"\n    class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n    style=\"\n      width: 42px;\n      height: 42px;\n      color: rgb(255, 255, 255);\n      transform-origin: 0% 0% 0px;\n    \"\n\t\t[ngStyle]=\"{\n      color: size === selectedSize ? 'rgb(255, 255, 255)' : 'inherit'\n    }\"\n  >\n    <div\n\t\t\t*ngIf=\"size === selectedSize\"\n      class=\"absolute bg-teal-400 top-0.5 left-0.5 -right-0.5 -bottom-0.5\"\n      style=\"transform-origin: 50% 50% 0px; border-radius: 0%; background-color: rgb(45, 212, 191);\"\n    ></div>\n    <div\n      class=\"absolute inset-0 border-2\"\n      style=\"\n        border-color: rgb(0, 0, 0);\n        background-color: rgb(0, 0, 0);\n        transform-origin: 50% 50% 0px;\n        border-radius: 0%;\n      \"\n\t\t\t[ngStyle]=\"{\n        'background-color':\n\t\t\t\t\tsize === selectedSize ? 'rgb(17, 24, 39)' : 'inherit',\n\t\t\t\t'border-color':\n          size === selectedSize\n            ? 'rgb(0, 0, 0)'\n            : 'rgb(255, 255, 255)'\n      }\"\n    ></div>\n\t\t<button\n\t\t\tmat-icon-button\n\t\t\t(click)=\"selectedSize = size\"\n\t\t>\n\t\t\t<span\n\t\t\t\tclass=\"absolute inset-0 flex items-center justify-center IBMPlexMono-Regular_font__VNQU5\"\n\t\t\t\tstyle=\"opacity: 1\"\n\t\t\t>{{ size }}</span>\n\t\t</button>\n  </li>\n</ul>\n"
+        },
+        {
+            "name": "SizeSelectorComponent",
+            "id": "component-SizeSelectorComponent-a8d29ce1b80fbd274dbcfff9250479a22bff414df91e7297254eff2889706f41e1bf22a75989731366177c1800bdc9cc47e7b2340dcb6b743a8999562cb78711-1",
             "file": "src/app/shopping/simple/size-selector/size-selector.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -740,7 +1006,10 @@
                     }
                 }
             },
-            "templateData": "<ul class=\"flex text-sm space-x-3\">\n    <li *ngFor=\"let size of sizes\"\n        class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n        style=\"width: 38px; height: 38px; transform-origin: 50% 50% 0px;\"\n        [ngStyle]=\"{\n            'color': size === selectedSize ? 'rgb(255, 255, 255)' : 'inherit'\n        }\"\n    >\n        <div\n            class=\"absolute inset-0 border-2\"\n            style=\"border-color: rgb(17, 24, 39); transform-origin: 50% 50% 0px; border-radius: 21.0526%;\"\n            [ngStyle]=\"{\n                'background-color': size === selectedSize ? 'rgb(17, 24, 39)' : 'inherit',\n                'border-color': size === selectedSize ? 'border-color: rgb(17, 24, 39)' : 'rgb(255, 255, 255)'\n            }\"\n        ></div>\n        <button\n            mat-icon-button\n            (click)=\"selectedSize = size\"\n        >\n            <span\n                class=\"absolute inset-0 flex items-center justify-center font-semibold\"\n                style=\"opacity: 1\"\n            >{{size}}</span>\n        </button>\n    </li>\n</ul>"
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "SizeSelectorComponent-1",
+            "templateData": "<ul class=\"flex text-sm space-x-3\">\n  <li\n    *ngFor=\"let size of sizes\"\n    class=\"relative flex-none flex items-center justify-center cursor-pointer\"\n    style=\"\n\t\t\twidth: 38px;\n\t\t\theight: 38px;\n\t\t\ttransform-origin:\n\t\t\t50% 50% 0px\n\t\t\"\n    [ngStyle]=\"{\n      color: size === selectedSize ? 'rgb(255, 255, 255)' : 'inherit'\n    }\"\n  >\n    <div\n      class=\"absolute inset-0 border-2\"\n      style=\"\n        border-color: rgb(17, 24, 39);\n        transform-origin: 50% 50% 0px;\n        border-radius: 21.0526%;\n      \"\n      [ngStyle]=\"{\n        'background-color':\n          size === selectedSize ? 'rgb(17, 24, 39)' : 'inherit',\n        'border-color':\n          size === selectedSize\n            ? 'border-color: rgb(17, 24, 39)'\n            : 'rgb(255, 255, 255)'\n      }\"\n    ></div>\n    <button mat-icon-button (click)=\"selectedSize = size\">\n      <span\n        class=\"absolute inset-0 flex items-center justify-center font-semibold\"\n        style=\"opacity: 1\"\n\t\t\t>{{ size }}</span>\n    </button>\n  </li>\n</ul>\n"
         },
         {
             "name": "WidthComponent",
@@ -787,13 +1056,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-918b5998025a67be7f519429a9c3efe64dab2c12def88c4f65c268de615a7376be6be0005480e1fddd1030894861d39db3f83eef71c66be3e22661d4754f1db2",
+            "id": "module-AppModule-759f8b0bcbbe15c70ab458088f88fa6a1f7a18f03ec59ffea39f8179cd78feaf46de9712f6358a46195c64a29372817bc94ac4e3306462877ac2870a8b7cc43c",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\nimport { GridModule } from './grid/grid.module';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule,\n    GridModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -827,6 +1096,9 @@
                     "elements": [
                         {
                             "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "GridModule"
                         }
                     ]
                 },
@@ -885,14 +1157,14 @@
             ]
         },
         {
-            "name": "SimpleModule",
-            "id": "module-SimpleModule-fd498c792e8b05cc605c5044790996f3e7fe4507cdfbd6d540a9c8e398277a41050e13e9e790e179787355e3ef527cbc865e56d9507eba037e2b831625537192",
+            "name": "BrutalistModule",
+            "id": "module-BrutalistModule-79ff7955c81b2ef093bb6f5656fc2dfd9de9396879658f04d928a56b0c5ad41725161bdaeca2e0461611e27b515dd7a7f3c0ef6fd7571e25a10ec697f61a026d",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/shopping/brutalist/brutalist.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport Brutalist from './brutalist.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    MatButtonModule,\n    MatIconModule\n  ],\n  exports: [],\n  declarations: [Brutalist],\n  providers: [],\n})\nexport class SimpleModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport SizeSelector from './size-selector/size-selector.component'\nimport Brutalist from './brutalist.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    MatButtonModule,\n    MatIconModule\n  ],\n  exports: [Brutalist],\n  declarations: [Brutalist, SizeSelector],\n  providers: [],\n})\nexport class BrutalistModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -903,6 +1175,53 @@
                     "elements": [
                         {
                             "name": "Brutalist"
+                        },
+                        {
+                            "name": "SizeSelector"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "Brutalist"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "GridModule",
+            "id": "module-GridModule-8f0abb56e40715c06be6d08e262f4b18f5adfb60155bf3757dc5055f62a5950a4624674794545814b0b21163b7f8019e3390fa14e31e8a915603b5d9d8c0c910",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/grid/grid.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { GridComponent } from './grid.component';\n\n\n\n@NgModule({\n  declarations: [\n    GridComponent\n  ],\n  imports: [\n    CommonModule\n  ]\n})\nexport class GridModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "GridComponent"
                         }
                     ]
                 },
@@ -925,14 +1244,101 @@
             ]
         },
         {
+            "name": "RentalModule",
+            "id": "module-RentalModule-e0af2295e4031dabd5237e2170681fc4ad3b215cbcb1ab62c195144976b59abfe986b18cee62f8435b48c6e499e2345019846e25c6364c0c55f687124f25aeea",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/rental/rental.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { RentalComponent } from './rental.component';\n\n@NgModule({\n  imports: [],\n  exports: [],\n  declarations: [RentalComponent],\n  providers: [],\n})\nexport class RentalModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "RentalComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShoppingModule",
+            "id": "module-ShoppingModule-af029e54c2f35e98e6cb9bb01d0e602fcc4299e94417ade1ee3527355455d41946633f99c9553ec68c42f80bbf7be560567dae97c5bff7c2b53de97d07b81d0d",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/shopping/shopping.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { SimpleModule } from './simple/simple.module';\nimport { BrutalistModule } from './brutalist/brutalist.module';\nimport Shopping from './shopping.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    SimpleModule,\n    BrutalistModule\n  ],\n  exports: [],\n  declarations: [Shopping],\n  providers: [],\n})\nexport class ShoppingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "Shopping"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "BrutalistModule"
+                        },
+                        {
+                            "name": "SimpleModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "SimpleModule",
-            "id": "module-SimpleModule-b59b4b81dc2f9b2e0e57eb707f1ece01cee7bcab684b1330bd22d0ccca18998819b46dd75a0280999e8dc60152b7822af99f27a721433c0a19099e1c33a5bcd5-1",
+            "id": "module-SimpleModule-70baad512f19de9b0ba657f9f4bcc9062f637b128e27abdb3e174461346aaf517b163a5ad9ceff94ad856a12478ba4be550518068bf07c05cb6db02d7d0857a8",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/shopping/simple/simple.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport Simple from './simple.component';\nimport SizeSelector from './size-selector/size-selector.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    MatButtonModule,\n    MatIconModule\n  ],\n  exports: [],\n  declarations: [Simple, SizeSelector],\n  providers: [],\n})\nexport class SimpleModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport Simple from './simple.component';\nimport SizeSelector from './size-selector/size-selector.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    MatButtonModule,\n    MatIconModule\n  ],\n  exports: [Simple],\n  declarations: [Simple, SizeSelector],\n  providers: [],\n})\nexport class SimpleModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -955,7 +1361,11 @@
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "Simple"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -1018,7 +1428,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Product",
-                "defaultValue": "{\n  id: 3,\n  name: 'Dogtooth Style Jacket',\n  image: '/assets/fancy-suit-jacket.jpg',\n  price: 350,\n  inStock: true,\n  isFavorite: false,\n  sizes: clothingSizes\n}"
+                "defaultValue": "{\n  id: 3,\n  name: 'Dogtooth Style Jacket',\n  image: '/assets/fancy-suit-jacket.jpg',\n  price: 350,\n  inStock: false,\n  isFavorite: false,\n  sizes: clothingSizes\n}"
             },
             {
                 "name": "FancySuitJacket",
@@ -1048,7 +1458,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Product",
-                "defaultValue": "{\n  id: 2,\n  name: 'Kids Jumper',\n  image: '/assets/kids-jumper.jpg',\n  price: 39,\n  inStock: true,\n  isFavorite: true,\n  sizes: clothingSizes\n}"
+                "defaultValue": "{\n  id: 2,\n  name: 'Kids Jumper',\n  image: '/assets/kids-jumper.jpg',\n  price: 39,\n  inStock: false,\n  isFavorite: true,\n  sizes: clothingSizes\n}"
             },
             {
                 "name": "KidsJumper",
@@ -1134,7 +1544,37 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Rental.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/shopping/Shopping.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1273,6 +1713,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<GridComponent>",
+                "defaultValue": "(args: GridComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1303,6 +1753,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Rental.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<RentalComponent>",
+                "defaultValue": "(args: RentalComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Width.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1328,6 +1788,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Simple>",
                 "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/shopping/Shopping.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Shopping>",
+                "defaultValue": "(args: Shopping) => ({\n  props: args,\n})"
             },
             {
                 "name": "w96",
@@ -1450,6 +1920,17 @@
                 "kind": 186
             },
             {
+                "name": "Style",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"brutalist\" | \"simple\"",
+                "file": "src/app/shopping/style.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
                 "name": "Widths",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
@@ -1482,7 +1963,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Product",
-                    "defaultValue": "{\n  id: 3,\n  name: 'Dogtooth Style Jacket',\n  image: '/assets/fancy-suit-jacket.jpg',\n  price: 350,\n  inStock: true,\n  isFavorite: false,\n  sizes: clothingSizes\n}"
+                    "defaultValue": "{\n  id: 3,\n  name: 'Dogtooth Style Jacket',\n  image: '/assets/fancy-suit-jacket.jpg',\n  price: 350,\n  inStock: false,\n  isFavorite: false,\n  sizes: clothingSizes\n}"
                 },
                 {
                     "name": "kidsJumper",
@@ -1492,7 +1973,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Product",
-                    "defaultValue": "{\n  id: 2,\n  name: 'Kids Jumper',\n  image: '/assets/kids-jumper.jpg',\n  price: 39,\n  inStock: true,\n  isFavorite: true,\n  sizes: clothingSizes\n}"
+                    "defaultValue": "{\n  id: 2,\n  name: 'Kids Jumper',\n  image: '/assets/kids-jumper.jpg',\n  price: 39,\n  inStock: false,\n  isFavorite: true,\n  sizes: clothingSizes\n}"
                 },
                 {
                     "name": "retroShoe",
@@ -1832,6 +2313,72 @@
                     "defaultValue": "(args: BrownFox) => ({\n  props: args,\n})"
                 }
             ],
+            "src/stories/Grid.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<GridComponent>",
+                    "defaultValue": "(args: GridComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Rental.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Rental.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Rental.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<RentalComponent>",
+                    "defaultValue": "(args: RentalComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/shopping/Shopping.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/shopping/Shopping.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/shopping/Shopping.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Shopping>",
+                    "defaultValue": "(args: Shopping) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/Width.stories.ts": [
                 {
                     "name": "Template",
@@ -1973,6 +2520,19 @@
                     "kind": 186
                 }
             ],
+            "src/app/shopping/style.ts": [
+                {
+                    "name": "Style",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"brutalist\" | \"simple\"",
+                    "file": "src/app/shopping/style.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                }
+            ],
             "src/app/shared/width.component.ts": [
                 {
                     "name": "Widths",
@@ -2013,6 +2573,24 @@
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/grid/grid.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "GridComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/rental/rental.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "RentalComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -2086,6 +2664,24 @@
                 "name": "BrutalistComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/brutalist/size-selector/size-selector.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SizeSelectorComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shopping/shopping.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ShoppingComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -2277,6 +2873,26 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/Grid.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Grid.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/Header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2328,6 +2944,26 @@
             },
             {
                 "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Rental.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Rental.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2398,6 +3034,26 @@
             },
             {
                 "filePath": "src/stories/shopping/Brutalist.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/shopping/Shopping.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/shopping/Shopping.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

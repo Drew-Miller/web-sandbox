@@ -10,6 +10,7 @@ import Button from './shared/button.component';
 import Header from './shared/header.component';
 import Page from './shared/page.component';
 import Width from './shared/width.component';
+import { GridModule } from './grid/grid.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import Width from './shared/width.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [AppComponent]

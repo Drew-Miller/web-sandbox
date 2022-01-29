@@ -1,0 +1,15 @@
+<div *ngIf="Style === 'brutalist">
+  <brutalist 
+    *ngFor="let product of products"
+    [product]="product"
+    [selectedSize]="product.sizes[0]"
+  ></brutalist>
+</div>
+
+<div *ngIf="Style === 'simple>
+  <simple 
+    *ngFor="let product of products"
+    [product]="product"
+    [selectedSize]="product.sizes[0]"
+  ></simple>
+</div>

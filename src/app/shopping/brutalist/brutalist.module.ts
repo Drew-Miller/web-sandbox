@@ -17,4 +17,4 @@ import Brutalist from './brutalist.component';
   declarations: [Brutalist, SizeSelector],
   providers: [],
 })
-export class SimpleModule { }
+export class BrutalistModule { }

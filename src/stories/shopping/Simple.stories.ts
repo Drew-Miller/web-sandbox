@@ -11,7 +11,7 @@ import SizeSelector from 'src/app/shopping/simple/size-selector/size-selector.co
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Simple',
+  title: 'Example/Shopping/Simple',
   component: Simple,
   decorators: [
     moduleMetadata({

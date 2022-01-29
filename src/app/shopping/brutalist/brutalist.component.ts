@@ -3,7 +3,7 @@ import * as Shopping from '../shopping';
 
 
 @Component({
-  selector: 'simple',
+  selector: 'brutalist',
   templateUrl: './brutalist.component.html',
   styleUrls: ['./brutalist.component.scss']
 })

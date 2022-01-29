@@ -11,7 +11,7 @@ import SizeSelector from 'src/app/shopping/brutalist/size-selector/size-selector
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Brutalist',
+  title: 'Example/Shopping/Brutalist',
   component: Brutalist,
   decorators: [
     moduleMetadata({
