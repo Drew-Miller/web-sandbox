@@ -1,11 +1,15 @@
-<div class="max-w-4xl mx-auto grid grid-cols-1">
+<div class="
+    max-w-4xl mx-auto
+    grid grid-cols-1 lg:grid-cols-2
+  "
+>
   <div class="
         relative
         p-3
         bg-none sm:bg-yellow-500
         rounded-lg
         flex flex-col-reverse
-        row-start-1 sm:row-start-2
+        row-start-1 sm:row-start-2 lg:row-start-1
         col-start-1
       "
     >
@@ -18,15 +22,27 @@
   <div class="
       row-start-1
       col-start-1 col-end-3
+      lg:col-start-2 lg:row-span-5 lg:row-end-5
     "
   >
-    <div class="rounded-lg bg-green-500 h-52 flex items-center justify-center">
+    <div class="
+        rounded-lg
+        bg-green-500
+        h-52 lg:h-full
+        flex items-center justify-center
+      "
+    >
       <img class="h-28" src="assets/heart-gray.svg" />
     </div>
   </div>
 
   <div class="
-      row-start-2 sm:row-start-3
+      mt-4
+      sm:mt-1
+      lg:mt-4
+      row-start-2
+      sm:row-start-3
+      lg:row-start-2
     "
   >
     <p class="rounded-lg bg-purple-500 p-2">
@@ -35,9 +51,13 @@
   </div>
 
   <div class="
-      col-start-1 sm:col-start-2
-      row-start-3 sm:row-start-2 sm:row-span-2
+      col-start-1
+      sm:col-start-2
+      row-start-3
+      sm:row-start-2 sm:row-span-2
+      lg:row-start-3 lg:row-end-4 lg:row-span-1 lg:col-start-1
       self-center
+      mt-4 sm:mt-0 lg:mt-6
     "
   >
     <button
@@ -59,7 +79,10 @@
   <div class="
       col-start-1
       sm:col-span-2
+      lg:col-span-1 lg:row-start-4
       leading-6
+      mt-4
+      lg:mt-6
     "
   >
     <p class="text-white font-sm rounded-lg bg-red-500 p-2">
