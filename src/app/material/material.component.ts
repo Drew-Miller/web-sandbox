@@ -1,6 +1,21 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+
+type NavLink = {
+  name: string,
+  link: string
+};
 
 type Theme = 'light' | 'dark';
+
+const navLinkSource$ = new BehaviorSubject<NavLink[]>([
+  { name: 'Item', link: 'https://www.google.com/'},
+  { name: 'Item', link: 'https://www.google.com/'},
+  { name: 'Item', link: 'https://www.google.com/'},
+  { name: 'Item', link: 'https://www.google.com/'},
+  { name: 'Item', link: 'https://www.google.com/'},
+  { name: 'Item', link: 'https://www.google.com/'}
+]).asObservable();
 
 @Component({
   selector: 'app-material',
@@ -8,13 +23,15 @@ type Theme = 'light' | 'dark';
   styleUrls: ['./material.component.scss']
 })
 export class MaterialComponent {
-  @HostBinding('class') className = 'light';
+  navLinks$ = navLinkSource$;
+
+  @HostBinding('class') classTheme: Theme = 'light';
 
   get mode() {
     return this._mode;
   }
   set mode(v: Theme) {
-    this.className = this._mode = v;
+    this.classTheme = this._mode = v;
   }
   private _mode: Theme = 'light';
 }

@@ -1,36 +1,41 @@
 <!-- Toolbar -->
-<mat-toolbar color="primary" class="
-    fixed top-0 right-0 left-0
-    z-10
-  "
->
-  <mat-toolbar-row  class="mat-elevation-z6">
-    <h1>DrewZone</h1>
+<mat-toolbar color="primary" class="fixed top-0 right-0 left-0 z-10">
+  <mat-toolbar-row class="pl-8 mat-elevation-z8 dark:shadow-none">
+    <h1>PSECT</h1>
 
-   <div class="flex-grow"></div>
+    <div class="flex-grow"></div>
 
-   <button mat-icon-button aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+    <button mat-icon-button aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+
+    <button *ngIf="mode !=='dark'" mat-icon-button (click)="mode = 'dark'" aria-label="Example icon-button with dark mode icon">
+      <mat-icon>dark_mode</mat-icon>
+    </button>
+    <button *ngIf="mode !=='light'" mat-icon-button (click)="mode = 'light'" aria-label="Example icon-button with light mode icon">
+      <mat-icon>light_mode</mat-icon>
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <!-- Side Nav-->
 <mat-sidenav-container>
   <!-- Display for mobile -->
-  <mat-sidenav #sidenav mode="over" class="w-56" fixedInViewport="true" fixedTopGap="64">
-    <mat-list class="sticky top-0" style="padding-top: 0px;">
-      <a mat-list-item href="https://www.google.com/" target="_blank" class="hover:bg-gray-100" matRipple>Item</a>
-      <a mat-list-item href="https://www.google.com/" target="_blank" class="hover:bg-gray-100" matRipple>Item</a>
-      <a mat-list-item href="https://www.google.com/" target="_blank" class="hover:bg-gray-100" matRipple>Item</a>
-    </mat-list>
+  <mat-sidenav #sidenav mode="over" class="w-56">
+    <div class="w-56 fixed sm:top-16 top-14">
+      <mat-nav-list>
+        <a *ngFor="let nav of navLinks$ | async" mat-list-item href="{{nav.link}}" target="_blank" rel="noopener">
+          {{ nav.name }}
+        </a>
+      </mat-nav-list>
+    </div>
   </mat-sidenav>
 
   <!-- Content -->
-  <mat-sidenav-content class="mt-16">
+  <mat-sidenav-content class="mt-14 sm:mt-16">
     <app-page-header>
       <button mat-button (click)="sidenav.toggle()" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
@@ -38,20 +43,8 @@
       <h1>Sandbox</h1>
     </app-page-header>
 
-    <!-- Desktop Navigation -->
     <main class="p-4 m-auto">
-      <app-button-gallery></app-button-gallery>
       <app-button-gallery></app-button-gallery>
     </main>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-
-
-
-
-<main class="flex">
-
-
-
-</main>
