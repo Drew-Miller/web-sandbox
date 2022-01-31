@@ -8,14 +8,13 @@ type Theme = 'light' | 'dark';
   styleUrls: ['./material.component.scss']
 })
 export class MaterialComponent {
-  @HostBinding('class') className = 'light-mode';
+  @HostBinding('class') className = 'light';
 
   get mode() {
     return this._mode;
   }
   set mode(v: Theme) {
-    this._mode = v;
-    this.className = `${v}-mode`;
+    this.className = this._mode = v;
   }
   private _mode: Theme = 'light';
 }
