@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tailwind-web": {
+    "web-sandbox": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tailwind-web",
+            "outputPath": "dist/web-sandbox",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -35,6 +35,7 @@
             ],
             "styles": [
               "src/styles.scss",
+              "src/assets/styles/material.scss",
               "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
             ],
             "scripts": []
@@ -76,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "tailwind-web:build:production"
+              "browserTarget": "web-sandbox:build:production"
             },
             "development": {
-              "browserTarget": "tailwind-web:build:development"
+              "browserTarget": "web-sandbox:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tailwind-web:build"
+            "browserTarget": "web-sandbox:build"
           }
         },
         "test": {
@@ -111,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "tailwind-web"
+  "defaultProject": "web-sandbox"
 }

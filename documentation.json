@@ -22,7 +22,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-884f0446ab4e9620ea34b349a06d6169f561bbc885b342d85b8222e8797f0eeed2cc5db57d62c94eeccd5bd911556e64e4e40a7de8c67dec6919ebe4d9f41509",
+            "id": "component-AppComponent-cd078729ab31a045bc3b31599a21092d2a6806a22f0c6f2fbafe4a6585410ccbf88ee94df513110401b44e841535f0d5cca4f229173efaadbb3030bca5ed6923",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -40,18 +40,7 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "title",
-                    "defaultValue": "'tailwind-web'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                }
-            ],
+            "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -60,7 +49,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'tailwind-web';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent { }\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -403,6 +392,69 @@
             }
         },
         {
+            "name": "ButtonGalleryComponent",
+            "id": "component-ButtonGalleryComponent-b57efe218e1c7cd172d315caa492c64c20717bb3128e0236603e2ff7b4b834dc1e69e65cb52386c01ebe2d1ed575892f19b2d10a217cedf8a98a3e195d99db4d",
+            "file": "src/app/material/button-gallery/button-gallery.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button-gallery",
+            "styleUrls": [
+                "./button-gallery.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button-gallery.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';\n\n@Component({\n  selector: 'app-button-gallery',\n  templateUrl: './button-gallery.component.html',\n  styleUrls: ['./button-gallery.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class ButtonGalleryComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./button-gallery.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 9
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<main class=\"mx-auto space-y-2\">\n  <section class=\"grid grid-cols-6\">\n    <div class=\"self-center\">Basic</div>\n    <div class=\"col-start-2 col-end-6 space-x-2\">\n      <button mat-button>Basic</button>\n      <button mat-button color=\"primary\">Primary</button>\n      <button mat-button color=\"accent\">Accent</button>\n      <button mat-button color=\"warn\">Warn</button>\n      <button mat-button disabled>Disabled</button>\n      <a mat-button href=\"https://www.google.com/\" target=\"_blank\">Link</a>\n    </div>\n  </section>\n  <mat-divider></mat-divider>\n\n  <section class=\"grid grid-cols-6\">\n    <div class=\"self-center\">Raised</div>\n    <div class=\"col-start-2 col-end-6 space-x-2\">\n      <button mat-raised-button>Basic</button>\n      <button mat-raised-button color=\"primary\">Primary</button>\n      <button mat-raised-button color=\"accent\">Accent</button>\n      <button mat-raised-button color=\"warn\">Warn</button>\n      <button mat-raised-button disabled>Disabled</button>\n      <a mat-raised-button href=\"https://www.google.com/\" target=\"_blank\">Link</a>\n    </div>\n  </section>\n  <mat-divider></mat-divider>\n\n  <section class=\"grid grid-cols-6\">\n    <div class=\"self-center\">Stroked</div>\n    <div class=\"col-start-2 col-end-6 space-x-2\">\n      <button mat-stroked-button>Basic</button>\n      <button mat-stroked-button color=\"primary\">Primary</button>\n      <button mat-stroked-button color=\"accent\">Accent</button>\n      <button mat-stroked-button color=\"warn\">Warn</button>\n      <button mat-stroked-button disabled>Disabled</button>\n      <a mat-stroked-button href=\"https://www.google.com/\" target=\"_blank\">Link</a>\n    </div>\n  </section>\n  <mat-divider></mat-divider>\n\n  <section class=\"grid grid-cols-6\">\n    <div class=\"self-center\">Flat</div>\n    <div class=\"col-start-2 col-end-6 space-x-2\">\n      <button mat-flat-button>Basic</button>\n      <button mat-flat-button color=\"primary\">Primary</button>\n      <button mat-flat-button color=\"accent\">Accent</button>\n      <button mat-flat-button color=\"warn\">Warn</button>\n      <button mat-flat-button disabled>Disabled</button>\n      <a mat-flat-button href=\"https://www.google.com/\" target=\"_blank\">Link</a>\n    </div>\n  </section>\n  <mat-divider></mat-divider>\n\n  <section class=\"grid grid-cols-6\">\n    <div class=\"self-center\">Icon</div>\n    <div class=\"col-start-2 col-end-6 space-x-2\">\n      <button mat-icon-button aria-label=\"Example icon button with a vertical three dot icon\">\n        <mat-icon>more_vert</mat-icon>\n      </button>\n      <button mat-icon-button color=\"primary\" aria-label=\"Example icon button with a home icon\">\n        <mat-icon>home</mat-icon>\n      </button>\n      <button mat-icon-button color=\"accent\" aria-label=\"Example icon button with a menu icon\">\n        <mat-icon>menu</mat-icon>\n      </button>\n      <button mat-icon-button color=\"warn\" aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>favorite</mat-icon>\n      </button>\n      <button mat-icon-button disabled aria-label=\"Example icon button with a open in new tab icon\">\n        <mat-icon>open_in_new</mat-icon>\n      </button>\n    </div>\n  </section>\n  <mat-divider></mat-divider>\n\n  <section class=\"grid grid-cols-6\">\n    <div class=\"self-center\">FAB</div>\n    <div class=\"col-start-2 col-end-6 space-x-2\">\n      <button mat-fab color=\"primary\" aria-label=\"Example icon button with a delete icon\">\n        <mat-icon>delete</mat-icon>\n      </button>\n      <button mat-fab color=\"accent\" aria-label=\"Example icon button with a bookmark icon\">\n        <mat-icon>bookmark</mat-icon>\n      </button>\n      <button mat-fab color=\"warn\" aria-label=\"Example icon button with a home icon\">\n        <mat-icon>home</mat-icon>\n      </button>\n      <button mat-fab disabled aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>favorite</mat-icon>\n      </button>\n    </div>\n  </section>\n  <mat-divider></mat-divider>\n\n  <section class=\"grid grid-cols-6\">\n    <div class=\"self-center\">Mini FAB</div>\n    <div class=\"col-start-2 col-end-6 space-x-2\">\n      <button mat-mini-fab color=\"primary\" aria-label=\"Example icon button with a menu icon\">\n        <mat-icon>menu</mat-icon>\n      </button>\n      <button mat-mini-fab color=\"accent\" aria-label=\"Example icon button with a plus one icon\">\n        <mat-icon>plus_one</mat-icon>\n      </button>\n      <button mat-mini-fab color=\"warn\" aria-label=\"Example icon button with a filter list icon\">\n        <mat-icon>filter_list</mat-icon>\n      </button>\n      <button mat-mini-fab disabled aria-label=\"Example icon button with a home icon\">\n        <mat-icon>home</mat-icon>\n      </button>\n    </div>\n  </section>\n  <mat-divider></mat-divider>\n</main>\n"
+        },
+        {
             "name": "GridComponent",
             "id": "component-GridComponent-816fd2bd4dce779d616d90034647ef7b08bfafff2c91519c0579eb7929465b791934f19c08ae29b79f7c260a0b409874f1f1dc6c71c36ebeef91e064628297d5",
             "file": "src/app/grid/grid.component.ts",
@@ -463,7 +515,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>grid works!</p>\n"
+            "templateData": "<div class=\"\n    max-w-4xl mx-auto\n    grid grid-cols-1 lg:grid-cols-2\n  \"\n>\n  <div class=\"\n        relative\n        p-3\n        bg-none sm:bg-yellow-500\n        rounded-lg\n        flex flex-col-reverse\n        row-start-1 sm:row-start-2 lg:row-start-1\n        col-start-1\n      \"\n    >\n    <h1 class=\"text-lg font-semibold text-white sm:text-black\">\n      Hello, world!\n    </h1>\n    <p class=\"text-sm font-medium text-white sm:text-black\">Foo bar</p>\n  </div>\n\n  <div class=\"\n      row-start-1\n      col-start-1 col-end-3\n      lg:col-start-2 lg:row-span-5 lg:row-end-5\n    \"\n  >\n    <div class=\"\n        rounded-lg\n        bg-green-500\n        h-52 lg:h-full\n        flex items-center justify-center\n      \"\n    >\n      <img class=\"h-28\" src=\"assets/heart-gray.svg\" />\n    </div>\n  </div>\n\n  <div class=\"\n      mt-4\n      sm:mt-1\n      lg:mt-4\n      row-start-2\n      sm:row-start-3\n      lg:row-start-2\n    \"\n  >\n    <p class=\"rounded-lg bg-purple-500 p-2\">\n      <span class=\"text-white text-sm\">subtitle - label</span>\n    </p>\n  </div>\n\n  <div class=\"\n      col-start-1\n      sm:col-start-2\n      row-start-3\n      sm:row-start-2 sm:row-span-2\n      lg:row-start-3 lg:row-end-4 lg:row-span-1 lg:col-start-1\n      self-center\n      mt-4 sm:mt-0 lg:mt-6\n    \"\n  >\n    <button\n      type=\"button\"\n      class=\"\n        bg-indigo-600 hover:bg-indigo-500\n        text-sm text-white\n        leading-6\n        font-medium\n        py-2 px-3\n        rounded-lg\n        \n      \"\n    >\n      Button\n    </button>\n  </div>\n\n  <div class=\"\n      col-start-1\n      sm:col-span-2\n      lg:col-span-1 lg:row-start-4\n      leading-6\n      mt-4\n      lg:mt-6\n    \"\n  >\n    <p class=\"text-white font-sm rounded-lg bg-red-500 p-2\">\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate\n      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint\n      occaecat cupidatat non proident, sunt in culpa qui officia deserunt\n      mollit anim id est laborum.\n    </p>\n  </div>\n</div>\n"
         },
         {
             "name": "HeaderComponent",
@@ -537,6 +589,68 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "MaterialComponent",
+            "id": "component-MaterialComponent-f738088fe68d2cf27e78756e36d1fb22748fef6aa6c423e50a2ae1cbf50c69a0bfb4d97f877fae86cb3fe5a60d3b37504379260d6858b42bc400497737c942d0",
+            "file": "src/app/material/material.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-material",
+            "styleUrls": [
+                "./material.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./material.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-material',\n  templateUrl: './material.component.html',\n  styleUrls: ['./material.component.scss']\n})\nexport class MaterialComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./material.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<app-button-gallery></app-button-gallery>"
         },
         {
             "name": "PageComponent",
@@ -650,7 +764,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<body class=\"antialiased text-gray-500 dark:text-gray-400\">\n  <div id=\"__next\" data-reactroot=\"\">\n    <div>\n      <main class=\"py-6 px-4 sm:p-6 md:py-10 md:px-8\">\n        <div\n          class=\"max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2\"\n        >\n          <div\n            class=\"relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1\"\n          >\n            <h1\n              class=\"mt-1 text-lg font-semibold text-white sm:text-gray-900 md:text-2xl dark:sm:text-white\"\n            >\n              Beach House in Collingwood\n            </h1>\n            <p\n              class=\"text-sm leading-4 font-medium text-white sm:text-gray-500 dark:sm:text-gray-400\"\n            >\n              Entire house\n            </p>\n          </div>\n          <div\n            class=\"grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0\"\n          >\n            <img\n              src=\"/assets/beach-house.jpg\"\n              alt=\"\"\n              class=\"w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full\"\n              loading=\"lazy\"\n            />\n            <img\n              src=\"/assets/beach-house-interior-1.jpg\"\n              alt=\"\"\n              class=\"hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32\"\n              loading=\"lazy\"\n            />\n            <img\n              src=\"/assets/beach-house-interior-2.jpg\"\n              alt=\"\"\n              class=\"hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32\"\n              loading=\"lazy\"\n            />\n          </div>\n          <dl\n            class=\"mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2\"\n          >\n            <dt class=\"sr-only\">Reviews</dt>\n            <dd class=\"text-indigo-600 flex items-center dark:text-indigo-400\">\n              <svg\n                width=\"24\"\n                height=\"24\"\n                fill=\"none\"\n                aria-hidden=\"true\"\n                class=\"mr-1 stroke-current dark:stroke-indigo-500\"\n              >\n                <path\n                  d=\"m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z\"\n                  stroke-width=\"2\"\n                  stroke-linecap=\"round\"\n                  stroke-linejoin=\"round\"\n                ></path>\n              </svg>\n              <span\n                >4.89 <span class=\"text-gray-400 font-normal\">(128)</span></span\n              >\n            </dd>\n            <dt class=\"sr-only\">Location</dt>\n            <dd class=\"flex items-center\">\n              <svg\n                width=\"2\"\n                height=\"2\"\n                aria-hidden=\"true\"\n                fill=\"currentColor\"\n                class=\"mx-3 text-gray-300\"\n              >\n                <circle cx=\"1\" cy=\"1\" r=\"1\"></circle>\n              </svg>\n              <svg\n                width=\"24\"\n                height=\"24\"\n                fill=\"none\"\n                stroke=\"currentColor\"\n                stroke-width=\"2\"\n                stroke-linecap=\"round\"\n                stroke-linejoin=\"round\"\n                class=\"mr-1 text-gray-400 dark:text-gray-500\"\n                aria-hidden=\"true\"\n              >\n                <path\n                  d=\"M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z\"\n                ></path>\n                <path d=\"M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z\"></path>\n              </svg>\n              Collingwood, Ontario\n            </dd>\n          </dl>\n          <div\n            class=\"mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4\"\n          >\n            <button\n              type=\"button\"\n              class=\"bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg\"\n            >\n              Check availability\n            </button>\n          </div>\n          <p\n            class=\"mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-gray-400\"\n          >\n            This sunny and spacious room is for those traveling light and\n            looking for a comfy and cosy place to lay their head for a night or\n            two. This beach house sits in a vibrant neighborhood littered with\n            cafes, pubs, restaurants and supermarkets and is close to all the\n            major attractions such as Edinburgh Castle and Arthur's Seat.\n          </p>\n        </div>\n      </main>\n    </div>\n  </div>\n  <script id=\"__NEXT_DATA__\" type=\"application/json\">\n    {\n      \"props\": { \"pageProps\": {} },\n      \"page\": \"/examples/mobile-first-demo\",\n      \"query\": {},\n      \"buildId\": \"u6_z16uThS3p_oGCHakW8\",\n      \"nextExport\": true,\n      \"autoExport\": true,\n      \"isFallback\": false,\n      \"scriptLoader\": []\n    }\n  </script>\n  <script></script>\n  <div\n    class=\"bar-of-progress finished\"\n    style=\"\n      position: fixed;\n      top: 0px;\n      left: 0px;\n      margin: 0px;\n      padding: 0px;\n      border: none;\n      border-radius: 0px;\n      background-color: currentcolor;\n      z-index: 10000;\n      height: 2px;\n      color: rgb(56, 189, 248);\n      opacity: 0;\n      width: 100%;\n      transition: width 0.1s ease-out 0s, opacity 0.5s ease 0.2s;\n    \"\n  >\n    <div\n      class=\"glow\"\n      style=\"opacity: 0.4; box-shadow: 3px 0px 8px; height: 100%\"\n    ></div>\n  </div>\n  <!-- <next-route-announcer>\n    <p aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\"\n      style=\"border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;\">\n    </p>\n  </next-route-announcer> -->\n</body>\n"
+            "templateData": "<body class=\"antialiased text-gray-500 dark:text-gray-400\">\n  <main class=\"py-6 px-4 sm:p-6 md:py-10 md:px-8\">\n    <div class=\"max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2\">\n      <div\n        class=\"relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1\">\n        <h1 class=\"mt-1 text-lg font-semibold text-white sm:text-gray-900 md:text-2xl dark:sm:text-white\">\n          Beach House in Collingwood\n        </h1>\n        <p class=\"text-sm leading-4 font-medium text-white sm:text-gray-500 dark:sm:text-gray-400\">\n          Entire house\n        </p>\n      </div>\n      <div\n        class=\"grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0\">\n        <img src=\"/assets/beach-house.jpg\" alt=\"\"\n          class=\"w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full\" loading=\"lazy\" />\n        <img src=\"/assets/beach-house-interior-1.jpg\" alt=\"\"\n          class=\"hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32\"\n          loading=\"lazy\" />\n        <img src=\"/assets/beach-house-interior-2.jpg\" alt=\"\"\n          class=\"hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32\"\n          loading=\"lazy\" />\n      </div>\n      <dl\n        class=\"mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2\">\n        <dt class=\"sr-only\">Reviews</dt>\n        <dd class=\"text-indigo-600 flex items-center dark:text-indigo-400\">\n          <svg width=\"24\" height=\"24\" fill=\"none\" aria-hidden=\"true\" class=\"mr-1 stroke-current dark:stroke-indigo-500\">\n            <path d=\"m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z\" stroke-width=\"2\" stroke-linecap=\"round\"\n              stroke-linejoin=\"round\"></path>\n          </svg>\n          <span>4.89 <span class=\"text-gray-400 font-normal\">(128)</span></span>\n        </dd>\n        <dt class=\"sr-only\">Location</dt>\n        <dd class=\"flex items-center\">\n          <svg width=\"2\" height=\"2\" aria-hidden=\"true\" fill=\"currentColor\" class=\"mx-3 text-gray-300\">\n            <circle cx=\"1\" cy=\"1\" r=\"1\"></circle>\n          </svg>\n          <svg width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"\n            stroke-linejoin=\"round\" class=\"mr-1 text-gray-400 dark:text-gray-500\" aria-hidden=\"true\">\n            <path d=\"M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z\"></path>\n            <path d=\"M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z\"></path>\n          </svg>\n          Collingwood, Ontario\n        </dd>\n      </dl>\n      <div\n        class=\"mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4\">\n        <button type=\"button\" class=\"bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg\">\n          Check availability\n        </button>\n      </div>\n      <p\n        class=\"mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-gray-400\">\n        This sunny and spacious room is for those traveling light and\n        looking for a comfy and cosy place to lay their head for a night or\n        two. This beach house sits in a vibrant neighborhood littered with\n        cafes, pubs, restaurants and supermarkets and is close to all the\n        major attractions such as Edinburgh Castle and Arthur's Seat.\n      </p>\n    </div>\n  </main>\n</body>"
         },
         {
             "name": "ShoppingComponent",
@@ -1122,13 +1236,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "id": "module-AppRoutingModule-2b4c4a0969b047093e6fc68521b4a01cab747bf0e71e18d8fa1d2ca7f90d1b2a83dbe90c5a34af8f8f95ca5acdede3f73f53f115cfc79b33f27434d5a24f96ce",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [{ path: 'material', loadChildren: () => \"import('./material/material.module').then(m => m.MaterialModule)\" }];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -1224,6 +1338,89 @@
                             "name": "GridComponent"
                         }
                     ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "MaterialModule",
+            "id": "module-MaterialModule-908cba9471fd954d8dc7902f0e706c51a74d1dc634f8a948a4e54e169e472479279a972a57a401b83b66e85cf8dd0181726b1481c23c8ab46ca8a1a90431c9d8",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/material/material.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatDividerModule } from '@angular/material/divider';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport { MaterialRoutingModule } from './material-routing.module';\nimport { MaterialComponent } from './material.component';\nimport { ButtonGalleryComponent } from './button-gallery/button-gallery.component';\n\n\nexport const imports = [\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule\n];\n\n@NgModule({\n  declarations: [\n    MaterialComponent,\n    ButtonGalleryComponent\n  ],\n  imports: [\n    MaterialRoutingModule,\n    ...imports\n  ]\n})\nexport class MaterialModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonGalleryComponent"
+                        },
+                        {
+                            "name": "MaterialComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "MaterialRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "MaterialRoutingModule",
+            "id": "module-MaterialRoutingModule-23c5c5726a42b9347fe3de20eb76109ef05c3251263843cab94b76af370b94fea2feb5b61ad0fa76c4d34a899c8ce2853955121ad1b863b4e100380ae18e3b37",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/material/material-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { MaterialComponent } from './material.component';\n\nconst routes: Routes = [{ path: '', component: MaterialComponent }];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class MaterialRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
                 },
                 {
                     "type": "imports",
@@ -1451,6 +1648,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "imports",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/material/material.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule\n]"
+            },
+            {
                 "name": "kidsJumper",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1544,16 +1751,6 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1564,7 +1761,27 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Rental.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/material/Material.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1713,21 +1930,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<GridComponent>",
-                "defaultValue": "(args: GridComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<GridComponent>",
+                "defaultValue": "(args: GridComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1773,6 +1990,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/material/Material.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MaterialComponent>",
+                "defaultValue": "(args: MaterialComponent) => ({\n  props: args\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/shopping/Brutalist.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1783,21 +2010,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/shopping/Simple.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Simple>",
-                "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/shopping/Shopping.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Shopping>",
                 "defaultValue": "(args: Shopping) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/shopping/Simple.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Simple>",
+                "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
             },
             {
                 "name": "w96",
@@ -2155,6 +2382,18 @@
                     "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
                 }
             ],
+            "src/app/material/material.module.ts": [
+                {
+                    "name": "imports",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/material/material.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule\n]"
+                }
+            ],
             "src/stories/Button.stories.ts": [
                 {
                     "name": "Large",
@@ -2357,6 +2596,28 @@
                     "defaultValue": "(args: RentalComponent) => ({\n  props: args,\n})"
                 }
             ],
+            "src/stories/material/Material.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/material/Material.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/material/Material.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MaterialComponent>",
+                    "defaultValue": "(args: MaterialComponent) => ({\n  props: args\n})"
+                }
+            ],
             "src/stories/shopping/Shopping.stories.ts": [
                 {
                     "name": "Primary",
@@ -2557,7 +2818,32 @@
                 "name": "routes",
                 "filename": "src/app/app-routing.module.ts",
                 "module": "AppRoutingModule",
-                "children": [],
+                "children": [
+                    {
+                        "path": "material",
+                        "loadChildren": "./material/material.module#MaterialModule",
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/material/material-routing.module.ts",
+                                        "module": "MaterialRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": "",
+                                                "component": "MaterialComponent"
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "MaterialModule"
+                            }
+                        ]
+                    }
+                ],
                 "kind": "module"
             }
         ]
@@ -2572,7 +2858,7 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -2582,6 +2868,34 @@
                 "name": "GridComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/material/button-gallery/button-gallery.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonGalleryComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/material/material.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MaterialComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/material/material.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "imports",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -2988,6 +3302,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "w96",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/material/Material.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/material/Material.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
