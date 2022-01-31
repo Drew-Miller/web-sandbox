@@ -1,78 +1,58 @@
 # Installation Guide
 
-*Not compatible with Angular 13.1.0 yet, use Angular 13.0.0*
+Not compatible with Angular 13.1.0 yet, use Angular 13.0.0
 
-## 1. Material 
-*install before tailwind*
+## Material
 
-### Install
-Run the following command to install.
+Install before tailwind. Run the following command to install.
 
 > npm i @angular/material
 
-&nbsp;
+Add the reference to the nodule modules scss file to **angular.json**. Or create your own theme.scss file.
 
-### Add to Project
-
-Add the reference to the scss file from nodule modules to **angular.json** *styles*
-
-```
+```typescript
 "styles": [
  "src/styles.scss",
- "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+ "src/theme.scss", // custome theme
+ "node_modules/@angular/material/prebuilt-themes/indigo-pink.css" // default theme
 ],
 ```
 
-Or, create your own!!!
+Import the icon font into styles.scss
 
-&nbsp;
+```scss
+/* Material Icons */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+```
 
-## 2. Tailwind
+## Tailwind
 
-### Repo
-**https://github.com/ngneat/tailwind**
+<https://github.com/ngneat/tailwind>
 
-### Install
-
-Try the first set of commands. If there is an error, use the second set of commands.
-
+To install, try the first command. If that fail's, try the second commands.
 
 > npx ng add @ngneat/tailwind
 
-**OR**
+> npm install tailwindcss @ngneat/tailwind
+>
+> npx tailwindcss init
 
-1. > npm install tailwindcss @ngneat/tailwind
+Add these imports to your style.scss file.
 
-2. > npx tailwindcss init
-
-&nbsp;
-
-### Add to Project
-
-In your application's stylesheet, add the following imports.
-
-> **style.scss**
-```
+```scss
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 ```
 
-&nbsp;
+## Storybook
 
-## 3. Storybook
+Install Storybook with these commands
 
-### Install
+> npx sb init
+>
+> npm run storybook
 
-Run the following commands
+Run storybook with
 
-1. > npx sb init
-
-2. > npm run storybook
-
-&nbsp;
-
-### Run
-
-Use the following command to run storybook
 > npm run storybook
