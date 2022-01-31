@@ -1,4 +1,5 @@
 import { Story, Meta, moduleMetadata } from '@storybook/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponent } from 'src/app/material/material.component';
 import * as MaterialModule from 'src/app/material/material.module';
 
@@ -8,7 +9,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [...MaterialModule.declarations],
-      imports: [...MaterialModule.imports]
+      imports: [...MaterialModule.imports, BrowserAnimationsModule]
     })
   ]
 } as Meta;

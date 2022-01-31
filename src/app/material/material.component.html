@@ -1,28 +1,57 @@
-<mat-toolbar color="primary" ngClass="
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="
     fixed top-0 right-0 left-0
     z-10
   "
 >
   <mat-toolbar-row  class="mat-elevation-z6">
-    <button mat-icon-button aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
     <h1>DrewZone</h1>
-    <button mat-icon-button aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button aria-label="Example icon-button with share icon">
-     <mat-icon>share</mat-icon>
-   </button>
+
+   <div class="flex-grow"></div>
+
+   <button mat-icon-button aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-toolbar-row></mat-toolbar-row>
+<!-- Side Nav-->
+<mat-sidenav-container>
+  <!-- Display for mobile -->
+  <mat-sidenav #sidenav mode="over" class="w-56" fixedInViewport="true" fixedTopGap="64">
+    <mat-list class="sticky top-0" style="padding-top: 0px;">
+      <a mat-list-item href="https://www.google.com/" target="_blank" class="hover:bg-gray-100" matRipple>Item</a>
+      <a mat-list-item href="https://www.google.com/" target="_blank" class="hover:bg-gray-100" matRipple>Item</a>
+      <a mat-list-item href="https://www.google.com/" target="_blank" class="hover:bg-gray-100" matRipple>Item</a>
+    </mat-list>
+  </mat-sidenav>
 
-<app-page-header>
-  <h1>Web Sandbox</h1>
-</app-page-header>
+  <!-- Content -->
+  <mat-sidenav-content class="mt-16">
+    <app-page-header>
+      <button mat-button (click)="sidenav.toggle()" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Sandbox</h1>
+    </app-page-header>
 
-<div class="p-4">
-  <app-button-gallery></app-button-gallery>
-</div>
+    <!-- Desktop Navigation -->
+    <main class="p-4 m-auto">
+      <app-button-gallery></app-button-gallery>
+      <app-button-gallery></app-button-gallery>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+<main class="flex">
+
+
+
+</main>

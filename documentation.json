@@ -650,7 +650,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<app-button-gallery></app-button-gallery>"
+            "templateData": "<!-- Toolbar -->\n<mat-toolbar color=\"primary\" class=\"\n    fixed top-0 right-0 left-0\n    z-10\n  \"\n>\n  <mat-toolbar-row  class=\"mat-elevation-z6\">\n    <button mat-icon-button aria-label=\"Example icon-button with menu icon\">\n      <mat-icon>menu</mat-icon>\n    </button>\n    <h1>DrewZone</h1>\n    <button mat-icon-button aria-label=\"Example icon-button with heart icon\">\n      <mat-icon>favorite</mat-icon>\n    </button>\n    <button mat-icon-button aria-label=\"Example icon-button with share icon\">\n     <mat-icon>share</mat-icon>\n   </button>\n\n   <div class=\"flex-grow\"></div>\n\n   <button mat-button (click)=\"sidenav.toggle()\">Sidenav</button>\n  </mat-toolbar-row>\n</mat-toolbar>\n\n<main class=\"mt-16\">\n  <app-page-header>\n    <h1>Sandbox</h1>\n  </app-page-header>\n\n  <mat-sidenav-container>\n    <!-- Side Navigation -->\n    <mat-sidenav #sidenav mode=\"side\" opened position=\"start\" class=\"w-64\">\n      <mat-list class=\"sticky t-0\" style=\"padding-top: 0px;\">\n        <a mat-list-item href=\"https://www.google.com/\" target=\"_blank\" class=\"hover:bg-gray-100\" matRipple>Item</a>\n        <a mat-list-item href=\"https://www.google.com/\" target=\"_blank\" class=\"hover:bg-gray-100\" matRipple>Item</a>\n        <a mat-list-item href=\"https://www.google.com/\" target=\"_blank\" class=\"hover:bg-gray-100\" matRipple>Item</a>\n      </mat-list>\n    </mat-sidenav>\n  \n    <!-- Content -->\n    <mat-sidenav-content>      \n      <div class=\"p-4\">\n        <app-button-gallery></app-button-gallery>\n        <app-button-gallery></app-button-gallery>\n      </div>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n</main>\n"
         },
         {
             "name": "PageComponent",
@@ -724,6 +724,47 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "PageHeaderComponent",
+            "id": "component-PageHeaderComponent-60b9cec97504c0dca7eb5702825caa26b6b652245d2c7e542a65dec7f500e77ee59da4dee5a806e65c78b7cc72ee523308e1dcdb887f1c2e87dae47ad6d6d84b",
+            "file": "src/app/material/page-header/page-header.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-page-header",
+            "styleUrls": [
+                "./page-header.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./page-header.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, ChangeDetectionStrategy } from '@angular/core';\n\n@Component({\n  selector: 'app-page-header',\n  templateUrl: './page-header.component.html',\n  styleUrls: ['./page-header.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class PageHeaderComponent { }\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./page-header.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"\n    flex items-center\n    p-6\n    text-2xl\n    bg-primary\n    font-thin\n  \"\n>\n  <ng-content></ng-content>\n</div>\n\n"
         },
         {
             "name": "RentalComponent",
@@ -1170,13 +1211,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-759f8b0bcbbe15c70ab458088f88fa6a1f7a18f03ec59ffea39f8179cd78feaf46de9712f6358a46195c64a29372817bc94ac4e3306462877ac2870a8b7cc43c",
+            "id": "module-AppModule-85b5b9e2065b092ab865639a03c38eed6bebbabc747938d49433408226e25562b73725da3ea821f3a2653f3c86d9d97fcdb1ddc464b4162fd30f968e71e5c5f9",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\nimport { GridModule } from './grid/grid.module';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CommonModule,\n    GridModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { CommonModule } from '@angular/common';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport BrownFox from './shared/brown-fox.component';\nimport Button from './shared/button.component';\nimport Header from './shared/header.component';\nimport Page from './shared/page.component';\nimport Width from './shared/width.component';\nimport { GridModule } from './grid/grid.module';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    BrownFox,\n    Button,\n    Header,\n    Page,\n    Width\n  ],\n  imports: [\n    BrowserModule,\n    BrowserAnimationsModule,\n    AppRoutingModule,\n    CommonModule,\n    GridModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -1236,13 +1277,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-2b4c4a0969b047093e6fc68521b4a01cab747bf0e71e18d8fa1d2ca7f90d1b2a83dbe90c5a34af8f8f95ca5acdede3f73f53f115cfc79b33f27434d5a24f96ce",
+            "id": "module-AppRoutingModule-5d26d0fd5bccead131389c4392f37e2a23e0465858bba28763efd8f66a42371b7f98a1e2f940444a5645aa7e4273b2ab4aec0f449f3849d46195e33bfaff9cbe",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [{ path: 'material', loadChildren: () => \"import('./material/material.module').then(m => m.MaterialModule)\" }];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [\n  { path: '', redirectTo: 'material', pathMatch: 'full'},\n  { path: 'material', loadChildren: () => \"import('./material/material.module').then(m => m.MaterialModule)\" }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -1359,13 +1400,13 @@
         },
         {
             "name": "MaterialModule",
-            "id": "module-MaterialModule-908cba9471fd954d8dc7902f0e706c51a74d1dc634f8a948a4e54e169e472479279a972a57a401b83b66e85cf8dd0181726b1481c23c8ab46ca8a1a90431c9d8",
+            "id": "module-MaterialModule-55fa1ad10b068bd85c8fa825fcac80ccd0f8c867b602325b9c324afbafd59d2e098c7e83c152673b2c44d9e941ecff3893f34f35f0dee42fe87289c9405b3782",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/material/material.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatDividerModule } from '@angular/material/divider';\nimport { MatIconModule } from '@angular/material/icon';\n\nimport { MaterialRoutingModule } from './material-routing.module';\nimport { MaterialComponent } from './material.component';\nimport { ButtonGalleryComponent } from './button-gallery/button-gallery.component';\n\n\nexport const imports = [\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule\n];\n\n@NgModule({\n  declarations: [\n    MaterialComponent,\n    ButtonGalleryComponent\n  ],\n  imports: [\n    MaterialRoutingModule,\n    ...imports\n  ]\n})\nexport class MaterialModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatDividerModule } from '@angular/material/divider';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatListModule } from '@angular/material/list';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatToolbarModule } from '@angular/material/toolbar';\n\nimport { MaterialRoutingModule } from './material-routing.module';\nimport { MaterialComponent } from './material.component';\nimport { ButtonGalleryComponent } from './button-gallery/button-gallery.component';\nimport { PageHeaderComponent } from './page-header/page-header.component';\n\n\nexport const imports = [\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule,\n  MatListModule,\n  MatSidenavModule,\n  MatToolbarModule\n];\n\nexport const declarations = [\n  MaterialComponent,\n  ButtonGalleryComponent,\n  PageHeaderComponent\n];\n\n@NgModule({\n  declarations: [\n    ...declarations\n  ],\n  imports: [\n    MaterialRoutingModule,\n    ...imports\n  ]\n})\nexport class MaterialModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -1379,6 +1420,9 @@
                         },
                         {
                             "name": "MaterialComponent"
+                        },
+                        {
+                            "name": "PageHeaderComponent"
                         }
                     ]
                 },
@@ -1598,6 +1642,16 @@
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
+                "name": "declarations",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/material/material.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  MaterialComponent,\n  ButtonGalleryComponent,\n  PageHeaderComponent\n]"
+            },
+            {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1655,7 +1709,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule\n]"
+                "defaultValue": "[\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule,\n  MatListModule,\n  MatSidenavModule,\n  MatToolbarModule\n]"
             },
             {
                 "name": "kidsJumper",
@@ -1940,21 +1994,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<GridComponent>",
-                "defaultValue": "(args: GridComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Header>",
                 "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<GridComponent>",
+                "defaultValue": "(args: GridComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2254,6 +2308,28 @@
                     "type": "literal type"
                 }
             ],
+            "src/app/material/material.module.ts": [
+                {
+                    "name": "declarations",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/material/material.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  MaterialComponent,\n  ButtonGalleryComponent,\n  PageHeaderComponent\n]"
+                },
+                {
+                    "name": "imports",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/material/material.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule,\n  MatListModule,\n  MatSidenavModule,\n  MatToolbarModule\n]"
+                }
+            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -2380,18 +2456,6 @@
                     "deprecationMessage": "",
                     "type": "Story<Simple>",
                     "defaultValue": "(args: Simple) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/app/material/material.module.ts": [
-                {
-                    "name": "imports",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/material/material.module.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "[]",
-                    "defaultValue": "[\n  CommonModule,\n  MatButtonModule,\n  MatDividerModule,\n  MatIconModule\n]"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -2820,6 +2884,11 @@
                 "module": "AppRoutingModule",
                 "children": [
                     {
+                        "path": "",
+                        "redirectTo": "material",
+                        "pathMatch": "full"
+                    },
+                    {
                         "path": "material",
                         "loadChildren": "./material/material.module#MaterialModule",
                         "children": [
@@ -2893,7 +2962,26 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "declarations",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/material/material.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "imports",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/material/page-header/page-header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageHeaderComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
