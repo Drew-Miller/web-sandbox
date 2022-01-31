@@ -1,5 +1,4 @@
 import { Story, Meta, moduleMetadata } from '@storybook/angular';
-import { ButtonGalleryComponent } from 'src/app/material/button-gallery/button-gallery.component';
 import { MaterialComponent } from 'src/app/material/material.component';
 import * as MaterialModule from 'src/app/material/material.module';
 
@@ -8,7 +7,7 @@ export default {
   component: MaterialComponent,
   decorators: [
     moduleMetadata({
-      declarations: [ButtonGalleryComponent],
+      declarations: [...MaterialModule.declarations],
       imports: [...MaterialModule.imports]
     })
   ]

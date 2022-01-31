@@ -31,3 +31,31 @@ $theme: mat.define-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($theme);
+
+// Tailwind type css classes for applying theme colors
+.bg-primary, .bg-primary-default {
+  background: mat.get-color-from-palette($theme-primary, 'default');
+  color: mat.get-color-from-palette($theme-primary, 'default-contrast');
+}
+
+.text-primary, .text-primary-default {
+  color: mat.get-color-from-palette($theme-primary, 'text');
+}
+
+.bg-accent, .bg-accent-default {
+  background: mat.get-color-from-palette($theme-accent, 'default');
+  color: mat.get-color-from-palette($theme-accent, 'default-contrast');
+}
+
+.text-accent, .text-accent-default {
+  color: mat.get-color-from-palette($theme-accent, 'text');
+}
+
+.bg-warning, .bg-warning-default {
+  background: mat.get-color-from-palette($theme-warn, 'default');
+  color: mat.get-color-from-palette($theme-accent, 'default-contrast');
+}
+
+.text-warning, .text-warning-default {
+  color: mat.get-color-from-palette($theme-warn, 'default')
+}

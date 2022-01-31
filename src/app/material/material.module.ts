@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MaterialRoutingModule } from './material-routing.module';
 import { MaterialComponent } from './material.component';
 import { ButtonGalleryComponent } from './button-gallery/button-gallery.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 
 export const imports = [
@@ -16,10 +17,15 @@ export const imports = [
   MatIconModule
 ];
 
+export const declarations = [
+  MaterialComponent,
+  ButtonGalleryComponent,
+  PageHeaderComponent
+];
+
 @NgModule({
   declarations: [
-    MaterialComponent,
-    ButtonGalleryComponent
+    ...declarations
   ],
   imports: [
     MaterialRoutingModule,
