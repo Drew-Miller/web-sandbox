@@ -1,4 +1,5 @@
-import { Component, HostBinding, OnDestroy } from '@angular/core';
+import { Component, HostBinding, OnDestroy, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 import { BehaviorSubject, fromEvent, Observable, Subject } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';
 
@@ -24,9 +25,12 @@ const navLinkSource$ = new BehaviorSubject<NavLink[]>([
   styleUrls: ['./material.component.scss']
 })
 export class MaterialComponent implements OnDestroy {
-  navLinks$: Observable<NavLink[]> = navLinkSource$;
-
   @HostBinding('class') classTheme: Theme = 'light';
+
+  @ViewChild(MatSidenav)
+  sideNav!: MatSidenav;
+
+  navLinks$: Observable<NavLink[]>;
 
   get mode() {
     return this._mode;
@@ -47,9 +51,16 @@ export class MaterialComponent implements OnDestroy {
   private _destroying$ = new Subject<void>();
 
   constructor() {
+    this.navLinks$ = navLinkSource$;
+
     fromEvent(window, 'resize').pipe(
       tap((evt: Event) => {
-        this.mode = 1000 < window.innerWidth ? 'over' : 'side';
+        if (window.innerWidth < 1000) {
+          this.mode = 'over';
+          this.sideNav.toggle(false)
+        } else {
+          this.mode = 'side';
+        }
       }),
       takeUntil(this._destroying$)
     ).subscribe();

@@ -1,16 +1,16 @@
 <!-- Toolbar -->
 <mat-toolbar color="primary" class="fixed top-0 right-0 left-0 z-10 min-h-0 h-14">
-  <mat-toolbar-row class="px-4 py-2 mat-elevation-z6">
-    <a mat-button class="hover:bg-black hover:bg-opacity-40">PSECT</a>
+  <mat-toolbar-row class="px-4 py-2 mat-elevation-z6 dark:bg-gray-900 dark:text-white">
+    <a mat-button class="font-bold hover:bg-black hover:bg-opacity-40 dark:hover:bg-gray-800">PSECT</a>
 
     <!-- Selected Nav Link -->
-    <a mat-button class="bg-black bg-opacity-20 hover:bg-opacity-40">
+    <a mat-button class="font-bold bg-black bg-opacity-20 hover:bg-opacity-40 dark:hover:bg-gray-800">
       <mat-icon class="mb-[2px] mr-[3px]">home</mat-icon> Home
     </a>
 
     <!-- Normal Nav Link -->
-    <a mat-button class="hover:bg-black hover:bg-opacity-40">
-      <mat-icon class="mb-[.125rem] mr-[.25rem]">code</mat-icon> Sandbox
+    <a mat-button class="font-bold hover:bg-black hover:bg-opacity-40 dark:hover:bg-gray-800">
+      <mat-icon class="mb-[2px] mr-[3px]">code</mat-icon> Sandbox
     </a>
 
     <div class="flex-grow"></div>
@@ -31,10 +31,9 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<!-- Side Nav-->
 <mat-sidenav-container>
-  <!-- Navigation -->
-  <mat-sidenav #sidenav [mode]="mode" class="w-56">
+  <!-- Mobile Navigation -->
+  <mat-sidenav #sidenav mode="over" class="w-56 visible lg:invisible">
     <div class="w-56 fixed top-14">
       <mat-nav-list>
         <a *ngFor="let nav of navLinks$ | async" mat-list-item href="{{nav.link}}" target="_blank" rel="noopener">
@@ -44,29 +43,45 @@
     </div>
   </mat-sidenav>
 
-  <!-- Content -->
-  <mat-sidenav-content class="mt-14">
-    <app-page-header>
-      <button
-        mat-button
-        (click)="sidenav.toggle()"
-        class="m-2 p-0 lg:hidden"
-        aria-label="Example icon-button with menu icon"
-      >
-        <mat-icon
-          class="
-            flex items-center justify-center
-            w-[4rem] h-[4rem] leading-[4rem]
-            text-3xl
-          "
-        >menu</mat-icon>
-      </button>
+  <mat-sidenav-content>
+    <mat-drawer-container>
+      <!-- Desktop Navigation -->
+      <mat-drawer mode="side" opened class="w-56 hidden lg:block">
+        <div class="w-56 fixed top-14">
+          <mat-nav-list>
+            <a *ngFor="let nav of navLinks$ | async" mat-list-item href="{{nav.link}}" target="_blank" rel="noopener">
+              {{ nav.name }}
+            </a>
+          </mat-nav-list>
+        </div>
+      </mat-drawer>
 
-      <h1 class="text-3xl mx-2 my-6">Sandbox</h1>
-    </app-page-header>
+      <!-- Page Content-->
+      <mat-drawer-content class="mt-14" style="height: calc(100vh - 3.5rem)">
+        <app-page-header>
+          <button
+            mat-button
+            (click)="sidenav.toggle()"
+            class="m-2 p-0 lg:hidden"
+            aria-label="Example icon-button with menu icon"
+          >
+            <mat-icon
+              class="
+                flex items-center justify-center
+                w-[4rem] h-[4rem] leading-[4rem]
+                text-3xl
+              "
+            >menu</mat-icon>
+          </button>
 
-    <main class="p-8 max-w-4xl m-auto">
-      <app-button-gallery></app-button-gallery>
-    </main>
+          <h1 class="text-3xl mx-2 my-6">Sandbox</h1>
+        </app-page-header>
+
+        <main class="p-8 max-w-4xl m-auto">
+          <app-button-gallery></app-button-gallery>
+          <app-button-gallery></app-button-gallery>
+        </main>
+      </mat-drawer-content>
+    </mat-drawer-container>
   </mat-sidenav-content>
 </mat-sidenav-container>
