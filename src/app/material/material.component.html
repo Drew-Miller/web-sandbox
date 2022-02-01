@@ -22,10 +22,10 @@
       <mat-icon>share</mat-icon>
     </button>
 
-    <button *ngIf="mode !=='dark'" mat-icon-button (click)="mode = 'dark'" aria-label="Example icon-button with dark mode icon">
+    <button *ngIf="theme !=='dark'" mat-icon-button (click)="theme = 'dark'" aria-label="Example icon-button with dark mode icon">
       <mat-icon>dark_mode</mat-icon>
     </button>
-    <button *ngIf="mode !=='light'" mat-icon-button (click)="mode = 'light'" aria-label="Example icon-button with light mode icon">
+    <button *ngIf="theme !=='light'" mat-icon-button (click)="theme = 'light'" aria-label="Example icon-button with light mode icon">
       <mat-icon>light_mode</mat-icon>
     </button>
   </mat-toolbar-row>
@@ -33,8 +33,8 @@
 
 <!-- Side Nav-->
 <mat-sidenav-container>
-  <!-- Display for mobile -->
-  <mat-sidenav #sidenav mode="over" class="w-56">
+  <!-- Navigation -->
+  <mat-sidenav #sidenav [mode]="mode" class="w-56">
     <div class="w-56 fixed top-14">
       <mat-nav-list>
         <a *ngFor="let nav of navLinks$ | async" mat-list-item href="{{nav.link}}" target="_blank" rel="noopener">
