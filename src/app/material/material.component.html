@@ -50,16 +50,22 @@
       <button
         mat-button
         (click)="sidenav.toggle()"
-        class="hidden sm:flex m-2 w-16 p-0 items-center content-center"
+        class="m-2 p-0 lg:hidden"
         aria-label="Example icon-button with menu icon"
       >
-        <mat-icon class="w-[4rem] h-[4rem] leading-[4rem] text-3xl">menu</mat-icon>
+        <mat-icon
+          class="
+            flex items-center justify-center
+            w-[4rem] h-[4rem] leading-[4rem]
+            text-3xl
+          "
+        >menu</mat-icon>
       </button>
 
-      <h1>Sandbox</h1>
+      <h1 class="text-3xl mx-2 my-6">Sandbox</h1>
     </app-page-header>
 
-    <main class="p-4 m-auto">
+    <main class="p-8 max-w-4xl m-auto">
       <app-button-gallery></app-button-gallery>
     </main>
   </mat-sidenav-content>

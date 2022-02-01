@@ -6,10 +6,7 @@ module.exports = {
     extend: {},
   },
   theme: {
-    extend: {},
-    screens: {
-      'sm': '600px'
-    }
+    extend: {}
   },
   variants: {
     extend: {},
