@@ -61,6 +61,68 @@
             "templateData": "\n<router-outlet></router-outlet>\n"
         },
         {
+            "name": "BlazorComponent",
+            "id": "component-BlazorComponent-e03c9ade71b8273b8af6ae15ad2442abce4242984ab010ca5915f80737bd364348372c9b7951180ab86bf415531130cc8dd04e2d1fec09140eb075170b3430ad",
+            "file": "src/app/blazor/blazor.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-blazor",
+            "styleUrls": [
+                "./blazor.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./blazor.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-blazor',\n  templateUrl: './blazor.component.html',\n  styleUrls: ['./blazor.component.scss']\n})\nexport class BlazorComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./blazor.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"page\" b-zph41ciitw=\"\">\n  <div class=\"sidebar\" b-zph41ciitw=\"\">\n    <!--!-->\n    <div class=\"top-row ps-3 navbar navbar-dark\" b-myz4v9z4ve=\"\">\n      <div class=\"container-fluid\" b-myz4v9z4ve=\"\">\n        <!--!--><a class=\"navbar-brand\" href=\"\" b-myz4v9z4ve=\"\">MyBlazorApp</a>\n        <button title=\"Navigation menu\" class=\"navbar-toggler\" b-myz4v9z4ve=\"\">\n          <!--!--><span class=\"navbar-toggler-icon\" b-myz4v9z4ve=\"\"></span>\n        </button>\n      </div>\n    </div>\n    <!--!-->\n\n    <div b-myz4v9z4ve=\"\" class=\"collapse\">\n      <nav class=\"flex-column\" b-myz4v9z4ve=\"\">\n        <div class=\"nav-item px-3\" b-myz4v9z4ve=\"\">\n          <!--!--><a href=\"\" class=\"nav-link\"\n            ><!--!--><span\n              class=\"oi oi-home\"\n              aria-hidden=\"true\"\n              b-myz4v9z4ve=\"\"\n            ></span>\n            Home\n          </a>\n        </div>\n        <!--!-->\n        <div class=\"nav-item px-3\" b-myz4v9z4ve=\"\">\n          <!--!--><a href=\"counter\" class=\"nav-link\"\n            ><!--!--><span\n              class=\"oi oi-plus\"\n              aria-hidden=\"true\"\n              b-myz4v9z4ve=\"\"\n            ></span>\n            Counter\n          </a>\n        </div>\n        <!--!-->\n        <div class=\"nav-item px-3\" b-myz4v9z4ve=\"\">\n          <!--!--><a href=\"fetchdata\" class=\"nav-link active\"\n            ><!--!--><span\n              class=\"oi oi-list-rich\"\n              aria-hidden=\"true\"\n              b-myz4v9z4ve=\"\"\n            ></span>\n            Fetch data\n          </a>\n        </div>\n      </nav>\n    </div>\n  </div>\n  <!--!-->\n\n  <main b-zph41ciitw=\"\">\n    <!--!-->\n    <div class=\"top-row px-4\" b-zph41ciitw=\"\">\n      <a\n        href=\"https://docs.microsoft.com/aspnet/\"\n        target=\"_blank\"\n        b-zph41ciitw=\"\"\n        >About</a\n      >\n    </div>\n\n    <article class=\"content px-4\" b-zph41ciitw=\"\">\n      <!--!--><!--!--><!--!--><!--!-->\n\n      <!--!-->\n      <h1 tabindex=\"-1\">Weather forecast</h1>\n\n      <!--!-->\n      <p>This component demonstrates fetching data from the server.</p>\n      <table class=\"table\">\n        <!--!-->\n        <thead>\n          <tr>\n            <th>Date</th>\n            <th>Temp. (C)</th>\n            <th>Temp. (F)</th>\n            <th>Summary</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>5/6/2018</td>\n            <!--!-->\n            <td>1</td>\n            <!--!-->\n            <td>33</td>\n            <!--!-->\n            <td>Freezing</td>\n          </tr>\n          <tr>\n            <td>5/7/2018</td>\n            <!--!-->\n            <td>14</td>\n            <!--!-->\n            <td>57</td>\n            <!--!-->\n            <td>Bracing</td>\n          </tr>\n          <tr>\n            <td>5/8/2018</td>\n            <!--!-->\n            <td>-13</td>\n            <!--!-->\n            <td>9</td>\n            <!--!-->\n            <td>Freezing</td>\n          </tr>\n          <tr>\n            <td>5/9/2018</td>\n            <!--!-->\n            <td>-16</td>\n            <!--!-->\n            <td>4</td>\n            <!--!-->\n            <td>Balmy</td>\n          </tr>\n          <tr>\n            <td>5/10/2018</td>\n            <!--!-->\n            <td>-2</td>\n            <!--!-->\n            <td>29</td>\n            <!--!-->\n            <td>Chilly</td>\n          </tr>\n        </tbody>\n      </table>\n    </article>\n  </main>\n</div>\n"
+        },
+        {
             "name": "BrownFoxComponent",
             "id": "component-BrownFoxComponent-728525c76c917b0e3f7949fbd69a247316c11973e43c2803959bf44afe29ec93a56725aa18690896c5e972733164668eafde43d1674aeaed5c5fe04329813ee0",
             "file": "src/app/shared/brown-fox.component.ts",
@@ -592,7 +654,7 @@
         },
         {
             "name": "MaterialComponent",
-            "id": "component-MaterialComponent-f738088fe68d2cf27e78756e36d1fb22748fef6aa6c423e50a2ae1cbf50c69a0bfb4d97f877fae86cb3fe5a60d3b37504379260d6858b42bc400497737c942d0",
+            "id": "component-MaterialComponent-09a9ab89ddcd63c9c82d09367b5c185ddd7128717a26d8e4f27436eee067832cd1d134fb3fc5a4e8224a28797b5d31a2abb51433edd8a1878181039fd29da306",
             "file": "src/app/material/material.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -610,27 +672,117 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "_destroying$",
+                    "defaultValue": "new Subject<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 51,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "_mode",
+                    "defaultValue": "'side'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"side\" | \"over\"",
+                    "optional": false,
+                    "description": "",
+                    "line": 41,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "_theme",
+                    "defaultValue": "'light'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Theme",
+                    "optional": false,
+                    "description": "",
+                    "line": 49,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "classTheme",
+                    "defaultValue": "'light'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Theme",
+                    "optional": false,
+                    "description": "",
+                    "line": 28,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'class'"
+                        }
+                    ]
+                },
+                {
+                    "name": "navLinks$",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<NavLink[]>",
+                    "optional": false,
+                    "description": "",
+                    "line": 33
+                },
+                {
+                    "name": "sideNav",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MatSidenav",
+                    "optional": false,
+                    "description": "",
+                    "line": 31,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "MatSidenav"
+                        }
+                    ]
+                }
+            ],
             "methodsClass": [
                 {
-                    "name": "ngOnInit",
+                    "name": "ngOnDestroy",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 69,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
             ],
             "deprecated": false,
             "deprecationMessage": "",
-            "hostBindings": [],
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "defaultValue": "'light'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "Theme",
+                    "decorators": []
+                }
+            ],
             "hostListeners": [],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-material',\n  templateUrl: './material.component.html',\n  styleUrls: ['./material.component.scss']\n})\nexport class MaterialComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, HostBinding, OnDestroy, ViewChild } from '@angular/core';\nimport { MatSidenav } from '@angular/material/sidenav';\nimport { BehaviorSubject, fromEvent, Observable, Subject } from 'rxjs';\nimport { takeUntil, tap } from 'rxjs/operators';\n\ntype NavLink = {\n  name: string,\n  link: string\n};\n\ntype Theme = 'light' | 'dark';\n\nconst navLinkSource$ = new BehaviorSubject<NavLink[]>([\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'}\n]).asObservable();\n\n@Component({\n  selector: 'app-material',\n  templateUrl: './material.component.html',\n  styleUrls: ['./material.component.scss']\n})\nexport class MaterialComponent implements OnDestroy {\n  @HostBinding('class') classTheme: Theme = 'light';\n\n  @ViewChild(MatSidenav)\n  sideNav!: MatSidenav;\n\n  navLinks$: Observable<NavLink[]>;\n\n  get mode() {\n    return this._mode;\n  }\n  set mode(v: 'side' | 'over') {\n    this._mode = v;\n  }\n  private _mode: 'side' | 'over' = 'side';\n\n  get theme() {\n    return this._theme;\n  }\n  set theme(v: Theme) {\n    this.classTheme = this._theme = v;\n  }\n  private _theme: Theme = 'light';\n\n  private _destroying$ = new Subject<void>();\n\n  constructor() {\n    this.navLinks$ = navLinkSource$;\n\n    fromEvent(window, 'resize').pipe(\n      tap((evt: Event) => {\n        if (window.innerWidth < 1000) {\n          this.mode = 'over';\n          this.sideNav.toggle(false)\n        } else {\n          this.mode = 'side';\n        }\n      }),\n      takeUntil(this._destroying$)\n    ).subscribe();\n  }\n\n  ngOnDestroy() {\n    this._destroying$.next(undefined);\n    this._destroying$.complete();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -645,12 +797,86 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 8
+                "line": 51
             },
             "implements": [
-                "OnInit"
+                "OnDestroy"
             ],
-            "templateData": "<!-- Toolbar -->\n<mat-toolbar color=\"primary\" class=\"\n    fixed top-0 right-0 left-0\n    z-10\n  \"\n>\n  <mat-toolbar-row  class=\"mat-elevation-z6\">\n    <button mat-icon-button aria-label=\"Example icon-button with menu icon\">\n      <mat-icon>menu</mat-icon>\n    </button>\n    <h1>DrewZone</h1>\n    <button mat-icon-button aria-label=\"Example icon-button with heart icon\">\n      <mat-icon>favorite</mat-icon>\n    </button>\n    <button mat-icon-button aria-label=\"Example icon-button with share icon\">\n     <mat-icon>share</mat-icon>\n   </button>\n\n   <div class=\"flex-grow\"></div>\n\n   <button mat-button (click)=\"sidenav.toggle()\">Sidenav</button>\n  </mat-toolbar-row>\n</mat-toolbar>\n\n<main class=\"mt-16\">\n  <app-page-header>\n    <h1>Sandbox</h1>\n  </app-page-header>\n\n  <mat-sidenav-container>\n    <!-- Side Navigation -->\n    <mat-sidenav #sidenav mode=\"side\" opened position=\"start\" class=\"w-64\">\n      <mat-list class=\"sticky t-0\" style=\"padding-top: 0px;\">\n        <a mat-list-item href=\"https://www.google.com/\" target=\"_blank\" class=\"hover:bg-gray-100\" matRipple>Item</a>\n        <a mat-list-item href=\"https://www.google.com/\" target=\"_blank\" class=\"hover:bg-gray-100\" matRipple>Item</a>\n        <a mat-list-item href=\"https://www.google.com/\" target=\"_blank\" class=\"hover:bg-gray-100\" matRipple>Item</a>\n      </mat-list>\n    </mat-sidenav>\n  \n    <!-- Content -->\n    <mat-sidenav-content>      \n      <div class=\"p-4\">\n        <app-button-gallery></app-button-gallery>\n        <app-button-gallery></app-button-gallery>\n      </div>\n    </mat-sidenav-content>\n  </mat-sidenav-container>\n</main>\n"
+            "accessors": {
+                "mode": {
+                    "name": "mode",
+                    "setSignature": {
+                        "name": "mode",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "v",
+                                "type": "\"side\" | \"over\"",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 38,
+                        "jsdoctags": [
+                            {
+                                "name": "v",
+                                "type": "\"side\" | \"over\"",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "mode",
+                        "type": "",
+                        "returnType": "",
+                        "line": 35
+                    }
+                },
+                "theme": {
+                    "name": "theme",
+                    "setSignature": {
+                        "name": "theme",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "v",
+                                "type": "Theme",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 46,
+                        "jsdoctags": [
+                            {
+                                "name": "v",
+                                "type": "Theme",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "theme",
+                        "type": "",
+                        "returnType": "",
+                        "line": 43
+                    }
+                }
+            },
+            "templateData": "<!-- Toolbar -->\n<mat-toolbar color=\"primary\" class=\"fixed top-0 right-0 left-0 z-10 min-h-0 h-14\">\n  <mat-toolbar-row class=\"px-4 py-2 mat-elevation-z6 dark:bg-gray-900 dark:text-white\">\n    <a mat-button class=\"font-bold hover:bg-black hover:bg-opacity-40 dark:hover:bg-gray-800\">PSECT</a>\n\n    <!-- Selected Nav Link -->\n    <a mat-button class=\"font-bold bg-black bg-opacity-20 hover:bg-opacity-40 dark:hover:bg-gray-800\">\n      <mat-icon class=\"mb-[2px] mr-[3px]\">home</mat-icon> Home\n    </a>\n\n    <!-- Normal Nav Link -->\n    <a mat-button class=\"font-bold hover:bg-black hover:bg-opacity-40 dark:hover:bg-gray-800\">\n      <mat-icon class=\"mb-[2px] mr-[3px]\">code</mat-icon> Sandbox\n    </a>\n\n    <div class=\"flex-grow\"></div>\n\n    <button mat-icon-button aria-label=\"Example icon-button with heart icon\">\n      <mat-icon>favorite</mat-icon>\n    </button>\n    <button mat-icon-button aria-label=\"Example icon-button with share icon\">\n      <mat-icon>share</mat-icon>\n    </button>\n\n    <button *ngIf=\"theme !=='dark'\" mat-icon-button (click)=\"theme = 'dark'\" aria-label=\"Example icon-button with dark mode icon\">\n      <mat-icon>dark_mode</mat-icon>\n    </button>\n    <button *ngIf=\"theme !=='light'\" mat-icon-button (click)=\"theme = 'light'\" aria-label=\"Example icon-button with light mode icon\">\n      <mat-icon>light_mode</mat-icon>\n    </button>\n  </mat-toolbar-row>\n</mat-toolbar>\n\n<mat-sidenav-container>\n  <!-- Mobile Navigation -->\n  <mat-sidenav #sidenav mode=\"over\" class=\"w-56 visible lg:invisible\">\n    <div class=\"w-56 fixed top-14\">\n      <mat-nav-list>\n        <a *ngFor=\"let nav of navLinks$ | async\" mat-list-item href=\"{{nav.link}}\" target=\"_blank\" rel=\"noopener\">\n          {{ nav.name }}\n        </a>\n      </mat-nav-list>\n    </div>\n  </mat-sidenav>\n\n  <mat-sidenav-content>\n    <mat-drawer-container>\n      <!-- Desktop Navigation -->\n      <mat-drawer mode=\"side\" opened class=\"w-56 hidden lg:block\">\n        <div class=\"w-56 fixed top-14\">\n          <mat-nav-list>\n            <a *ngFor=\"let nav of navLinks$ | async\" mat-list-item href=\"{{nav.link}}\" target=\"_blank\" rel=\"noopener\">\n              {{ nav.name }}\n            </a>\n          </mat-nav-list>\n        </div>\n      </mat-drawer>\n\n      <!-- Page Content-->\n      <mat-drawer-content class=\"mt-14\" style=\"height: calc(100vh - 3.5rem)\">\n        <app-page-header>\n          <button\n            mat-button\n            (click)=\"sidenav.toggle()\"\n            class=\"m-2 p-0 lg:hidden\"\n            aria-label=\"Example icon-button with menu icon\"\n          >\n            <mat-icon\n              class=\"\n                flex items-center justify-center\n                w-[4rem] h-[4rem] leading-[4rem]\n                text-3xl\n              \"\n            >menu</mat-icon>\n          </button>\n\n          <h1 class=\"text-3xl mx-2 my-6\">Sandbox</h1>\n        </app-page-header>\n\n        <main class=\"p-8 max-w-4xl m-auto\">\n          <app-button-gallery></app-button-gallery>\n          <app-button-gallery></app-button-gallery>\n        </main>\n      </mat-drawer-content>\n    </mat-drawer-container>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
         },
         {
             "name": "PageComponent",
@@ -764,7 +990,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"\n    flex items-center\n    p-6\n    text-2xl\n    bg-primary\n    font-thin\n  \"\n>\n  <ng-content></ng-content>\n</div>\n\n"
+            "templateData": "<div class=\"\n    flex items-center\n    text-2xl\n    bg-primary dark:bg-gray-900 dark:text-white\n    font-thin\n    space-x-2\n    lg:pl-5\n  \"\n>\n  <ng-content></ng-content>\n</div>\n\n"
         },
         {
             "name": "RentalComponent",
@@ -1277,13 +1503,93 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-5d26d0fd5bccead131389c4392f37e2a23e0465858bba28763efd8f66a42371b7f98a1e2f940444a5645aa7e4273b2ab4aec0f449f3849d46195e33bfaff9cbe",
+            "id": "module-AppRoutingModule-cd594292318a1a8a26d3626d457b772dcd0908a98d46046986502dee4f3dd262fc194fc6874daa495e23fa23945bb04a85197b0e6bfb02a97bfa41e67ce22676",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [\n  { path: '', redirectTo: 'material', pathMatch: 'full'},\n  { path: 'material', loadChildren: () => \"import('./material/material.module').then(m => m.MaterialModule)\" }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [\n  { path: '', redirectTo: 'material', pathMatch: 'full'},\n  { path: 'material', loadChildren: () => \"import('./material/material.module').then(m => m.MaterialModule)\" },\n  { path: 'blazor', loadChildren: () => \"import('./blazor/blazor.module').then(m => m.BlazorModule)\" }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BlazorModule",
+            "id": "module-BlazorModule-4f3df9a97b470c08455cccffb0534c5ec4f3faa0f27099f3f6ada80d4667efa7ba6052dc96016ceeae2b85e5e35915423ccb09f0995c61122f719462f78c9c3c",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/blazor/blazor.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { BlazorRoutingModule } from './blazor-routing.module';\nimport { BlazorComponent } from './blazor.component';\n\nexport const imports = [\n  CommonModule,\n  BlazorRoutingModule\n];\n\nexport const declarations = [\n  BlazorComponent\n];\n\n@NgModule({\n  declarations: [\n    ...declarations\n  ],\n  imports: [\n    ...imports\n  ]\n})\nexport class BlazorModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "BlazorComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "BlazorRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BlazorRoutingModule",
+            "id": "module-BlazorRoutingModule-a99d298ecda64e7429dd094550637af8ab7b8a965ebc056017d78e3ba662abef9081b3cb064d5b06767a4f29e5dab131932ec06f4c226237cc13aea1c3018918",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/blazor/blazor-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { BlazorComponent } from './blazor.component';\n\nconst routes: Routes = [{ path: '', component: BlazorComponent }];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class BlazorRoutingModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -1416,19 +1722,16 @@
                     "type": "declarations",
                     "elements": [
                         {
-                            "name": "ButtonGalleryComponent"
-                        },
-                        {
-                            "name": "MaterialComponent"
-                        },
-                        {
-                            "name": "PageHeaderComponent"
+                            "name": "BlazorComponent"
                         }
                     ]
                 },
                 {
                     "type": "imports",
                     "elements": [
+                        {
+                            "name": "BlazorRoutingModule"
+                        },
                         {
                             "name": "MaterialRoutingModule"
                         }
@@ -1645,6 +1948,16 @@
                 "name": "declarations",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/blazor/blazor.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  BlazorComponent\n]"
+            },
+            {
+                "name": "declarations",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/material/material.module.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1700,6 +2013,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "imports",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/blazor/blazor.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  CommonModule,\n  BlazorRoutingModule\n]"
             },
             {
                 "name": "imports",
@@ -1802,6 +2125,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "navLinkSource$",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/material/material.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "new BehaviorSubject<NavLink[]>([\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'}\n]).asObservable()"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1826,6 +2159,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Rental.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/blazor/Blazor.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1994,21 +2337,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Grid.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<GridComponent>",
                 "defaultValue": "(args: GridComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2039,6 +2382,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Width>",
                 "defaultValue": "(args: Width) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/blazor/Blazor.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<BlazorComponent>",
+                "defaultValue": "(args: BlazorComponent) => ({\n  props: args\n})"
             },
             {
                 "name": "Template",
@@ -2179,6 +2532,17 @@
                 "kind": 186
             },
             {
+                "name": "NavLink",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/material/material.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 181
+            },
+            {
                 "name": "Product",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
@@ -2206,6 +2570,17 @@
                 "subtype": "typealias",
                 "rawtype": "\"brutalist\" | \"simple\"",
                 "file": "src/app/shopping/style.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
+                "name": "Theme",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"light\" | \"dark\"",
+                "file": "src/app/material/material.component.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2306,6 +2681,28 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
+                }
+            ],
+            "src/app/blazor/blazor.module.ts": [
+                {
+                    "name": "declarations",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/blazor/blazor.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  BlazorComponent\n]"
+                },
+                {
+                    "name": "imports",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/blazor/blazor.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  CommonModule,\n  BlazorRoutingModule\n]"
                 }
             ],
             "src/app/material/material.module.ts": [
@@ -2616,6 +3013,18 @@
                     "defaultValue": "(args: BrownFox) => ({\n  props: args,\n})"
                 }
             ],
+            "src/app/material/material.component.ts": [
+                {
+                    "name": "navLinkSource$",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/material/material.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "new BehaviorSubject<NavLink[]>([\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'},\n  { name: 'Item', link: 'https://www.google.com/'}\n]).asObservable()"
+                }
+            ],
             "src/stories/Grid.stories.ts": [
                 {
                     "name": "Primary",
@@ -2658,6 +3067,28 @@
                     "deprecationMessage": "",
                     "type": "Story<RentalComponent>",
                     "defaultValue": "(args: RentalComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/blazor/Blazor.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/blazor/Blazor.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/blazor/Blazor.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<BlazorComponent>",
+                    "defaultValue": "(args: BlazorComponent) => ({\n  props: args\n})"
                 }
             ],
             "src/stories/material/Material.stories.ts": [
@@ -2821,6 +3252,30 @@
                     "kind": 186
                 }
             ],
+            "src/app/material/material.component.ts": [
+                {
+                    "name": "NavLink",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/material/material.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 181
+                },
+                {
+                    "name": "Theme",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"light\" | \"dark\"",
+                    "file": "src/app/material/material.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                }
+            ],
             "src/app/shopping/shopping.ts": [
                 {
                     "name": "Product",
@@ -2897,6 +3352,18 @@
                                 "children": [
                                     {
                                         "name": "routes",
+                                        "filename": "src/app/blazor/blazor-routing.module.ts",
+                                        "module": "BlazorRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": "",
+                                                "component": "BlazorComponent"
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    },
+                                    {
+                                        "name": "routes",
                                         "filename": "src/app/material/material-routing.module.ts",
                                         "module": "MaterialRoutingModule",
                                         "children": [
@@ -2911,6 +3378,17 @@
                                 "module": "MaterialModule"
                             }
                         ]
+                    },
+                    {
+                        "path": "blazor",
+                        "loadChildren": "./blazor/blazor.module#BlazorModule",
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [],
+                                "module": "BlazorModule"
+                            }
+                        ]
                     }
                 ],
                 "kind": "module"
@@ -2918,7 +3396,7 @@
         ]
     },
     "coverage": {
-        "count": 2,
+        "count": 1,
         "status": "low",
         "files": [
             {
@@ -2926,6 +3404,35 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/blazor/blazor.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BlazorComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/blazor/blazor.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "declarations",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/blazor/blazor.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "imports",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2954,7 +3461,17 @@
                 "linktype": "component",
                 "name": "MaterialComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/material/material.component.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "navLinkSource$",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -3390,6 +3907,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "w96",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/blazor/Blazor.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/blazor/Blazor.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

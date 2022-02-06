@@ -48,7 +48,7 @@ export class MaterialComponent implements OnDestroy {
   }
   private _theme: Theme = 'light';
 
-  private _destroying$ = new Subject<void>();
+  private readonly _destroying$ = new Subject<void>();
 
   constructor() {
     this.navLinks$ = navLinkSource$;
