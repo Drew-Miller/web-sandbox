@@ -20,7 +20,6 @@ const navLinkSource$ = new BehaviorSubject<NavLink[]>([
 ]).asObservable();
 
 @Component({
-  selector: 'app-material',
   templateUrl: './material.component.html',
   styleUrls: ['./material.component.scss']
 })

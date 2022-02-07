@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { BlazorRoutingModule } from './blazor-routing.module';
 import { BlazorComponent } from './blazor.component';
+import { OriginalComponent } from './original/original.component';
+import { SidebarModule } from './sidenav/sidebar.module';
 
 export const imports = [
   CommonModule,
-  BlazorRoutingModule
+  BlazorRoutingModule,
+  SidebarModule
 ];
 
 export const declarations = [
@@ -15,10 +18,11 @@ export const declarations = [
 
 @NgModule({
   declarations: [
-    ...declarations
+    ...declarations,
+    OriginalComponent
   ],
   imports: [
-    ...imports
+    ...imports,
   ]
 })
 export class BlazorModule { }

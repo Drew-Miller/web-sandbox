@@ -1,122 +1,16 @@
-<div id="app">
-  <!--!-->
-  <!--!-->
-  <!--!-->
-  <!--!-->
-  <div class="page" b-zph41ciitw="">
-    <div class="sidebar" b-zph41ciitw="">
-      <!--!-->
-      <div class="top-row ps-3 navbar navbar-dark" b-myz4v9z4ve="">
-        <div class="container-fluid" b-myz4v9z4ve="">
-          <!--!--><a class="navbar-brand" href="" b-myz4v9z4ve="">MyBlazorApp</a>
-          <button title="Navigation menu" class="navbar-toggler" b-myz4v9z4ve="" (click)="navCollpase = !navCollpase">
-            <!--!--><span class="navbar-toggler-icon" b-myz4v9z4ve=""></span>
-          </button>
-        </div>
-      </div>
-      <!--!-->
-
-      <div b-myz4v9z4ve="" [class.collapse]="navCollpase">
-        <nav class="flex-column" b-myz4v9z4ve="">
-          <div class="nav-item px-3" b-myz4v9z4ve="">
-            <!--!--><a href="" class="nav-link">
-              <!--!--><span class="oi oi-home" aria-hidden="true" b-myz4v9z4ve=""></span> Home
-            </a>
-          </div>
-          <!--!-->
-          <div class="nav-item px-3" b-myz4v9z4ve="">
-            <!--!--><a href="counter" class="nav-link">
-              <!--!--><span class="oi oi-plus" aria-hidden="true" b-myz4v9z4ve=""></span> Counter
-            </a>
-          </div>
-          <!--!-->
-          <div class="nav-item px-3" b-myz4v9z4ve="">
-            <!--!--><a href="fetchdata" class="nav-link active">
-              <!--!--><span class="oi oi-list-rich" aria-hidden="true" b-myz4v9z4ve=""></span> Fetch data
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!--!-->
-
-    <main b-zph41ciitw="">
-      <!--!-->
-      <div class="top-row px-4" b-zph41ciitw=""><a href="https://docs.microsoft.com/aspnet/" target="_blank"
-          b-zph41ciitw="">About</a></div>
-
-      <article class="content px-4" b-zph41ciitw="">
-        <!--!-->
-        <!--!-->
-        <!--!-->
-        <!--!-->
-
-        <!--!-->
-        <h1 tabindex="-1">Weather forecast</h1>
-
-        <!--!-->
-        <p>This component demonstrates fetching data from the server.</p>
-        <table class="table">
-          <!--!-->
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Temp. (C)</th>
-              <th>Temp. (F)</th>
-              <th>Summary</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>5/6/2018</td>
-              <!--!-->
-              <td>1</td>
-              <!--!-->
-              <td>33</td>
-              <!--!-->
-              <td>Freezing</td>
-            </tr>
-            <tr>
-              <td>5/7/2018</td>
-              <!--!-->
-              <td>14</td>
-              <!--!-->
-              <td>57</td>
-              <!--!-->
-              <td>Bracing</td>
-            </tr>
-            <tr>
-              <td>5/8/2018</td>
-              <!--!-->
-              <td>-13</td>
-              <!--!-->
-              <td>9</td>
-              <!--!-->
-              <td>Freezing</td>
-            </tr>
-            <tr>
-              <td>5/9/2018</td>
-              <!--!-->
-              <td>-16</td>
-              <!--!-->
-              <td>4</td>
-              <!--!-->
-              <td>Balmy</td>
-            </tr>
-            <tr>
-              <td>5/10/2018</td>
-              <!--!-->
-              <td>-2</td>
-              <!--!-->
-              <td>29</td>
-              <!--!-->
-              <td>Chilly</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-    </main>
+<div class="flex flex-col sm:flex-row">
+  <blazor-sidebar>
+    <blazor-nav-link>
+      <a>Home</a>
+    </blazor-nav-link>
+    <blazor-nav-link>
+      <a>Home</a>
+    </blazor-nav-link>
+    <blazor-nav-link>
+      <a>Home</a>
+    </blazor-nav-link>
+  </blazor-sidebar>
+  <div class="bg-red-500 w-full h-screen">
+    <h1>Hello, blazor!</h1>
   </div>
-  <!--!-->
-  <!--!-->
 </div>

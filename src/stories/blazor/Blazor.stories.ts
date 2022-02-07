@@ -1,7 +1,8 @@
 import { Story, Meta, moduleMetadata } from '@storybook/angular';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 import { BlazorComponent } from 'src/app/blazor/blazor.component';
 import * as BlazorModule from 'src/app/blazor/blazor.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export default {
   title: 'Blazor/Main',
@@ -9,7 +10,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [...BlazorModule.declarations],
-      imports: [...BlazorModule.imports, BrowserAnimationsModule]
+      imports: [...BlazorModule.imports, MatIconModule, BrowserAnimationsModule]
     })
   ]
 } as Meta;
