@@ -1,3 +1,23 @@
-.nav-link {
-  color: red
+a {
+  cursor: pointer;
+}
+
+.nav-item {
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  color: #d7d7d7;
+  border-radius: 4px;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  line-height: 3rem;
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }

@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { SidebarComponent } from './sidebar.component';
-import { NavLinkComponent } from './nav-link/nav-link.component';
+import { NavItemComponent } from './nav-item/nav-item.component';
 
 @NgModule({
   declarations: [
     SidebarComponent,
-    NavLinkComponent
+    NavItemComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +15,7 @@ import { NavLinkComponent } from './nav-link/nav-link.component';
   ],
   exports: [
     SidebarComponent,
-    NavLinkComponent
+    NavItemComponent
   ]
 })
 export class SidebarModule { }

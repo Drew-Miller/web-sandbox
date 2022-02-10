@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { OriginalComponent } from 'src/app/blazor/original/original.component';
 
 export default {
-  title: 'Blazor/Main/Original',
+  title: 'Blazor/Main',
   component: OriginalComponent,
   decorators: [
     moduleMetadata({
@@ -16,4 +16,4 @@ const Template: Story<OriginalComponent> = (args: OriginalComponent) => ({
   props: args
 });
 
-export const Primary = Template.bind({});
+export const Original = Template.bind({});
